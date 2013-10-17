@@ -1,0 +1,12 @@
+﻿<Window x:Class="LFM.Submissions.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="SubmitEdrsButton" Content="Submit eDRS" HorizontalAlignment="Left" Margin="44,57,0,0" VerticalAlignment="Top" Width="83" Click="SubmitEdrsButton_Click"/>
+        <Button x:Name="SubmitEdrsAttachmentButton" Content="Submit Attachment" HorizontalAlignment="Left" Margin="44,91,0,0" VerticalAlignment="Top" Width="123" Click="SubmitEdrsAttachmentButton_Click"/>
+        <TextBox x:Name="ApplicationIdTextBox" HorizontalAlignment="Left" Height="20" Margin="44,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206"/>
+        <Button x:Name="GenerateIdButton" Content="Generate" HorizontalAlignment="Left" Height="20" Margin="277,15,0,0" VerticalAlignment="Top" Width="54" Click="GenerateIdButton_Click"/>
+
+    </Grid>
+</Window>
