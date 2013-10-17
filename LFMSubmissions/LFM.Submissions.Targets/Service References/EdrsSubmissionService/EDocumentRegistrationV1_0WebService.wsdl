@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://drsv1_0.ws.bg.lr.gov/" name="EDocumentRegistrationV1_0WebService" targetNamespace="http://drsv1_0.ws.bg.lr.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:Q2="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" xmlns:Q1="http://www.oscre.org/ns/eReg-Final/2012/RequestApplicationToChangeRegisterV1_0" targetNamespace="http://drsv1_0.ws.bg.lr.gov/">
+      <xsd:import schemaLocation="RequestApplicationToChangeRegisterV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/RequestApplicationToChangeRegisterV1_0" />
+      <xsd:import schemaLocation="ResponseApplicationToChangeRegisterV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" />
+      <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string" />
+      <xsd:element name="SchemaException" nillable="true" type="xsd:string" />
+      <xsd:element name="eDocumentRegistration" type="tns:eDocumentRegistration" />
+      <xsd:element name="eDocumentRegistrationResponse" type="tns:eDocumentRegistrationResponse" />
+      <xsd:complexType name="eDocumentRegistration">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="Q1:RequestApplicationToChangeRegisterV1_0Type" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="eDocumentRegistrationResponse">
+        <xsd:sequence>
+          <xsd:element name="return" type="Q2:ResponseApplicationToChangeRegisterV1_0Type" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SOAPEngineSystemException">
+    <wsdl:part name="fault" element="tns:SOAPEngineSystemException" />
+  </wsdl:message>
+  <wsdl:message name="eDocumentRegistrationResponse">
+    <wsdl:part name="parameters" element="tns:eDocumentRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="eDocumentRegistration">
+    <wsdl:part name="parameters" element="tns:eDocumentRegistration" />
+  </wsdl:message>
+  <wsdl:message name="SchemaException">
+    <wsdl:part name="fault" element="tns:SchemaException" />
+  </wsdl:message>
+  <wsdl:portType name="EDocumentRegistrationV1_0Service">
+    <wsdl:operation name="eDocumentRegistration">
+      <wsdl:input message="tns:eDocumentRegistration" />
+      <wsdl:output message="tns:eDocumentRegistrationResponse" />
+      <wsdl:fault name="SOAPEngineSystemException" message="tns:SOAPEngineSystemException" />
+      <wsdl:fault name="SchemaException" message="tns:SchemaException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EDocumentRegistrationV1_0WSImplPortBinding" type="tns:EDocumentRegistrationV1_0Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="eDocumentRegistration">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SOAPEngineSystemException">
+        <soap:fault use="literal" name="SOAPEngineSystemException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SchemaException">
+        <soap:fault use="literal" name="SchemaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EDocumentRegistrationV1_0WebService">
+    <wsdl:port name="EDocumentRegistrationV1_0WSImplPort" binding="tns:EDocumentRegistrationV1_0WSImplPortBinding">
+      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/ECDRS_StubService/EDocumentRegistrationV1_0WebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

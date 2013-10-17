@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace LFM.Submissions.Client
                     ApplicationId = ApplicationIdTextBox.Text,
                     Username = "BGUser001",
                     Password = "LandReg001",
-                    Payload = "<payload xml goes here>"
+                    Payload = File.ReadAllText(@"E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\LandRegistry\TestXML\eDRS Test 4 XmlRequest.xml")
                 });
         }
 

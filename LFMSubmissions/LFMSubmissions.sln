@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Config", "LFM.Submissions.Config\LFM.Submissions.Config.csproj", "{D756F755-C2C9-48A5-8DAD-82633836538B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Targets", "LFM.Submissions.Targets\LFM.Submissions.Targets.csproj", "{3182D968-1616-405B-844A-7F24FA717AA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D756F755-C2C9-48A5-8DAD-82633836538B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D756F755-C2C9-48A5-8DAD-82633836538B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D756F755-C2C9-48A5-8DAD-82633836538B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3182D968-1616-405B-844A-7F24FA717AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3182D968-1616-405B-844A-7F24FA717AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3182D968-1616-405B-844A-7F24FA717AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3182D968-1616-405B-844A-7F24FA717AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

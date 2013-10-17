@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ResponseApplicationToChangeRegisterV1_0" type="ResponseApplicationToChangeRegisterV1_0Type" />
+  <xs:complexType name="AcknowledgementType">
+    <xs:annotation>
+      <xs:documentation>This is the the Business Gateway confirmation
+				response to the External System.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="UniqueID" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Unique identifier used by end user to get
+						the
+						status update of their request.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="MessageDescription" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>This will be a String type element and will
+						be use
+						to display a message to end user. This element should be
+						marked as
+						mandatory</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element minOccurs="1" maxOccurs="1" name="ExpectedResponseDateTime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>This element will hold expected time when
+							Business Gateway will try to process the queued request. This
+							element will contain date and time data as GMT format. This
+							element should be marked as mandatory</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="PriorityDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ABR" type="xs:string" />
+        </xs:sequence>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GatewayResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="TypeCode" type="ProductResponseCodeContentType">
+        <xs:annotation>
+          <xs:documentation>A character string (letters, figures or symbols)
+						that for brevity and/or language independence may be used to
+						represent or replace a definitive value or text of an Attribute
+						together with relevant supplementary information.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Acknowledgement" type="AcknowledgementType">
+        <xs:annotation>
+          <xs:documentation>This is the the Business Gateway
+						confirmationresponse to the External System.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="Rejection" type="RejectionType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Results" type="ResultsType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RejectionType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ExternalReference" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>A unique reference given to identify a
+						particular
+						request, order or instruction in the system of the
+						organisation
+						allocating it with the ability to associate the name
+						of the Company
+						that has allocated it.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="RejectionResponse" type="RejectionResponseType">
+        <xs:annotation>
+          <xs:documentation>Provides details of the reasons for the
+						rejection
+						of the Search Order Send message.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RejectionResponseType">
+    <xs:annotation>
+      <xs:documentation>Provides details of the reasons for the
+				rejection.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Reason" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>A description of the reason for rejection.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Code" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>A code signifying the reason for rejection
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="OtherDescription" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Freeform text field to convey any further
+						information about the rejection.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationErrors" type="ValidationErrorsType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResultsType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="MessageDetails" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExternalReference" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Reference associated with a case in Case
+						Management System</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="ActualFee" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EarlyCompletionIndicator" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AdditionalDespatchItemsIndicator" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultTypeCode" type="ResultCodeContentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DespatchDocument" type="AttachmentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="XmlRegisters" type="XmlRegistersType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AttachmentType">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="filename" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>Must be the full filename including the
+							extension(Reference IETF RFC 2045, 2046, 2047)</xs:documentation>
+            <xs:documentation>This is not required for requests
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="format" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>The format of the binary content.Note: A file
+							format is a particular way to encode information for storage in a
+							computer file. May be identified by the section of its name
+							following the final period, e.g., gif, pdf, jpg.
+						</xs:documentation>
+            <xs:documentation>This is not required for requests
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="XmlRegistersType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element minOccurs="1" maxOccurs="1" name="XmlRegisterData" type="XmlRegisterDataType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XmlRegisterDataType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="TitleNumber" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PropertyRegister" type="RegisterType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProprietorshipRegister" type="RegisterType">
+        <xs:annotation>
+          <xs:documentation>
+						AS part of RFC 11583/1 RES will be excluding
+						1925
+						Act Cautions as they cannot be converted
+						into Intelligent Register
+						format. Hence all
+						Title Numbers will have an A and B register.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ChargesRegister" type="RegisterType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidationErrorsType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Code" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>A character string (i.e. a finite set of
+						characters) generally in the form of words of a language.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="Description" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>A character string (i.e. a finite set of
+						characters) generally in the form of words of a language.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseApplicationToChangeRegisterV1_0Type">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="GatewayResponse" type="GatewayResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DistrictDetails" type="DistrictDetailsType" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="RegisterEntry" type="RegisterEntryType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Schedule" type="ScheduleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DistrictDetailsType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntryText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterEntryType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EntryNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntryDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntryType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="EntryText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScheduleType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ScheduleType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="ScheduleEntry" type="RegisterEntryType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ProductResponseCodeContentType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>Other</xs:documentation>
+          <xs:documentation>-</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>Acknowledgement</xs:documentation>
+          <xs:documentation>-</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>Rejection</xs:documentation>
+          <xs:documentation>-</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>Result</xs:documentation>
+          <xs:documentation>-</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeContentType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>FE</xs:documentation>
+          <xs:documentation>Full electronic result</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>PE</xs:documentation>
+          <xs:documentation>Partial electronic result (some results by post)
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>FP</xs:documentation>
+          <xs:documentation>All results sent by post</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="40">
+        <xs:annotation>
+          <xs:documentation>CN</xs:documentation>
+          <xs:documentation>Cancellation</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

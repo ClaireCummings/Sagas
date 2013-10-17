@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78eab713-2e89-41fa-ad1d-9f0918b14229" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EDocumentRegistrationV1_0PollRequestWebService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ResponseApplicationToChangeRegisterV1_0.xsd" MetadataType="Schema" ID="04a38ca6-6618-4ff9-8fce-4d1075255f2c" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EDocumentRegistrationV1_0PollRequestWebService/WEB-INF/wsdl/ResponseApplicationToChangeRegisterV1_0.xsd" />
+    <MetadataFile FileName="EDocumentRegistrationV1_0PollRequestWebService.wsdl" MetadataType="Wsdl" ID="640d3f19-a956-44da-82f4-11a0d4d92ccb" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EDocumentRegistrationV1_0PollRequestWebService/WEB-INF/wsdl/EDocumentRegistrationV1_0PollRequestService.wsdl" />
+    <MetadataFile FileName="PollRequest.xsd" MetadataType="Schema" ID="09bfc4ce-4b31-47a4-bd51-b7c7d75f35ef" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EDocumentRegistrationV1_0PollRequestWebService/WEB-INF/wsdl/PollRequest.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

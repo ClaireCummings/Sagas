@@ -17,3 +17,5 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.x
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Targets.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Targets.pdb

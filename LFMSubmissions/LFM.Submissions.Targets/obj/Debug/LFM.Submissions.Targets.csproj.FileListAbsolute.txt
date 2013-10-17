@@ -1,0 +1,6 @@
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Targets.dll.config
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Targets.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Targets.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.Targets.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.Targets.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.Targets.csprojResolveAssemblyReference.cache

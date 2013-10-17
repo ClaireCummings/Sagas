@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://poll.drsv1_0.ws.bg.lr.gov/" name="EDocumentRegistrationV1_0PollRequestWebService" targetNamespace="http://poll.drsv1_0.ws.bg.lr.gov/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:ns3="http://poll.drsv1_0.ws.bg.lr.gov/" xmlns:ns1="http://www.oscre.org/ns/eReg/MR01-20090605/PollRequest" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" targetNamespace="http://poll.drsv1_0.ws.bg.lr.gov/">
+      <xsd:import schemaLocation="PollRequest.xsd" namespace="http://www.oscre.org/ns/eReg/MR01-20090605/PollRequest" />
+      <xsd:import schemaLocation="ResponseApplicationToChangeRegisterV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/ResponseApplicationToChangeRegisterV1_0" />
+      <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string" />
+      <xsd:element name="SchemaException" nillable="true" type="xsd:string" />
+      <xsd:element name="getResponse" type="ns3:getResponse" />
+      <xsd:element name="getResponseResponse" type="ns3:getResponseResponse" />
+      <xsd:complexType name="getResponse">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="ns1:PollRequestType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getResponseResponse">
+        <xsd:sequence>
+          <xsd:element name="return" type="ns2:ResponseApplicationToChangeRegisterV1_0Type" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="getResponseResponse">
+    <part name="parameters" element="tns:getResponseResponse" />
+  </message>
+  <message name="SchemaException">
+    <part name="fault" element="tns:SchemaException" />
+  </message>
+  <message name="SOAPEngineSystemException">
+    <part name="fault" element="tns:SOAPEngineSystemException" />
+  </message>
+  <message name="getResponse">
+    <part name="parameters" element="tns:getResponse" />
+  </message>
+  <portType name="EDocumentRegistrationV1_0PollRequestService">
+    <operation name="getResponse">
+      <input message="tns:getResponse" />
+      <output message="tns:getResponseResponse" />
+      <fault name="SOAPEngineSystemException" message="tns:SOAPEngineSystemException" />
+      <fault name="SchemaException" message="tns:SchemaException" />
+    </operation>
+  </portType>
+  <binding name="EDocumentRegistrationV1_0PollRequestWSImplPortBinding" type="tns:EDocumentRegistrationV1_0PollRequestService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getResponse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault use="literal" name="SOAPEngineSystemException" namespace="" />
+      </fault>
+      <fault name="SchemaException">
+        <soap:fault use="literal" name="SchemaException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="EDocumentRegistrationV1_0PollRequestWebService">
+    <port name="EDocumentRegistrationV1_0PollRequestWSImplPort" binding="tns:EDocumentRegistrationV1_0PollRequestWSImplPortBinding">
+      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/ECDRS_StubService/EDocumentRegistrationV1_0PollRequestWebService" />
+    </port>
+  </service>
+</definitions>

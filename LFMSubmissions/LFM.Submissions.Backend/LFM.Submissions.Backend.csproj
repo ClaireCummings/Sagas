@@ -67,6 +67,10 @@
       <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.Targets\LFM.Submissions.Targets.csproj">
+      <Project>{3182D968-1616-405B-844A-7F24FA717AA6}</Project>
+      <Name>LFM.Submissions.Targets</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
