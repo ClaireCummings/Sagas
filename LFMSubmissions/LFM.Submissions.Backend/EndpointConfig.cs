@@ -1,4 +1,6 @@
 
+using LFM.Submissions.Config;
+
 namespace LFM.Submissions.Backend
 {
     using NServiceBus;
@@ -7,7 +9,12 @@ namespace LFM.Submissions.Backend
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
 		can be found here: http://particular.net/articles/the-nservicebus-host
 	*/
-	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server
+	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
     {
+	    public void Init()
+	    {
+	        Configure.With()
+	                 .MyMessageConventions();
+	    }
     }
 }

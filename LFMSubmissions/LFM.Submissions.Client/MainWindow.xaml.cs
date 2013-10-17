@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LFM.Submissions.InternalMessages;
 using LFM.Submissions.InternalMessages.LandRegistry;
 
 namespace LFM.Submissions.Client
@@ -28,7 +29,7 @@ namespace LFM.Submissions.Client
 
         private void GenerateIdButton_Click(object sender, RoutedEventArgs e)
         {
-            GenerateIdButton.Content = Guid.NewGuid().ToString();
+            ApplicationIdTextBox.Text = Guid.NewGuid().ToString();
         }
 
         private void SubmitEdrsButton_Click(object sender, RoutedEventArgs e)

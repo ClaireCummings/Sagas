@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using LFM.Submissions.Config;
 using NServiceBus;
 using NServiceBus.Installation.Environments;
 
@@ -23,8 +24,8 @@ namespace LFM.Submissions.Client
 
             Configure.Serialization.Xml();
             Bus = Configure.With()
-                .Log4Net()
                 .DefaultBuilder()
+                .MyMessageConventions()
                 .UseTransport<Msmq>()
                 .UnicastBus()
                 .LoadMessageHandlers()
