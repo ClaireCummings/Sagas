@@ -8,10 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using LFM.Submissions.Targets.EdrsPollRequestService;
 using LFM.Submissions.Targets.EdrsSubmissionService;
-using Laserform.eSubmissions.Comms.LandRegistry;
 
 namespace LFM.Submissions.Targets.LandRegistry
 {
+    public enum EdrsResponse
+    {
+        None,
+        Acknowledgement,
+        Results,
+        Rejection,
+        Other
+    }
+
     public class EdrsSender : IEdrsSender
     {
         public string ApplicationId { get; set; }
@@ -19,7 +27,7 @@ namespace LFM.Submissions.Targets.LandRegistry
         public string Password { get; set; }
         public string Payload { get; set; }
 
-        public void Submit()
+        public string Submit()
         {
             RequestApplicationToChangeRegisterV1_0Type request;
             try
@@ -29,7 +37,7 @@ namespace LFM.Submissions.Targets.LandRegistry
             }
             catch 
             {
-                return;
+                return null;
             }
             
             request.MessageId = ApplicationId;
@@ -42,6 +50,9 @@ namespace LFM.Submissions.Targets.LandRegistry
 
             // submit the request
             var response = client.eDocumentRegistration(request);
+
+            return response.XmlSerializeToString();
+
         }
     }
 }

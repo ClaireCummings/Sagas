@@ -40,7 +40,7 @@ namespace LFM.Submissions.Client
                     ApplicationId = ApplicationIdTextBox.Text,
                     Username = "BGUser001",
                     Password = "LandReg001",
-                    Payload = File.ReadAllText(@"E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\LandRegistry\TestXML\eDRS Test 4 XmlRequest.xml")
+                    Payload = File.ReadAllText(@"E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Client\TestXML\eDRS Test 4 XmlRequest.xml")
                 });
         }
 

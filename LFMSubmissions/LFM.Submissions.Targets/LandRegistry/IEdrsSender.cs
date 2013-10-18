@@ -7,6 +7,6 @@
         string Password { get; set; }
         string Payload { get; set; }
         
-        void Submit();
+        string Submit();
     }
 }

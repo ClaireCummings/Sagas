@@ -6,12 +6,13 @@ using NServiceBus.Saga;
 
 namespace LFM.Submissions.LandRegistry
 {
-    public class EdrsProcessor : Saga<EdrsProcessorSagaData>, IAmStartedByMessages<SubmitEdrs>, IAmStartedByMessages<SubmitEdrsAttachment>
+    public class EdrsProcessor : Saga<EdrsProcessorSagaData>, IAmStartedByMessages<SubmitEdrs>, IAmStartedByMessages<SubmitEdrsAttachment>, IHandleMessages<ProcessEdrsResponse>
     {
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<SubmitEdrs>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<SubmitEdrsAttachment>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<ProcessEdrsResponse>(s => s.ApplicationId, m => m.ApplicationId);
         }
 
         public void Handle(SubmitEdrs message)
@@ -25,13 +26,27 @@ namespace LFM.Submissions.LandRegistry
                     Password = message.Password,
                     Payload = message.Payload
                 };
-            sender.Submit();
+            
+            var response = sender.Submit();
+
+            Bus.Send(new ProcessEdrsResponse
+                {
+                    ApplicationId = message.ApplicationId,
+                    ResponsePayload = response
+                });
         }
 
         public void Handle(SubmitEdrsAttachment message)
         {
             this.Data.ApplicationId = message.ApplicationId;
             Console.WriteLine("Land Registry Received {0}{3}ApplicationId: {1}{3}AttachmentId: {2}", message.GetType().ToString(), message.ApplicationId, message.AttachmentId, Environment.NewLine);
+        }
+
+        public void Handle(ProcessEdrsResponse message)
+        {
+            //todo persist the response to the backend database
+            this.Data.EdrsResponse = new EdrsResponseAnalyser(message.ResponsePayload).EdrsResponse;
+            Console.WriteLine("Land Registry Received {0}{3}ApplicationId: {1}{3}Response: {2}", message.GetType().ToString(), message.ApplicationId, this.Data.EdrsResponse.ToString(), Environment.NewLine);
         }
     }
 
@@ -42,5 +57,6 @@ namespace LFM.Submissions.LandRegistry
         public string OriginalMessageId { get; set; }
 
         public string ApplicationId { get; set; }
+        public EdrsResponse EdrsResponse { get; set; }
     }
 }

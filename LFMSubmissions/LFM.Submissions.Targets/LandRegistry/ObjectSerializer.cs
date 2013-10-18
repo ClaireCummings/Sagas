@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace Laserform.eSubmissions.Comms.LandRegistry
+namespace LFM.Submissions.Targets.LandRegistry
 {
     /// <summary>
     /// Serialization and Deserialization tasks for an ojbect.
