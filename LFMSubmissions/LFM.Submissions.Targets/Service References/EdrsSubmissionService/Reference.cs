@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.Targets.EdrsSubmissionService {
+namespace LFM.Submissions.GovGateway.EdrsSubmissionService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -24,10 +24,10 @@ namespace LFM.Submissions.Targets.EdrsSubmissionService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RepresentativeType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ApplicationType))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse eDocumentRegistration(LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest request);
+        LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse eDocumentRegistration(LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse> eDocumentRegistrationAsync(LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse> eDocumentRegistrationAsync(LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest request);
     }
     
     /// <remarks/>
@@ -2801,12 +2801,12 @@ namespace LFM.Submissions.Targets.EdrsSubmissionService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://drsv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.Targets.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0;
+        public LFM.Submissions.GovGateway.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0;
         
         public eDocumentRegistrationRequest() {
         }
         
-        public eDocumentRegistrationRequest(LFM.Submissions.Targets.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
+        public eDocumentRegistrationRequest(LFM.Submissions.GovGateway.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
             this.arg0 = arg0;
         }
     }
@@ -2819,23 +2819,23 @@ namespace LFM.Submissions.Targets.EdrsSubmissionService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://drsv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.Targets.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type @return;
+        public LFM.Submissions.GovGateway.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type @return;
         
         public eDocumentRegistrationResponse() {
         }
         
-        public eDocumentRegistrationResponse(LFM.Submissions.Targets.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type @return) {
+        public eDocumentRegistrationResponse(LFM.Submissions.GovGateway.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EDocumentRegistrationV1_0ServiceChannel : LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service, System.ServiceModel.IClientChannel {
+    public interface EDocumentRegistrationV1_0ServiceChannel : LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EDocumentRegistrationV1_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service>, LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service {
+    public partial class EDocumentRegistrationV1_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service>, LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service {
         
         public EDocumentRegistrationV1_0ServiceClient() {
         }
@@ -2857,26 +2857,26 @@ namespace LFM.Submissions.Targets.EdrsSubmissionService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service.eDocumentRegistration(LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest request) {
+        LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service.eDocumentRegistration(LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest request) {
             return base.Channel.eDocumentRegistration(request);
         }
         
-        public LFM.Submissions.Targets.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type eDocumentRegistration(LFM.Submissions.Targets.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
-            LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest inValue = new LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest();
+        public LFM.Submissions.GovGateway.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type eDocumentRegistration(LFM.Submissions.GovGateway.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
+            LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest inValue = new LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse retVal = ((LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service)(this)).eDocumentRegistration(inValue);
+            LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse retVal = ((LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service)(this)).eDocumentRegistration(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse> LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service.eDocumentRegistrationAsync(LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse> LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service.eDocumentRegistrationAsync(LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest request) {
             return base.Channel.eDocumentRegistrationAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse> eDocumentRegistrationAsync(LFM.Submissions.Targets.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
-            LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest inValue = new LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse> eDocumentRegistrationAsync(LFM.Submissions.GovGateway.EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type arg0) {
+            LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest inValue = new LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.Targets.EdrsSubmissionService.EDocumentRegistrationV1_0Service)(this)).eDocumentRegistrationAsync(inValue);
+            return ((LFM.Submissions.GovGateway.EdrsSubmissionService.EDocumentRegistrationV1_0Service)(this)).eDocumentRegistrationAsync(inValue);
         }
     }
 }

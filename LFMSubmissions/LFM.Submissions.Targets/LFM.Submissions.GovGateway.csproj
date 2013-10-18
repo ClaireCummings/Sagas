@@ -7,8 +7,8 @@
     <ProjectGuid>{3182D968-1616-405B-844A-7F24FA717AA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LFM.Submissions.Targets</RootNamespace>
-    <AssemblyName>LFM.Submissions.Targets</AssemblyName>
+    <RootNamespace>LFM.Submissions.GovGateway</RootNamespace>
+    <AssemblyName>LFM.Submissions.GovGateway</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NServiceBus">
+      <HintPath>..\packages\NServiceBus.Interfaces.4.1.0\lib\net40\NServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.4.1.0\lib\net40\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.4.1.0\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -41,11 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LFM.Submissions.Backend\LandRegistry\EdrsResponse.cs">
+      <Link>LandRegistry\EdrsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsProcessor.cs">
+      <Link>LandRegistry\PollEdrsProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\SubmitEdrsProcessor.cs">
+      <Link>LandRegistry\SubmitEdrsProcessor.cs</Link>
+    </Compile>
+    <Compile Include="EndpointConfig.cs" />
     <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />
     <Compile Include="LandRegistry\IEdrsSender.cs" />
-    <Compile Include="LandRegistry\ObjectSerializer.cs" />
+    <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\EdrsPollRequestService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -63,11 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Service References\EdrsPollRequestService\EDocumentRegistrationV1_0PollRequestWebService.wsdl" />
-    <None Include="Service References\EdrsPollRequestService\LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse.datasource">
+    <None Include="Service References\EdrsPollRequestService\LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EdrsPollRequestService\LFM.Submissions.Targets.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type.datasource">
+    <None Include="Service References\EdrsPollRequestService\LFM.Submissions.GovGateway.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EdrsPollRequestService\PollRequest.xsd">
@@ -77,10 +97,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EdrsSubmissionService\EDocumentRegistrationV1_0WebService.wsdl" />
-    <None Include="Service References\EdrsSubmissionService\LFM.Submissions.Targets.EdrsSubmissionService.eDocumentRegistrationResponse.datasource">
+    <None Include="Service References\EdrsSubmissionService\LFM.Submissions.GovGateway.EdrsSubmissionService.eDocumentRegistrationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EdrsSubmissionService\LFM.Submissions.Targets.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type.datasource">
+    <None Include="Service References\EdrsSubmissionService\LFM.Submissions.GovGateway.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EdrsSubmissionService\RequestApplicationToChangeRegisterV1_0.xsd">
@@ -118,6 +138,16 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LFM.Submissions.Config\LFM.Submissions.Config.csproj">
+      <Project>{d756f755-c2c9-48a5-8dad-82633836538b}</Project>
+      <Name>LFM.Submissions.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.InternalMessages\LFM.Submissions.InternalMessages.csproj">
+      <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
+      <Name>LFM.Submissions.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -126,4 +156,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
 </Project>

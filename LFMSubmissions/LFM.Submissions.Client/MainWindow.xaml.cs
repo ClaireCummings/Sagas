@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LFM.Submissions.InternalMessages;
 using LFM.Submissions.InternalMessages.LandRegistry;
+using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 
 namespace LFM.Submissions.Client
 {

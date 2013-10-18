@@ -12,8 +12,9 @@ namespace LFM.Submissions.Config
     {
         public static Configure MyMessageConventions(this Configure config)
         {
-            config.DefiningCommandsAs(t => t.Namespace != null && t.Namespace.Contains(".InternalMessages."));
-
+            config.DefiningCommandsAs(t => t.Namespace != null && t.Namespace.EndsWith(".Commands"));
+            config.DefiningMessagesAs(t => t.Namespace != null && t.Namespace.EndsWith(".Messages"));
+            
             return config;
         }
     }

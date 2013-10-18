@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.Targets.EdrsPollRequestService {
+namespace LFM.Submissions.GovGateway.EdrsPollRequestService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -21,10 +21,10 @@ namespace LFM.Submissions.Targets.EdrsPollRequestService {
         [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SchemaException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse getResponse(LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest request);
+        LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse getResponse(LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse> getResponseAsync(LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest request);
     }
     
     /// <remarks/>
@@ -1048,12 +1048,12 @@ namespace LFM.Submissions.Targets.EdrsPollRequestService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.drsv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.Targets.EdrsPollRequestService.PollRequestType arg0;
+        public LFM.Submissions.GovGateway.EdrsPollRequestService.PollRequestType arg0;
         
         public getResponseRequest() {
         }
         
-        public getResponseRequest(LFM.Submissions.Targets.EdrsPollRequestService.PollRequestType arg0) {
+        public getResponseRequest(LFM.Submissions.GovGateway.EdrsPollRequestService.PollRequestType arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1066,23 +1066,23 @@ namespace LFM.Submissions.Targets.EdrsPollRequestService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.drsv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.Targets.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type @return;
+        public LFM.Submissions.GovGateway.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type @return;
         
         public getResponseResponse() {
         }
         
-        public getResponseResponse(LFM.Submissions.Targets.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type @return) {
+        public getResponseResponse(LFM.Submissions.GovGateway.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EDocumentRegistrationV1_0PollRequestServiceChannel : LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService, System.ServiceModel.IClientChannel {
+    public interface EDocumentRegistrationV1_0PollRequestServiceChannel : LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EDocumentRegistrationV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService>, LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService {
+    public partial class EDocumentRegistrationV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService>, LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService {
         
         public EDocumentRegistrationV1_0PollRequestServiceClient() {
         }
@@ -1104,26 +1104,26 @@ namespace LFM.Submissions.Targets.EdrsPollRequestService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService.getResponse(LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest request) {
+        LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService.getResponse(LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest request) {
             return base.Channel.getResponse(request);
         }
         
-        public LFM.Submissions.Targets.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type getResponse(LFM.Submissions.Targets.EdrsPollRequestService.PollRequestType arg0) {
-            LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest inValue = new LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest();
+        public LFM.Submissions.GovGateway.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type getResponse(LFM.Submissions.GovGateway.EdrsPollRequestService.PollRequestType arg0) {
+            LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest inValue = new LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse retVal = ((LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService)(this)).getResponse(inValue);
+            LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse retVal = ((LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService)(this)).getResponse(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse> LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService.getResponseAsync(LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse> LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService.getResponseAsync(LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest request) {
             return base.Channel.getResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.Targets.EdrsPollRequestService.getResponseResponse> getResponseAsync(LFM.Submissions.Targets.EdrsPollRequestService.PollRequestType arg0) {
-            LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest inValue = new LFM.Submissions.Targets.EdrsPollRequestService.getResponseRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.EdrsPollRequestService.PollRequestType arg0) {
+            LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest inValue = new LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.Targets.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService)(this)).getResponseAsync(inValue);
+            return ((LFM.Submissions.GovGateway.EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestService)(this)).getResponseAsync(inValue);
         }
     }
 }

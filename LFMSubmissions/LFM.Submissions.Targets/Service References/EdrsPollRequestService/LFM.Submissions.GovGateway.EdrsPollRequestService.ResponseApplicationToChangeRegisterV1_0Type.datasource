@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="ResponseApplicationToChangeRegisterV1_0Type" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>LFM.Submissions.Targets.EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type, Service References.EdrsSubmissionService.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>LFM.Submissions.GovGateway.EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type, Service References.EdrsPollRequestService.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

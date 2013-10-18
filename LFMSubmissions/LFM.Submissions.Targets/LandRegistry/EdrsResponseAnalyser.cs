@@ -1,42 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LFM.Submissions.Targets.EdrsSubmissionService;
+﻿using LFM.Submissions.LandRegistry;
 
-namespace LFM.Submissions.Targets.LandRegistry
+namespace LFM.Submissions.GovGateway.LandRegistry
 {
-    public class EdrsResponseAnalyser
+    public static class EdrsResponseAnalyser
     {
-        private readonly string _responsePayload;
-        private readonly ResponseApplicationToChangeRegisterV1_0Type _response;
-        public EdrsResponse EdrsResponse { get; set; }
-
-        public EdrsResponseAnalyser(string responsePayload)
+        public static EdrsResponse GetEdrsResponse(EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type response)
         {
-            _responsePayload = responsePayload;
-            _response =
-                ObjectSerializer.XmlDeserializeFromString<ResponseApplicationToChangeRegisterV1_0Type>(_responsePayload);
-            GetEdrsResponse();
-        }
-
-        private void GetEdrsResponse()
-        {
-            switch (_response.GatewayResponse.TypeCode)
+            switch (response.GatewayResponse.TypeCode)
             {
                 case EdrsSubmissionService.ProductResponseCodeContentType.Item10:
-                    EdrsResponse = EdrsResponse.Acknowledgement;
-                    break;
+                    return EdrsResponse.Acknowledgement;
                 case EdrsSubmissionService.ProductResponseCodeContentType.Item20:
-                    EdrsResponse = EdrsResponse.Rejection;
-                    break;
+                    return EdrsResponse.Rejection;
                 case EdrsSubmissionService.ProductResponseCodeContentType.Item30:
-                    EdrsResponse = EdrsResponse.Results;
-                    break;
+                    return EdrsResponse.Results;
                 default:
-                    EdrsResponse = EdrsResponse.Other;
-                    break;
+                    return EdrsResponse.Other;
+            }
+        }
+
+        public static EdrsResponse GetEdrsResponse(EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type response)
+        {
+            switch (response.GatewayResponse.TypeCode)
+            {
+                case EdrsPollRequestService.ProductResponseCodeContentType.Item10:
+                    return EdrsResponse.Acknowledgement;
+                case EdrsPollRequestService.ProductResponseCodeContentType.Item20:
+                    return EdrsResponse.Rejection;
+                case EdrsPollRequestService.ProductResponseCodeContentType.Item30:
+                    return EdrsResponse.Results;
+                default:
+                    return EdrsResponse.Other;
             }
         }
     }

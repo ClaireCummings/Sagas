@@ -1,25 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
-using LFM.Submissions.Targets.EdrsPollRequestService;
-using LFM.Submissions.Targets.EdrsSubmissionService;
 
-namespace LFM.Submissions.Targets.LandRegistry
+namespace LFM.Submissions.GovGateway.LandRegistry
 {
-    public enum EdrsResponse
-    {
-        None,
-        Acknowledgement,
-        Results,
-        Rejection,
-        Other
-    }
-
     public class EdrsSender : IEdrsSender
     {
         public string ApplicationId { get; set; }
@@ -27,13 +10,13 @@ namespace LFM.Submissions.Targets.LandRegistry
         public string Password { get; set; }
         public string Payload { get; set; }
 
-        public string Submit()
+        public EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type Submit()
         {
-            RequestApplicationToChangeRegisterV1_0Type request;
+            EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type request;
             try
             {
                  request =
-                    ObjectSerializer.XmlDeserializeFromString<RequestApplicationToChangeRegisterV1_0Type>(Payload);
+                    ObjectSerializer.XmlDeserializeFromString<EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type>(Payload);
             }
             catch 
             {
@@ -43,7 +26,7 @@ namespace LFM.Submissions.Targets.LandRegistry
             request.MessageId = ApplicationId;
 
             // create an instance of the client
-            var client = new EDocumentRegistrationV1_0ServiceClient();
+            var client = new EdrsSubmissionService.EDocumentRegistrationV1_0ServiceClient();
             
             // create a Header Instance
             client.ChannelFactory.Endpoint.Behaviors.Add(new HMLRBGMessageEndpointBehavior(Username, Password));
@@ -51,8 +34,33 @@ namespace LFM.Submissions.Targets.LandRegistry
             // submit the request
             var response = client.eDocumentRegistration(request);
 
-            return response.XmlSerializeToString();
+            return response;
 
+        }
+
+        public EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type Poll()
+        {
+            var request = new EdrsPollRequestService.PollRequestType
+            {
+                ID = new EdrsPollRequestService.Q1IdentifierType { MessageID = new EdrsPollRequestService.MessageIDTextType { Value = ApplicationId } }
+            };
+
+            // create an instance of the client
+            var client = new EdrsPollRequestService.EDocumentRegistrationV1_0PollRequestServiceClient();
+
+            
+            // overwrite endpointBehavior attributes
+            client.ChannelFactory.Credentials.ClientCertificate.SetCertificate(StoreLocation.CurrentUser, StoreName.My, X509FindType.FindBySerialNumber, "47 ce 29 6f");
+
+            
+
+            // create a Header Instance
+            client.ChannelFactory.Endpoint.Behaviors.Add(new HMLRBGMessageEndpointBehavior(Username, Password));
+
+            // submit the request
+            var response = client.getResponse(request);
+
+            return response;
         }
     }
 }

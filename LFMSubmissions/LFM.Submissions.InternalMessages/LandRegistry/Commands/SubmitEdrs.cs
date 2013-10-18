@@ -1,4 +1,4 @@
-﻿namespace LFM.Submissions.InternalMessages.LandRegistry
+﻿namespace LFM.Submissions.InternalMessages.LandRegistry.Commands
 {
     public class SubmitEdrs
     {

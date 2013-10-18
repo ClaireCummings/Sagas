@@ -39,9 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LandRegistry\ProcessEdrsResponse.cs" />
-    <Compile Include="LandRegistry\SubmitEdrs.cs" />
-    <Compile Include="LandRegistry\SubmitEdrsAttachment.cs" />
+    <Compile Include="LandRegistry\Commands\PollEdrs.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsAcknowledgementReceived.cs" />
+    <Compile Include="LandRegistry\Commands\SubmitEdrs.cs" />
+    <Compile Include="LandRegistry\Commands\SubmitEdrsAttachment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
