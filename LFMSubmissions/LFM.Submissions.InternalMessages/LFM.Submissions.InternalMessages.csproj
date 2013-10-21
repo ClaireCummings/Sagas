@@ -43,6 +43,10 @@
     <Compile Include="LandRegistry\Messages\EdrsAcknowledgementReceived.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrs.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrsAttachment.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsOtherReceived.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsRejectionReceived.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsResultsReceived.cs" />
+    <Compile Include="LandRegistry\Messages\IEdrsResponseReceived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

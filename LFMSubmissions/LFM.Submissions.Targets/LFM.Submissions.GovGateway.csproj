@@ -50,9 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\LFM.Submissions.Backend\LandRegistry\EdrsResponse.cs">
-      <Link>LandRegistry\EdrsResponse.cs</Link>
-    </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsProcessor.cs">
       <Link>LandRegistry\PollEdrsProcessor.cs</Link>
     </Compile>

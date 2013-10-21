@@ -21,14 +21,14 @@ namespace LFM.Submissions.GovGateway.LandRegistry
                         
             var response = sender.Submit();
 
-            var responseResult = EdrsResponseAnalyser.GetEdrsResponse(response);
             Console.WriteLine("GovGateway EdrsService Responded: " + response.GatewayResponse.Acknowledgement.MessageDescription);
-            Bus.Reply(new EdrsAcknowledgementReceived
-                {
-                    ApplicationId = message.ApplicationId,
-                    Username = message.Username,
-                    Password = message.Password
-                });
+            var responseMessage = EdrsResponseAnalyser.GetEdrsResponse(response);
+
+            responseMessage.ApplicationId = message.ApplicationId;
+            responseMessage.Username = message.Username;
+            responseMessage.Password = message.Password;
+
+            Bus.Reply(responseMessage);
         }
     }
 }

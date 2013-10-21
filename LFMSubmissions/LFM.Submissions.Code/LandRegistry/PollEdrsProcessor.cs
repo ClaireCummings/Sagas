@@ -1,7 +1,5 @@
 ﻿using System;
-using LFM.Submissions.GovGateway.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
-using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
 
 namespace LFM.Submissions.GovGateway.LandRegistry
@@ -20,15 +18,27 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             };
 
             var response = sender.Poll();
+            var responseDescription = "No Description";
 
-            var responseResult = EdrsResponseAnalyser.GetEdrsResponse(response);
-            Console.WriteLine("GovGateway EdrsPollService Responded: " + response.GatewayResponse.Results.MessageDetails);
-            Bus.Reply(new EdrsAcknowledgementReceived
-            {
-                ApplicationId = message.ApplicationId,
-                Username = message.Username,
-                Password = message.Password
-            });
+            if(response.GatewayResponse.Acknowledgement != null)
+                responseDescription = response.GatewayResponse.Acknowledgement.MessageDescription;
+            else if (response.GatewayResponse.Results != null)
+                responseDescription = response.GatewayResponse.Results.MessageDetails;
+            else if (response.GatewayResponse.Rejection.RejectionResponse != null)
+                responseDescription = response.GatewayResponse.Rejection.RejectionResponse.Reason;
+
+            Console.WriteLine("GovGateway EdrsPollService Responded: " + responseDescription);
+            
+            var responseMessage = EdrsResponseAnalyser.GetEdrsResponse(response);
+
+            responseMessage.ApplicationId = "TestOutOfHours";
+
+           // responseMessage.ApplicationId = message.ApplicationId;
+            responseMessage.Username = message.Username;
+            responseMessage.Password = message.Password;
+
+            Bus.Reply(responseMessage);
+
         }
     }
 }

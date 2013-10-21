@@ -7,7 +7,8 @@ using NServiceBus.Saga;
 namespace LFM.Submissions.LandRegistry
 {
     public class EdrsProcessor : Saga<EdrsProcessorSagaData>, IAmStartedByMessages<SubmitEdrs>, IAmStartedByMessages<SubmitEdrsAttachment>, 
-            IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<PollEdrs>
+             IHandleMessages<PollEdrs>,IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, 
+                IHandleMessages<EdrsOtherReceived>
     {
         public override void ConfigureHowToFindSaga()
         {
@@ -30,6 +31,14 @@ namespace LFM.Submissions.LandRegistry
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
         }
 
+        public void Handle(PollEdrs message)
+        {
+            if (this.Data.EdrsResponse == EdrsResponse.Acknowledgement)
+            {
+                Bus.Send(message);
+            }
+        }
+
         public void Handle(EdrsAcknowledgementReceived message)
         {
             //todo persist the response to the backend database
@@ -43,13 +52,27 @@ namespace LFM.Submissions.LandRegistry
                     Username = message.Username,
                     Password = message.Password
                 });
-
         }
 
-        public void Handle(PollEdrs message)
+        public void Handle(EdrsRejectionReceived message)
         {
+            this.Data.EdrsResponse = EdrsResponse.Rejection;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
+            MarkAsComplete();
+        }
 
-            Bus.Send(message);
+        public void Handle(EdrsResultsReceived message)
+        {
+            this.Data.EdrsResponse = EdrsResponse.Results;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
+            MarkAsComplete();
+        }
+
+        public void Handle(EdrsOtherReceived message)
+        {
+            this.Data.EdrsResponse = EdrsResponse.Other;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
+            MarkAsComplete();
         }
     }
 

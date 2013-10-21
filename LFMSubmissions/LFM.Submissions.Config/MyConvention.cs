@@ -14,7 +14,6 @@ namespace LFM.Submissions.Config
         {
             config.DefiningCommandsAs(t => t.Namespace != null && t.Namespace.EndsWith(".Commands"));
             config.DefiningMessagesAs(t => t.Namespace != null && t.Namespace.EndsWith(".Messages"));
-            
             return config;
         }
     }
