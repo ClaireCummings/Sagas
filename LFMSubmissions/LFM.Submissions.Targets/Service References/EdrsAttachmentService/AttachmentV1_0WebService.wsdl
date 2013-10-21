@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://attachmentv1_0.ws.bg.lr.gov/" name="AttachmentV1_0WebService" targetNamespace="http://attachmentv1_0.ws.bg.lr.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:Q2="http://www.oscre.org/ns/eReg-Final/2012/ResponseAttachmentV1_0" xmlns:Q1="http://www.oscre.org/ns/eReg-Final/2012/RequestAttachmentV1_0" targetNamespace="http://attachmentv1_0.ws.bg.lr.gov/">
+      <xsd:import schemaLocation="RequestAttachmentV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/RequestAttachmentV1_0" />
+      <xsd:import schemaLocation="ResponseAttachmentV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/ResponseAttachmentV1_0" />
+      <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string" />
+      <xsd:element name="SchemaException" nillable="true" type="xsd:string" />
+      <xsd:element name="newAttachment" type="tns:newAttachment" />
+      <xsd:element name="newAttachmentResponse" type="tns:newAttachmentResponse" />
+      <xsd:complexType name="newAttachment">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="Q1:AttachmentV1_0Type" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="newAttachmentResponse">
+        <xsd:sequence>
+          <xsd:element name="return" type="Q2:AttachmentResponseV1_0Type" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="newAttachmentResponse">
+    <wsdl:part name="parameters" element="tns:newAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOAPEngineSystemException">
+    <wsdl:part name="fault" element="tns:SOAPEngineSystemException" />
+  </wsdl:message>
+  <wsdl:message name="newAttachment">
+    <wsdl:part name="parameters" element="tns:newAttachment" />
+  </wsdl:message>
+  <wsdl:message name="SchemaException">
+    <wsdl:part name="fault" element="tns:SchemaException" />
+  </wsdl:message>
+  <wsdl:portType name="AttachmentV1_0Service">
+    <wsdl:operation name="newAttachment">
+      <wsdl:input message="tns:newAttachment" />
+      <wsdl:output message="tns:newAttachmentResponse" />
+      <wsdl:fault name="SOAPEngineSystemException" message="tns:SOAPEngineSystemException" />
+      <wsdl:fault name="SchemaException" message="tns:SchemaException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AttachmentV1_0WSImplPortBinding" type="tns:AttachmentV1_0Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="newAttachment">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SOAPEngineSystemException">
+        <soap:fault use="literal" name="SOAPEngineSystemException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SchemaException">
+        <soap:fault use="literal" name="SchemaException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AttachmentV1_0WebService">
+    <wsdl:port name="AttachmentV1_0WSImplPort" binding="tns:AttachmentV1_0WSImplPortBinding">
+      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/ECDRS_StubService/AttachmentV1_0WebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

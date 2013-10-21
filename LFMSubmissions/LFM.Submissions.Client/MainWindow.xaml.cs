@@ -53,7 +53,7 @@ namespace LFM.Submissions.Client
                 ApplicationId = ApplicationIdTextBox.Text,
                 Username = "BGUser001",
                 Password = "LandReg001",
-                Payload = "<payload xml goes here>"
+                Payload = File.ReadAllText(@"E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Client\TestXML\Attachment Service Test 8 XmlRequest.xml")
             });
         }
     }

@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LandRegistry\EdrsProcessor.cs" />
+    <Compile Include="LandRegistry\PollEdrsAttachmentProcessor.cs" />
     <Compile Include="LandRegistry\PollEdrsProcessor.cs" />
+    <Compile Include="LandRegistry\SubmitEdrsAttachmentProcessor.cs" />
     <Compile Include="LandRegistry\SubmitEdrsProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

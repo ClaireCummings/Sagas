@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -7,15 +8,24 @@ using NServiceBus.Saga;
 namespace LFM.Submissions.LandRegistry
 {
     public class EdrsProcessor : Saga<EdrsProcessorSagaData>, IAmStartedByMessages<SubmitEdrs>, IAmStartedByMessages<SubmitEdrsAttachment>, 
-             IHandleMessages<PollEdrs>,IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, 
-                IHandleMessages<EdrsOtherReceived>
+        IHandleMessages<PollEdrs>, IHandleMessages<PollEdrsAttachment>,
+    IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
+        IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>
     {
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<SubmitEdrs>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<SubmitEdrsAttachment>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<EdrsAcknowledgementReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsRejectionReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsResultsReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsOtherReceived>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<PollEdrs>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<PollEdrsAttachment>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsAttachmentAcknowledgementReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsAttachmentRejectionReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsAttachmentResultsReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EdrsAttachmentOtherReceived>(s => s.ApplicationId, m => m.ApplicationId);
         }
 
         public void Handle(SubmitEdrs message)
@@ -28,7 +38,10 @@ namespace LFM.Submissions.LandRegistry
         public void Handle(SubmitEdrsAttachment message)
         {
             this.Data.ApplicationId = message.ApplicationId;
+            this.Data.Attachments = new Dictionary<string, EdrsResponse>();
+            this.Data.Attachments.Add(message.AttachmentId,EdrsResponse.None);
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
+            Bus.Send(message);
         }
 
         public void Handle(PollEdrs message)
@@ -74,6 +87,50 @@ namespace LFM.Submissions.LandRegistry
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
             MarkAsComplete();
         }
+
+        public void Handle(EdrsAttachmentAcknowledgementReceived message)
+        {
+            //todo persist the response to the backend database
+            this.Data.Attachments[message.AttachmentId] = EdrsResponse.Acknowledgement;
+
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
+
+            Bus.Defer(TimeSpan.FromSeconds(5),
+                new PollEdrsAttachment
+                {
+                    ApplicationId = message.ApplicationId,
+                    AttachmentId = message.AttachmentId,
+                    Username = message.Username,
+                    Password = message.Password
+                });
+        }
+
+        public void Handle(EdrsAttachmentRejectionReceived message)
+        {
+            this.Data.Attachments[message.AttachmentId] = EdrsResponse.Rejection;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
+        }
+
+        public void Handle(EdrsAttachmentResultsReceived message)
+        {
+            this.Data.Attachments[message.AttachmentId] = EdrsResponse.Results;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
+        }
+
+        public void Handle(EdrsAttachmentOtherReceived message)
+        {
+            this.Data.Attachments[message.AttachmentId] = EdrsResponse.Other;
+            Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
+        }
+
+        public void Handle(PollEdrsAttachment message)
+        {
+            if (this.Data.EdrsResponse == EdrsResponse.None || this.Data.EdrsResponse == EdrsResponse.Acknowledgement)
+            {
+                if (this.Data.Attachments.ContainsKey(message.AttachmentId) && this.Data.Attachments[message.AttachmentId] == EdrsResponse.Acknowledgement)
+                    Bus.Send(message);
+            }
+        }
     }
 
     public class EdrsProcessorSagaData : IContainSagaData
@@ -84,5 +141,7 @@ namespace LFM.Submissions.LandRegistry
 
         public string ApplicationId { get; set; }
         public EdrsResponse EdrsResponse { get; set; }
+
+        public Dictionary<string, EdrsResponse> Attachments { get; set; }
     }
 }

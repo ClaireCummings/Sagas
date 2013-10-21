@@ -50,19 +50,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsAttachmentProcessor.cs">
+      <Link>LandRegistry\PollEdrsAttachmentProcessor.cs</Link>
+    </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsProcessor.cs">
       <Link>LandRegistry\PollEdrsProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\SubmitEdrsAttachmentProcessor.cs">
+      <Link>LandRegistry\SubmitEdrsAttachmentProcessor.cs</Link>
     </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\SubmitEdrsProcessor.cs">
       <Link>LandRegistry\SubmitEdrsProcessor.cs</Link>
     </Compile>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="LandRegistry\EdrsAttachmentSender.cs" />
     <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />
     <Compile Include="LandRegistry\IEdrsSender.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EdrsAttachmentPollService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EdrsAttachmentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\EdrsPollRequestService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +97,32 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Service References\EdrsAttachmentPollService\AttachmentV1_0PollRequestWebService.wsdl" />
+    <None Include="Service References\EdrsAttachmentPollService\LFM.Submissions.GovGateway.EdrsAttachmentPollService.AttachmentResponseV1_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdrsAttachmentPollService\LFM.Submissions.GovGateway.EdrsAttachmentPollService.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdrsAttachmentPollService\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdrsAttachmentPollService\ResponseAttachmentV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdrsAttachmentService\AttachmentV1_0WebService.wsdl" />
+    <None Include="Service References\EdrsAttachmentService\LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentResponseV1_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdrsAttachmentService\LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EdrsAttachmentService\RequestAttachmentV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EdrsAttachmentService\ResponseAttachmentV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EdrsPollRequestService\EDocumentRegistrationV1_0PollRequestWebService.wsdl" />
     <None Include="Service References\EdrsPollRequestService\LFM.Submissions.GovGateway.EdrsPollRequestService.getResponseResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -108,6 +151,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EdrsAttachmentPollService\" />
+    <WCFMetadataStorage Include="Service References\EdrsAttachmentService\" />
     <WCFMetadataStorage Include="Service References\EdrsPollRequestService\" />
     <WCFMetadataStorage Include="Service References\EdrsSubmissionService\" />
   </ItemGroup>
@@ -144,6 +189,30 @@
       <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentPollService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentPollService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EdrsAttachmentPollService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

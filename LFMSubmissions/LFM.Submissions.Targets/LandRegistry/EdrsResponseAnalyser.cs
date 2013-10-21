@@ -56,5 +56,57 @@ namespace LFM.Submissions.GovGateway.LandRegistry
                     return new EdrsOtherReceived { };
             }
         }
+
+        public static IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentService.AttachmentResponseV1_0Type response)
+        {
+            switch (response.GatewayResponse.TypeCode)
+            {
+                case EdrsAttachmentService.ProductResponseCodeContentType.Item10:
+                    return new EdrsAttachmentAcknowledgementReceived
+                    {
+                    };
+
+                case EdrsAttachmentService.ProductResponseCodeContentType.Item20:
+                    return new EdrsAttachmentRejectionReceived
+                    {
+                        RejectionReason = response.GatewayResponse.Rejection.Reason
+                    };
+
+                case EdrsAttachmentService.ProductResponseCodeContentType.Item30:
+                    return new EdrsAttachmentResultsReceived
+                    {
+                        Results = response.GatewayResponse.Results.MessageDetails
+                    };
+
+                default:
+                    return new EdrsAttachmentOtherReceived { };
+            }
+        }
+
+        public static IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentPollService.AttachmentResponseV1_0Type response)
+        {
+            switch (response.GatewayResponse.TypeCode)
+            {
+                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item10:
+                    return new EdrsAttachmentAcknowledgementReceived
+                    {
+                    };
+
+                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item20:
+                    return new EdrsAttachmentRejectionReceived
+                    {
+                        RejectionReason = response.GatewayResponse.Rejection.Reason
+                    };
+
+                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item30:
+                    return new EdrsAttachmentResultsReceived
+                    {
+                        Results = response.GatewayResponse.Results.MessageDetails
+                    };
+
+                default:
+                    return new EdrsAttachmentOtherReceived { };
+            }
+        }
     }
 }

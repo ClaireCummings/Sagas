@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("testxml/edrs%20test%204%20xmlrequest.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("testxml/attachment%20service%20test%208%20xmlrequest.xml")]
 
 

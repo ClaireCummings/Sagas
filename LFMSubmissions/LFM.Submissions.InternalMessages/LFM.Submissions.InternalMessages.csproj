@@ -40,12 +40,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LandRegistry\Commands\PollEdrs.cs" />
+    <Compile Include="LandRegistry\Commands\PollEdrsAttachment.cs" />
     <Compile Include="LandRegistry\Messages\EdrsAcknowledgementReceived.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrs.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrsAttachment.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsAttachmentAcknowledgementReceived.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsAttachmentOtherReceived.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsAttachmentRejectionReceived.cs" />
+    <Compile Include="LandRegistry\Messages\EdrsAttachmentResultsReceived.cs" />
     <Compile Include="LandRegistry\Messages\EdrsOtherReceived.cs" />
     <Compile Include="LandRegistry\Messages\EdrsRejectionReceived.cs" />
     <Compile Include="LandRegistry\Messages\EdrsResultsReceived.cs" />
+    <Compile Include="LandRegistry\Messages\IEdrsAttachmentResponseReceived.cs" />
     <Compile Include="LandRegistry\Messages\IEdrsResponseReceived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

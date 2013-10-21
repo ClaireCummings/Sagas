@@ -31,9 +31,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             
             var responseMessage = EdrsResponseAnalyser.GetEdrsResponse(response);
 
-            responseMessage.ApplicationId = "TestOutOfHours";
-
-           // responseMessage.ApplicationId = message.ApplicationId;
+            responseMessage.ApplicationId = message.ApplicationId;
             responseMessage.Username = message.Username;
             responseMessage.Password = message.Password;
 
