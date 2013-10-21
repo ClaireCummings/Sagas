@@ -48,7 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\EdrsProcessor.cs">
+      <Link>LandRegistry\EdrsProcessor.cs</Link>
+    </Compile>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="LandRegistry\EdrsResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +70,6 @@
       <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LandRegistry\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

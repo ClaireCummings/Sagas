@@ -4,7 +4,7 @@ using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
 
-namespace LFM.Submissions.LandRegistry
+namespace LFM.Submissions.GovGateway.LandRegistry
 {
     public class PollEdrsProcessor : IHandleMessages<PollEdrs>
     {
@@ -22,7 +22,7 @@ namespace LFM.Submissions.LandRegistry
             var response = sender.Poll();
 
             var responseResult = EdrsResponseAnalyser.GetEdrsResponse(response);
-            Console.WriteLine("GovGateway EdrsPollService Responded: " + response.GatewayResponse.Results.MessageDetails + "ApplicationId:" + message.ApplicationId);
+            Console.WriteLine("GovGateway EdrsPollService Responded: " + response.GatewayResponse.Results.MessageDetails);
             Bus.Reply(new EdrsAcknowledgementReceived
             {
                 ApplicationId = message.ApplicationId,

@@ -50,14 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\LFM.Submissions.Code\LandRegistry\EdrsProcessor.cs">
-      <Link>LandRegistry\EdrsProcessor.cs</Link>
+    <Compile Include="..\LFM.Submissions.Backend\LandRegistry\EdrsResponse.cs">
+      <Link>LandRegistry\EdrsResponse.cs</Link>
     </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsProcessor.cs">
       <Link>LandRegistry\PollEdrsProcessor.cs</Link>
     </Compile>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\SubmitEdrsProcessor.cs">
+      <Link>LandRegistry\SubmitEdrsProcessor.cs</Link>
+    </Compile>
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="LandRegistry\EdrsResponse.cs" />
     <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />

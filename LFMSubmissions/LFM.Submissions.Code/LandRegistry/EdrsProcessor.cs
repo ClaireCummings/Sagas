@@ -1,5 +1,4 @@
 ﻿using System;
-using LFM.Submissions.GovGateway.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -22,32 +21,13 @@ namespace LFM.Submissions.LandRegistry
         {
             this.Data.ApplicationId = message.ApplicationId;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name,message.ApplicationId);
-            
-            var sender = new EdrsSender
-            {
-                ApplicationId = message.ApplicationId,
-                Username = message.Username,
-                Password = message.Password,
-                Payload = message.Payload
-            };
-
-            var response = sender.Submit();
-
-            var responseResult = EdrsResponseAnalyser.GetEdrsResponse(response);
-            Console.WriteLine("GovGateway EdrsService Responded: " + response.GatewayResponse.Acknowledgement.MessageDescription + "ApplicatonId: " + message.ApplicationId);
-            Bus.Send(new EdrsAcknowledgementReceived
-            {
-                ApplicationId = message.ApplicationId,
-                Username = message.Username,
-                Password = message.Password
-            });
+            Bus.Send(message);
         }
 
         public void Handle(SubmitEdrsAttachment message)
         {
             this.Data.ApplicationId = message.ApplicationId;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
-
         }
 
         public void Handle(EdrsAcknowledgementReceived message)
