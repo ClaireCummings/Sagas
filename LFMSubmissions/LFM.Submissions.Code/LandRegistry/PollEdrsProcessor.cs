@@ -1,5 +1,6 @@
 ﻿using System;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
+using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
 
 namespace LFM.Submissions.GovGateway.LandRegistry

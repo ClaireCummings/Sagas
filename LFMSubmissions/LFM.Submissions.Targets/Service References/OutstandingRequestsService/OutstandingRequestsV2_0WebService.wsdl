@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://outstandingrequestsv2_0.ws.bg.lr.gov/" name="OutstandingRequestsV2_0WebService" targetNamespace="http://outstandingrequestsv2_0.ws.bg.lr.gov/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:ns3="http://outstandingrequestsv2_0.ws.bg.lr.gov/" xmlns:ns1="http://www.oscre.org/ns/eReg-Final/2011/RequestOutstandingRequestsV2_0" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2011/ResponseOutstandingRequestsV2_0" targetNamespace="http://outstandingrequestsv2_0.ws.bg.lr.gov/">
+      <xsd:import schemaLocation="RequestOutstandingRequestsV2_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2011/RequestOutstandingRequestsV2_0" />
+      <xsd:import schemaLocation="ResponseOutstandingRequestsV2_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2011/ResponseOutstandingRequestsV2_0" />
+      <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string" />
+      <xsd:element name="getOutstandingRequests" type="ns3:getOutstandingRequests" />
+      <xsd:element name="getOutstandingRequestsResponse" type="ns3:getOutstandingRequestsResponse" />
+      <xsd:complexType name="getOutstandingRequests">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="ns1:RequestOutstandingRequestsType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOutstandingRequestsResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="ns2:ResponseOutstandingRequestsType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="getOutstandingRequestsResponse">
+    <part name="parameters" element="tns:getOutstandingRequestsResponse" />
+  </message>
+  <message name="getOutstandingRequests">
+    <part name="parameters" element="tns:getOutstandingRequests" />
+  </message>
+  <message name="SOAPEngineSystemException">
+    <part name="fault" element="tns:SOAPEngineSystemException" />
+  </message>
+  <portType name="OutstandingRequestsV2_0Service">
+    <operation name="getOutstandingRequests">
+      <input message="tns:getOutstandingRequests" />
+      <output message="tns:getOutstandingRequestsResponse" />
+      <fault name="SOAPEngineSystemException" message="tns:SOAPEngineSystemException" />
+    </operation>
+  </portType>
+  <binding name="OutstandingRequestsV2_0WSImplPortBinding" type="tns:OutstandingRequestsV2_0Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getOutstandingRequests">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault use="literal" name="SOAPEngineSystemException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="OutstandingRequestsV2_0WebService">
+    <port name="OutstandingRequestsV2_0WSImplPort" binding="tns:OutstandingRequestsV2_0WSImplPortBinding">
+      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/BGStubService/OutstandingRequestsV2_0WebService" />
+    </port>
+  </service>
+</definitions>

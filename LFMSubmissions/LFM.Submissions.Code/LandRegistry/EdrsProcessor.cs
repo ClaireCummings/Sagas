@@ -58,6 +58,7 @@ namespace LFM.Submissions.LandRegistry
             this.Data.EdrsResponse = EdrsResponse.Acknowledgement;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
 
+            // TODO:  Defer poll according to response expected datetime
             Bus.Defer(TimeSpan.FromSeconds(5),
                 new PollEdrs
                 {
@@ -65,27 +66,32 @@ namespace LFM.Submissions.LandRegistry
                     Username = message.Username,
                     Password = message.Password
                 });
+
+            // Ensure outstanding requests are polled for for this user
+            Bus.Send(new PollForOutstandingRequests {ApplicationId = message.ApplicationId, Username = message.Username, Password = message.Password});
         }
 
         public void Handle(EdrsRejectionReceived message)
         {
             this.Data.EdrsResponse = EdrsResponse.Rejection;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
-            MarkAsComplete();
+            EndProcessing(message.ApplicationId,message.Username);
         }
+
+        
 
         public void Handle(EdrsResultsReceived message)
         {
             this.Data.EdrsResponse = EdrsResponse.Results;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
-            MarkAsComplete();
+            EndProcessing(message.ApplicationId, message.Username);
         }
 
         public void Handle(EdrsOtherReceived message)
         {
             this.Data.EdrsResponse = EdrsResponse.Other;
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name, message.ApplicationId);
-            MarkAsComplete();
+            EndProcessing(message.ApplicationId, message.Username);
         }
 
         public void Handle(EdrsAttachmentAcknowledgementReceived message)
@@ -130,6 +136,16 @@ namespace LFM.Submissions.LandRegistry
                 if (this.Data.Attachments.ContainsKey(message.AttachmentId) && this.Data.Attachments[message.AttachmentId] == EdrsResponse.Acknowledgement)
                     Bus.Send(message);
             }
+        }
+        
+        public void EndProcessing(string applicationId, string username)
+        {
+            MarkAsComplete();
+            Bus.Send(new StopPollingForOutstandingRequests
+                {
+                    ApplicationId = applicationId,
+                    Username = username
+                });
         }
     }
 

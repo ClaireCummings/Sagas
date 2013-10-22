@@ -39,8 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LandRegistry\Commands\StopPollingForOutstandingRequests.cs" />
+    <Compile Include="LandRegistry\Commands\GetOutstandingRequests.cs" />
+    <Compile Include="LandRegistry\Commands\IOutstandingRequest.cs" />
     <Compile Include="LandRegistry\Commands\PollEdrs.cs" />
     <Compile Include="LandRegistry\Commands\PollEdrsAttachment.cs" />
+    <Compile Include="LandRegistry\Commands\PollForOutstandingRequests.cs" />
     <Compile Include="LandRegistry\Messages\EdrsAcknowledgementReceived.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrs.cs" />
     <Compile Include="LandRegistry\Commands\SubmitEdrsAttachment.cs" />
@@ -53,6 +57,7 @@
     <Compile Include="LandRegistry\Messages\EdrsResultsReceived.cs" />
     <Compile Include="LandRegistry\Messages\IEdrsAttachmentResponseReceived.cs" />
     <Compile Include="LandRegistry\Messages\IEdrsResponseReceived.cs" />
+    <Compile Include="LandRegistry\Messages\OutstandingRequestsRejectionReceived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

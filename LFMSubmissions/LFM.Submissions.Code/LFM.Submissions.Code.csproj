@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LandRegistry\EdrsProcessor.cs" />
+    <Compile Include="LandRegistry\OutstandingRequestsProcessor.cs" />
     <Compile Include="LandRegistry\PollEdrsAttachmentProcessor.cs" />
     <Compile Include="LandRegistry\PollEdrsProcessor.cs" />
     <Compile Include="LandRegistry\SubmitEdrsAttachmentProcessor.cs" />

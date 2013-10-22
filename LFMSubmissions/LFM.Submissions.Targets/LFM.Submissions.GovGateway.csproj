@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\OutstandingRequestsProcessor.cs">
+      <Link>LandRegistry\OutstandingRequestsProcessor.cs</Link>
+    </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsAttachmentProcessor.cs">
       <Link>LandRegistry\PollEdrsAttachmentProcessor.cs</Link>
     </Compile>
@@ -68,6 +71,8 @@
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />
     <Compile Include="LandRegistry\IEdrsSender.cs" />
+    <Compile Include="LandRegistry\OutstandingRequestsResponseAnalyser.cs" />
+    <Compile Include="LandRegistry\OutstandingRequestsSender.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\EdrsAttachmentPollService\Reference.cs">
@@ -86,6 +91,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\EdrsSubmissionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OutstandingRequestsService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -149,12 +159,26 @@
     <None Include="Service References\EdrsSubmissionService\ResponseApplicationToChangeRegisterV1_0.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\OutstandingRequestsService\LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutstandingRequestsService\LFM.Submissions.GovGateway.OutstandingRequestsService.ResponseOutstandingRequestsType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OutstandingRequestsService\OutstandingRequestsV2_0WebService.wsdl" />
+    <None Include="Service References\OutstandingRequestsService\RequestOutstandingRequestsV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OutstandingRequestsService\ResponseOutstandingRequestsV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\EdrsAttachmentPollService\" />
     <WCFMetadataStorage Include="Service References\EdrsAttachmentService\" />
     <WCFMetadataStorage Include="Service References\EdrsPollRequestService\" />
     <WCFMetadataStorage Include="Service References\EdrsSubmissionService\" />
+    <WCFMetadataStorage Include="Service References\OutstandingRequestsService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EdrsPollRequestService\configuration91.svcinfo" />
@@ -210,6 +234,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EdrsAttachmentPollService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutstandingRequestsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutstandingRequestsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OutstandingRequestsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
