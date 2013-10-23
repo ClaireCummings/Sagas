@@ -30,9 +30,13 @@ namespace LFM.Submissions.GovGateway.LandRegistry
                        outstandingRequests.Add(new PollEdrs {ApplicationId = messageId});
                         break;
                     case 88:
-
+                       outstandingRequests.Add(new PollEdrsAttachment {AttachmentId = messageId});
+                        break;
                     case 89:
+                        outstandingRequests.Add(new PollCorrespondence {MessageId = messageId});
+                        break;
                     case 90:
+                        //outstandingRequest.Add(new PollEarlyCompletion {ApplicationId = messageId});
                         break;
                 }
             }

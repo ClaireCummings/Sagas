@@ -1,5 +1,4 @@
 ﻿using System.Security.Cryptography.X509Certificates;
-using System.ServiceModel;
 
 namespace LFM.Submissions.GovGateway.LandRegistry
 {

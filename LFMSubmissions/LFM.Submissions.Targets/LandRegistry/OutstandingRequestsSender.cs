@@ -13,6 +13,13 @@ namespace LFM.Submissions.GovGateway.LandRegistry
         public string Username { get; set; }
         public string Password { get; set; }
         
+        /// <summary>
+        /// TODO: Design consideration -- need to find out exactly what a New response is.  
+        /// If it is defined as items not already picked up from this (OutstandingRequests) service then we are in trouble if the responses get lost on 
+        /// the way back to us then how do we recover????
+        /// Hopefully New Responses are those which we have already requested from the individual poll services in which case we are OK.
+        /// </summary>
+        /// <returns></returns>
         public ResponseOutstandingRequestsType Query()
         {
             var request = new OutstandingRequestsService.RequestOutstandingRequestsType

@@ -1,4 +1,3 @@
-
 using LFM.Submissions.Config;
 
 namespace LFM.Submissions.Backend

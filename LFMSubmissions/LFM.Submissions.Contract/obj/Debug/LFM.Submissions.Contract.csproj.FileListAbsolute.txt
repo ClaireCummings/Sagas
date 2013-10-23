@@ -1,0 +1,5 @@
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Contract\bin\Debug\LFM.Submissions.Contract.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Contract\bin\Debug\LFM.Submissions.Contract.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Contract\obj\Debug\LFM.Submissions.Contract.csprojResolveAssemblyReference.cache
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Contract\obj\Debug\LFM.Submissions.Contract.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Contract\obj\Debug\LFM.Submissions.Contract.pdb

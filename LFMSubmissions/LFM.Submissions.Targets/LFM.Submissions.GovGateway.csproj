@@ -53,6 +53,9 @@
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\OutstandingRequestsProcessor.cs">
       <Link>LandRegistry\OutstandingRequestsProcessor.cs</Link>
     </Compile>
+    <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollCorrespondenceProcessor.cs">
+      <Link>LandRegistry\PollCorrespondenceProcessor.cs</Link>
+    </Compile>
     <Compile Include="..\LFM.Submissions.Code\LandRegistry\PollEdrsAttachmentProcessor.cs">
       <Link>LandRegistry\PollEdrsAttachmentProcessor.cs</Link>
     </Compile>
@@ -66,6 +69,9 @@
       <Link>LandRegistry\SubmitEdrsProcessor.cs</Link>
     </Compile>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="LandRegistry\CorrespondencePollResponseAnalyser.cs" />
+    <Compile Include="LandRegistry\CorrespondencePollSender.cs" />
+    <Compile Include="LandRegistry\CorrespondenceSentProcessor.cs" />
     <Compile Include="LandRegistry\EdrsAttachmentSender.cs" />
     <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
@@ -75,6 +81,11 @@
     <Compile Include="LandRegistry\OutstandingRequestsSender.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CorrespondenceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\EdrsAttachmentPollService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +118,19 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Service References\CorrespondenceService\CorrespondenceV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CorrespondenceService\CorrespondenceV1_0PollRequestWebService.wsdl" />
+    <None Include="Service References\CorrespondenceService\LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CorrespondenceService\LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CorrespondenceService\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EdrsAttachmentPollService\AttachmentV1_0PollRequestWebService.wsdl" />
     <None Include="Service References\EdrsAttachmentPollService\LFM.Submissions.GovGateway.EdrsAttachmentPollService.AttachmentResponseV1_0Type.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -174,6 +198,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CorrespondenceService\" />
     <WCFMetadataStorage Include="Service References\EdrsAttachmentPollService\" />
     <WCFMetadataStorage Include="Service References\EdrsAttachmentService\" />
     <WCFMetadataStorage Include="Service References\EdrsPollRequestService\" />
@@ -208,6 +233,10 @@
     <ProjectReference Include="..\LFM.Submissions.Config\LFM.Submissions.Config.csproj">
       <Project>{d756f755-c2c9-48a5-8dad-82633836538b}</Project>
       <Name>LFM.Submissions.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.Contract\LFM.Submissions.Contract.csproj">
+      <Project>{1a2a8cba-0f89-4c03-afca-750b61e1ad2f}</Project>
+      <Name>LFM.Submissions.Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.InternalMessages\LFM.Submissions.InternalMessages.csproj">
       <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
@@ -246,6 +275,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\OutstandingRequestsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorrespondenceService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorrespondenceService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorrespondenceService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

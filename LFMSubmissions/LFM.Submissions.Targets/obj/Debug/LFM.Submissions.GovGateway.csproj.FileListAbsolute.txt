@@ -17,3 +17,5 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.Go
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.GovGateway.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Config.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Config.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.pdb

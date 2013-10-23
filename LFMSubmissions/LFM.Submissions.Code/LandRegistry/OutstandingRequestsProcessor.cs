@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
-using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
 using NServiceBus.Saga;
 
@@ -54,11 +53,11 @@ namespace LFM.Submissions.GovGateway.LandRegistry
 
             foreach (var outstandingRequest in OutstandingRequestsResponseAnalyser.GetOutstandingRequests(response))
             {
-                if (this.Data.OngoingApplications.Contains(outstandingRequest.MessageId))
+                if (this.Data.OngoingApplications.Contains(outstandingRequest.MessageId) || outstandingRequest.GetType() == typeof(PollCorrespondence))
                 {
                     outstandingRequest.Username = message.Username;
                     outstandingRequest.Password = message.Password;
-                    Bus.Send(outstandingRequest);
+                    Bus.SendLocal(outstandingRequest);
                 }
             }
 

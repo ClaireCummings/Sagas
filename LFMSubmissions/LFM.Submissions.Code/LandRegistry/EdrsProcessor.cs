@@ -48,7 +48,7 @@ namespace LFM.Submissions.LandRegistry
         {
             if (this.Data.EdrsResponse == EdrsResponse.Acknowledgement)
             {
-                Bus.Send(message);
+               Bus.Send(message);
             }
         }
 
