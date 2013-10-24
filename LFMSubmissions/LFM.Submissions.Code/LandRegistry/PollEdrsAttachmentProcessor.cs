@@ -34,7 +34,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             responseMessage.Username = message.Username;
             responseMessage.Password = message.Password;
 
-            Bus.Reply(responseMessage);
+            Bus.Send(responseMessage);
         }
     }
 }

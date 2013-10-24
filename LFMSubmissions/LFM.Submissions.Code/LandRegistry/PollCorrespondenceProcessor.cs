@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using LFM.Submissions.Contract.NotificationsService;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
-using NServiceBus;
 using NServiceBus.Saga;
 
 
@@ -13,27 +10,18 @@ namespace LFM.Submissions.GovGateway.LandRegistry
     /// -- actually I don't think we'll need the CorrespondenceSent message in practice as the live outstanding requests service
     /// won't return the same item of correspondance if we tick "ShowOnlyNewResponses".
     /// </summary>
-    public class PollCorrespondenceProcessor : Saga<PollCorrespondenceSagaData>, IAmStartedByMessages<PollCorrespondence>, IHandleMessages<CorrespondenceSent>
+    public class PollCorrespondenceProcessor : Saga<PollCorrespondenceSagaData>, IAmStartedByMessages<PollCorrespondence>
     {
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<PollCorrespondence>(s => s.Username, m=> m.Username);
-            ConfigureMapping<CorrespondenceSent>(s => s.Username, m => m.Username);
 
         }
         public void Handle(PollCorrespondence message)
         {
             this.Data.Username = message.Username;
 
-            if(this.Data.CorrespondencesReceived == null)
-                this.Data.CorrespondencesReceived = new Dictionary<string, bool>();
-            
-            if(!this.Data.CorrespondencesReceived.ContainsKey(message.MessageId))
-                this.Data.CorrespondencesReceived.Add(message.MessageId,false);
-
-            if (this.Data.CorrespondencesReceived[message.MessageId])
-                return;
-            
+           
             Console.WriteLine("Gateway received message PollCorrespondence MessageId: " + message.MessageId);
 
             var sender = new CorrespondencePollSender
@@ -55,14 +43,6 @@ namespace LFM.Submissions.GovGateway.LandRegistry
                 Bus.Publish(responseMessage);                       
             }
         }
-
-        public void Handle(CorrespondenceSent message)
-        {
-            Console.WriteLine("Gateway received {0}", message.GetType().Name);
-            if(this.Data.CorrespondencesReceived.ContainsKey(message.CorrespondenceId))
-                this.Data.CorrespondencesReceived[message.CorrespondenceId] = true;
-            //todo otherwise raise an exception we've sent an untracked message
-        }
     }
 
     public class PollCorrespondenceSagaData : IContainSagaData
@@ -72,6 +52,5 @@ namespace LFM.Submissions.GovGateway.LandRegistry
         public string OriginalMessageId { get; set; }
 
         public string Username { get; set; }
-        public Dictionary<string, bool> CorrespondencesReceived { get; set; }
-    }
+  }
 }

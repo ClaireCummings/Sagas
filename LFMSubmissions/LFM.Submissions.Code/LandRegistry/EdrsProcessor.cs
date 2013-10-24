@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LFM.Submissions.Contract.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -9,8 +10,10 @@ namespace LFM.Submissions.LandRegistry
 {
     public class EdrsProcessor : Saga<EdrsProcessorSagaData>, IAmStartedByMessages<SubmitEdrs>, IAmStartedByMessages<SubmitEdrsAttachment>, 
         IHandleMessages<PollEdrs>, IHandleMessages<PollEdrsAttachment>,
-    IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
-        IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>
+        IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
+        IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>,
+        IHandleMessages<EarlyCompletionReceived>
+
     {
         public override void ConfigureHowToFindSaga()
         {
@@ -26,6 +29,7 @@ namespace LFM.Submissions.LandRegistry
             ConfigureMapping<EdrsAttachmentRejectionReceived>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<EdrsAttachmentResultsReceived>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<EdrsAttachmentOtherReceived>(s => s.ApplicationId, m => m.ApplicationId);
+            ConfigureMapping<EarlyCompletionReceived>(s => s.ApplicationId, m => m.ApplicationMessageId);
         }
 
         public void Handle(SubmitEdrs message)
@@ -101,6 +105,7 @@ namespace LFM.Submissions.LandRegistry
 
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
 
+            // TODO: Use expected response datetime in defer
             Bus.Defer(TimeSpan.FromSeconds(5),
                 new PollEdrsAttachment
                 {
@@ -146,6 +151,13 @@ namespace LFM.Submissions.LandRegistry
                     ApplicationId = applicationId,
                     Username = username
                 });
+        }
+
+        public void Handle(EarlyCompletionReceived message)
+        {
+            Console.WriteLine("LandRegistry recieved EarlyCompletion for ApplicationID: " + message.ApplicationMessageId);
+            // TODO:  Publish to NotificationService to Email the dispatch doc?  
+            // Early completion does not end the Edrs Saga -- still need to await the actual Results
         }
     }
 

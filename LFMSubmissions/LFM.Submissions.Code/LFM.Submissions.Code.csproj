@@ -45,6 +45,7 @@
     <Compile Include="LandRegistry\EdrsProcessor.cs" />
     <Compile Include="LandRegistry\OutstandingRequestsProcessor.cs" />
     <Compile Include="LandRegistry\PollCorrespondenceProcessor.cs" />
+    <Compile Include="LandRegistry\PollEarlyCompletionProcessor.cs" />
     <Compile Include="LandRegistry\PollEdrsAttachmentProcessor.cs" />
     <Compile Include="LandRegistry\PollEdrsProcessor.cs" />
     <Compile Include="LandRegistry\SubmitEdrsAttachmentProcessor.cs" />
@@ -52,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LFM.Submissions.Contract\LFM.Submissions.Contract.csproj">
+      <Project>{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}</Project>
+      <Name>LFM.Submissions.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.InternalMessages\LFM.Submissions.InternalMessages.csproj">
       <Project>{7a568ab9-7268-47d5-81c3-84af8d64048c}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>

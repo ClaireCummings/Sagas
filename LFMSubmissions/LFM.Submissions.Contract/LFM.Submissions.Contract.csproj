@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LandRegistry\CorrespondenceReceived.cs" />
-    <Compile Include="NotificationsService\CorrespondenceSent.cs" />
+    <Compile Include="LandRegistry\EarlyCompletionReceived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

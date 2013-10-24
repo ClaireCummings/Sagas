@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LandRegistry\Commands\PollCorrespondence.cs" />
+    <Compile Include="LandRegistry\Commands\PollEarlyCompletion.cs" />
     <Compile Include="LandRegistry\Commands\StopPollingForOutstandingRequests.cs" />
     <Compile Include="LandRegistry\Commands\GetOutstandingRequests.cs" />
     <Compile Include="LandRegistry\Commands\IOutstandingRequest.cs" />

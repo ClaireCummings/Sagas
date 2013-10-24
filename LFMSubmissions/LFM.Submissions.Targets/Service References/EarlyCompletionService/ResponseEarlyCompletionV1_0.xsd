@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.oscre.org/ns/eReg-Final/2012/ResponseEarlyCompletionV1_0" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.oscre.org/ns/eReg-Final/2012/ResponseEarlyCompletionV1_0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ResponseEarlyCompletionV1_0" type="ResponseEarlyCompletionV1_0Type" />
+  <xs:complexType name="ResponseEarlyCompletionV1_0Type">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="GatewayResponse" type="GatewayResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GatewayResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="TypeCode" type="ProductResponseCodeContentType">
+        <xs:annotation>
+          <xs:documentation>A character string (letters, figures or symbols)
+						that for brevity and/or language independence may be used to
+						represent or replace a definitive value or text of an Attribute
+						together with relevant supplementary information.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="EarlyCompletion" type="EarlyCompletionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EarlyCompletionType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ApplicationMessageId" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExternalReference" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ABR" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DespatchDocument" type="AttachmentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="XmlRegisterData" type="XmlRegisterDataType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AttachmentType">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="filename" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>This is not required for requests
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="format" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>The format of the binary content.Note: A file
+							format is a particular way to encode information for storage in a
+							computer file. May be identified by the section of its name
+							following the final period, e.g., gif, pdf, jpg.
+						</xs:documentation>
+            <xs:documentation>This is not required for requests
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="XmlRegisterDataType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="TitleNumber" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PropertyRegister" type="RegisterType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProprietorshipRegister" type="RegisterType">
+        <xs:annotation>
+          <xs:documentation>
+						AS part of RFC 11583/1 RES will be excluding
+						1925
+						Act Cautions as they cannot be converted
+						into Intelligent Register
+						format. Hence all
+						Title Numbers will have an A and B register.
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ChargesRegister" type="RegisterType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DistrictDetails" type="DistrictDetailsType" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="RegisterEntry" type="RegisterEntryType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Schedule" type="ScheduleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DistrictDetailsType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntryText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterEntryType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="EntryNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntryDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EntryType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="EntryText" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScheduleType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ScheduleType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="ScheduleEntry" type="RegisterEntryType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ProductResponseCodeContentType">
+    <xs:restriction base="xs:normalizedString">
+      <xs:enumeration value="30">
+        <xs:annotation>
+          <xs:documentation>Result</xs:documentation>
+          <xs:documentation>-</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

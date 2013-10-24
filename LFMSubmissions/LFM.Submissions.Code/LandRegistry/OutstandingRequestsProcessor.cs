@@ -53,15 +53,13 @@ namespace LFM.Submissions.GovGateway.LandRegistry
 
             foreach (var outstandingRequest in OutstandingRequestsResponseAnalyser.GetOutstandingRequests(response))
             {
-                if (this.Data.OngoingApplications.Contains(outstandingRequest.MessageId) || outstandingRequest.GetType() == typeof(PollCorrespondence))
-                {
-                    outstandingRequest.Username = message.Username;
-                    outstandingRequest.Password = message.Password;
-                    Bus.SendLocal(outstandingRequest);
-                }
+                outstandingRequest.Username = message.Username;
+                outstandingRequest.Password = message.Password;
+                Bus.SendLocal(outstandingRequest);
             }
 
-            Bus.Defer(TimeSpan.FromSeconds(30),
+            // TODO:  Configure the polling interval - recommended is 2 hours
+            Bus.Defer(TimeSpan.FromSeconds(20),
                       new GetOutstandingRequests {RequestId = Guid.NewGuid().ToString(), Username = message.Username, Password = message.Password});
         }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="faba30d3-f852-41ac-a5b9-e1b26954963f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EarlyCompletionV1_0PollRequestWebService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EarlyCompletionV1_0PollRequestWebService.wsdl" MetadataType="Wsdl" ID="550b236f-cc3a-4815-bb95-22abf0b7364a" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EarlyCompletionV1_0PollRequestWebService/WEB-INF/wsdl/EarlyCompletionV1_0PollRequestService.wsdl" />
+    <MetadataFile FileName="PollRequest.xsd" MetadataType="Schema" ID="c09e4369-f78e-410c-b2ec-be452dfa3b25" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EarlyCompletionV1_0PollRequestWebService/WEB-INF/wsdl/PollRequest.xsd" />
+    <MetadataFile FileName="ResponseEarlyCompletionV1_0.xsd" MetadataType="Schema" ID="71d03f48-97cf-418e-b2e5-1e74213a4d96" SourceId="1" SourceUrl="https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService/EarlyCompletionV1_0PollRequestWebService/WEB-INF/wsdl/ResponseEarlyCompletionV1_0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

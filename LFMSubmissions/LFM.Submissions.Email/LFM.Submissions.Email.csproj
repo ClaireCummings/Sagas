@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="NotificationsService\CorrespondenceReceivedProcessor.cs" />
+    <Compile Include="NotificationsService\EarlyCompletionReceivedProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

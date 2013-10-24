@@ -36,7 +36,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
                         outstandingRequests.Add(new PollCorrespondence {MessageId = messageId});
                         break;
                     case 90:
-                        //outstandingRequest.Add(new PollEarlyCompletion {ApplicationId = messageId});
+                        outstandingRequests.Add(new PollEarlyCompletion {MessageId = messageId});
                         break;
                 }
             }
