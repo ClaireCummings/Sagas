@@ -2,11 +2,13 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Ba
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Backend.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Backend.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Config.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Contract.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.InternalMessages.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Core.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.exe
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Config.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Contract.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.InternalMessages.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.xml
@@ -17,5 +19,3 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.x
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.pdb
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Contract.dll
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Contract.pdb

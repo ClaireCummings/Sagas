@@ -15,7 +15,6 @@ namespace LFM.Submissions.GovGateway.LandRegistry
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<PollCorrespondence>(s => s.Username, m=> m.Username);
-
         }
         public void Handle(PollCorrespondence message)
         {

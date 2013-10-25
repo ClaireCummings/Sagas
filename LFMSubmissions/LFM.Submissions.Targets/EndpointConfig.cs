@@ -16,7 +16,6 @@ namespace LFM.Submissions.GovGateway
 	    public void Init()
 	    {
             var builder = new ContainerBuilder();
-          // builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());
             builder.RegisterModule<GovGatewayModule>();
 
             Configure.With()
