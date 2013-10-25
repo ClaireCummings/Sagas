@@ -19,3 +19,10 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Co
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Config.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\Autofac.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\Autofac.Configuration.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\NServiceBus.ObjectBuilder.Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\Autofac.Configuration.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\NServiceBus.ObjectBuilder.Autofac.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml

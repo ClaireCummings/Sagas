@@ -29,3 +29,8 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.GovGateway.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\FakeItEasy.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\FakeItEasy.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\Autofac.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.ObjectBuilder.Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.ObjectBuilder.Autofac.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml

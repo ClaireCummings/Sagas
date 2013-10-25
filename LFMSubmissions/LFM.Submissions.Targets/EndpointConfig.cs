@@ -1,4 +1,6 @@
 
+using Autofac;
+using Autofac.Features.ResolveAnything;
 using LFM.Submissions.Config;
 
 namespace LFM.Submissions.GovGateway
@@ -13,7 +15,13 @@ namespace LFM.Submissions.GovGateway
     {
 	    public void Init()
 	    {
-	        Configure.With().MyMessageConventions();
+            var builder = new ContainerBuilder();
+          // builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());
+            builder.RegisterModule<GovGatewayModule>();
+
+            Configure.With()
+                .MyMessageConventions()
+                .AutofacBuilder(builder.Build());
 	    }
     }
 }
