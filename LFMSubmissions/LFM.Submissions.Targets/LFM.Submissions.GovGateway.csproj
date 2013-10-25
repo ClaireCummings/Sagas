@@ -80,6 +80,7 @@
     <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />
+    <Compile Include="LandRegistry\IEdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\IEdrsSender.cs" />
     <Compile Include="LandRegistry\OutstandingRequestsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\OutstandingRequestsSender.cs" />

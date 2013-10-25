@@ -19,6 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Email", "LF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Contract", "LFM.Submissions.Contract\LFM.Submissions.Contract.csproj", "{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.LandRegistry.UnitTests", "LFM.Submissions.LandRegistry.UnitTests\LFM.Submissions.LandRegistry.UnitTests.csproj", "{CE32A04D-0A6B-4F69-AA97-6A11AA029E2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6DE2A6D7-9CFA-4EEC-A73B-ADA77E94AEC5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +63,10 @@ Global
 		{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE32A04D-0A6B-4F69-AA97-6A11AA029E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE32A04D-0A6B-4F69-AA97-6A11AA029E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE32A04D-0A6B-4F69-AA97-6A11AA029E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE32A04D-0A6B-4F69-AA97-6A11AA029E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

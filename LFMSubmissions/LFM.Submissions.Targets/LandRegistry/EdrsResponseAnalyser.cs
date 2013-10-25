@@ -2,9 +2,9 @@
 
 namespace LFM.Submissions.GovGateway.LandRegistry
 {
-    public static class EdrsResponseAnalyser
+    public class EdrsResponseAnalyser : IEdrsResponseAnalyser
     {
-        public static IEdrsResponseReceived GetEdrsResponse(EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type response)
+        public IEdrsResponseReceived GetEdrsResponse(EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type response)
         {
             switch (response.GatewayResponse.TypeCode)
             {
@@ -31,7 +31,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             }
         }
 
-        public static IEdrsResponseReceived GetEdrsResponse(EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type response)
+        public IEdrsResponseReceived GetEdrsResponse(EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type response)
         {
             switch (response.GatewayResponse.TypeCode)
             {
@@ -57,7 +57,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             }
         }
 
-        public static IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentService.AttachmentResponseV1_0Type response)
+        public IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentService.AttachmentResponseV1_0Type response)
         {
             switch (response.GatewayResponse.TypeCode)
             {
@@ -83,7 +83,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
             }
         }
 
-        public static IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentPollService.AttachmentResponseV1_0Type response)
+        public IEdrsAttachmentResponseReceived GetEdrsResponse(EdrsAttachmentPollService.AttachmentResponseV1_0Type response)
         {
             switch (response.GatewayResponse.TypeCode)
             {

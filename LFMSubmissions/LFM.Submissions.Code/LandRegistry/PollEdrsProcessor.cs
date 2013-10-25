@@ -8,6 +8,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
     public class PollEdrsProcessor : IHandleMessages<PollEdrs>
     {
         public IBus Bus { get; set; }
+        public IEdrsResponseAnalyser EdrsResponseAnalyser { get; set; }
 
         public void Handle(PollEdrs message)
         {

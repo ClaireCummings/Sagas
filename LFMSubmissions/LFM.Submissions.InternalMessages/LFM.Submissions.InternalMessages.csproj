@@ -59,6 +59,7 @@
     <Compile Include="LandRegistry\Messages\EdrsResultsReceived.cs" />
     <Compile Include="LandRegistry\Messages\IEdrsAttachmentResponseReceived.cs" />
     <Compile Include="LandRegistry\Messages\IEdrsResponseReceived.cs" />
+    <Compile Include="LandRegistry\Messages\InvalidEdrsPayload.cs" />
     <Compile Include="LandRegistry\Messages\OutstandingRequestsRejectionReceived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

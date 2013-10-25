@@ -11,6 +11,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
     public class PollEdrsAttachmentProcessor : IHandleMessages<PollEdrsAttachment>
     {
         public IBus Bus { get; set; }
+        public IEdrsResponseAnalyser EdrsResponseAnalyser { get; set; }
 
         public void Handle(PollEdrsAttachment message)
         {

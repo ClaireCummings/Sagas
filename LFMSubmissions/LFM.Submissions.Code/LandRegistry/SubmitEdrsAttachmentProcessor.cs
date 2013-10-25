@@ -7,6 +7,8 @@ namespace LFM.Submissions.GovGateway.LandRegistry
     public class SubmitEdrsAttachmentProcessor : IHandleMessages<SubmitEdrsAttachment>
     {
         public IBus Bus { get; set; }
+        public IEdrsSender EdrsSender { get; set; }
+        public IEdrsResponseAnalyser EdrsResponseAnalyser { get; set; }
 
         public void Handle(SubmitEdrsAttachment message)
         {

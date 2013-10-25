@@ -12,15 +12,9 @@ namespace LFM.Submissions.GovGateway.LandRegistry
         public EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type Submit()
         {
             EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type request;
-            try
-            {
-                 request =
-                    ObjectSerializer.XmlDeserializeFromString<EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type>(Payload);
-            }
-            catch 
-            {
-                return null;
-            }
+
+            request =
+                ObjectSerializer.XmlDeserializeFromString<EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type>(Payload);
             
             request.MessageId = ApplicationId;
 

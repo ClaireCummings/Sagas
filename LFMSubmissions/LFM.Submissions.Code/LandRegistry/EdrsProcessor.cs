@@ -12,7 +12,7 @@ namespace LFM.Submissions.LandRegistry
         IHandleMessages<PollEdrs>, IHandleMessages<PollEdrsAttachment>,
         IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
         IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>,
-        IHandleMessages<EarlyCompletionReceived>
+        IHandleMessages<EarlyCompletionReceived>, IHandleMessages<InvalidEdrsPayload> 
 
     {
         public override void ConfigureHowToFindSaga()
@@ -30,6 +30,7 @@ namespace LFM.Submissions.LandRegistry
             ConfigureMapping<EdrsAttachmentResultsReceived>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<EdrsAttachmentOtherReceived>(s => s.ApplicationId, m => m.ApplicationId);
             ConfigureMapping<EarlyCompletionReceived>(s => s.ApplicationId, m => m.ApplicationMessageId);
+            ConfigureMapping<InvalidEdrsPayload>(s => s.ApplicationId, m => m.ApplicationId);
         }
 
         public void Handle(SubmitEdrs message)
@@ -158,6 +159,12 @@ namespace LFM.Submissions.LandRegistry
             Console.WriteLine("LandRegistry recieved EarlyCompletion for ApplicationID: " + message.ApplicationMessageId);
             // TODO:  Publish to NotificationService to Email the dispatch doc?  
             // Early completion does not end the Edrs Saga -- still need to await the actual Results
+        }
+
+        public void Handle(InvalidEdrsPayload message)
+        {
+            Console.WriteLine("Application {0} has an invalid payload", message.ApplicationId);
+            MarkAsComplete();
         }
     }
 
