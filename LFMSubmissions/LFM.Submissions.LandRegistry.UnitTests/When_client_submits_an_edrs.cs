@@ -1,14 +1,12 @@
-﻿using System;
-using LFM.Submissions.GovGateway.EdrsSubmissionService;
-using LFM.Submissions.GovGateway.LandRegistry;
+﻿using LFM.Submissions.AgentComms.LandRegistry;
+using LFM.Submissions.AgentServices.EdrsSubmissionService;
+using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
-using Xunit;
 using NServiceBus.Testing;
 using FakeItEasy;
 using Xunit.Extensions;
-using Ploeh.AutoFixture;
 
 namespace LFM.Submissions.LandRegistry.UnitTests
 {

@@ -1,7 +1,4 @@
-﻿using EdrsService = LFM.Submissions.GovGateway.EdrsSubmissionService;
-using EdrsPollService = LFM.Submissions.GovGateway.EdrsPollRequestService;
-
-namespace LFM.Submissions.GovGateway.LandRegistry
+﻿namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public interface IEdrsSender
     {
@@ -10,7 +7,7 @@ namespace LFM.Submissions.GovGateway.LandRegistry
         string Password { get; set; }
         string Payload { get; set; }
 
-        EdrsService.ResponseApplicationToChangeRegisterV1_0Type Submit();
-        EdrsPollService.ResponseApplicationToChangeRegisterV1_0Type Poll();
+        EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type Submit();
+        EdrsPollRequestService.ResponseApplicationToChangeRegisterV1_0Type Poll();
     }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LFM.Submissions.GovGateway.OutstandingRequestsService;
+﻿using LFM.Submissions.AgentServices.OutstandingRequestsService;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class OutstandingRequestsSender
     {

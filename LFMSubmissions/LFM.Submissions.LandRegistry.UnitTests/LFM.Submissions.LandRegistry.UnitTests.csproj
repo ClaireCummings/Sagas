@@ -80,6 +80,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LFM.Submissions.AgentComms\LFM.Submissions.AgentComms.csproj">
+      <Project>{e0a0674c-bc7a-4260-97e8-6ceef68efdb7}</Project>
+      <Name>LFM.Submissions.AgentComms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.Backend\LFM.Submissions.Backend.csproj">
       <Project>{C76A7E38-DA05-4533-936A-25CA9990CBC9}</Project>
       <Name>LFM.Submissions.Backend</Name>
@@ -88,9 +92,9 @@
       <Project>{7A568AB9-7268-47D5-81C3-84AF8D64048C}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LFM.Submissions.Targets\LFM.Submissions.GovGateway.csproj">
+    <ProjectReference Include="..\LFM.Submissions.Targets\LFM.Submissions.AgentServices.csproj">
       <Project>{3182D968-1616-405B-844A-7F24FA717AA6}</Project>
-      <Name>LFM.Submissions.GovGateway</Name>
+      <Name>LFM.Submissions.AgentServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

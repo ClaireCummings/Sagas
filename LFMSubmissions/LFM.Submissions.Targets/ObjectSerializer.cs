@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace LFM.Submissions.GovGateway
+namespace LFM.Submissions.AgentServices
 {
     /// <summary>
     /// Serialization and Deserialization tasks for an ojbect.

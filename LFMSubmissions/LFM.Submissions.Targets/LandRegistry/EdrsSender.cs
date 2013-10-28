@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class EdrsSender : IEdrsSender
     {

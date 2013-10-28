@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.GovGateway.EdrsAttachmentService {
+namespace LFM.Submissions.AgentServices.EdrsAttachmentService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -21,10 +21,10 @@ namespace LFM.Submissions.GovGateway.EdrsAttachmentService {
         [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SchemaException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse newAttachment(LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest request);
+        LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse newAttachment(LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse> newAttachmentAsync(LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse> newAttachmentAsync(LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest request);
     }
     
     /// <remarks/>
@@ -885,12 +885,12 @@ namespace LFM.Submissions.GovGateway.EdrsAttachmentService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://attachmentv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Type arg0;
+        public LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Type arg0;
         
         public newAttachmentRequest() {
         }
         
-        public newAttachmentRequest(LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Type arg0) {
+        public newAttachmentRequest(LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Type arg0) {
             this.arg0 = arg0;
         }
     }
@@ -903,23 +903,23 @@ namespace LFM.Submissions.GovGateway.EdrsAttachmentService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://attachmentv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentResponseV1_0Type @return;
+        public LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentResponseV1_0Type @return;
         
         public newAttachmentResponse() {
         }
         
-        public newAttachmentResponse(LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentResponseV1_0Type @return) {
+        public newAttachmentResponse(LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentResponseV1_0Type @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface AttachmentV1_0ServiceChannel : LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service, System.ServiceModel.IClientChannel {
+    public interface AttachmentV1_0ServiceChannel : LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AttachmentV1_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service>, LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service {
+    public partial class AttachmentV1_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service>, LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service {
         
         public AttachmentV1_0ServiceClient() {
         }
@@ -941,26 +941,26 @@ namespace LFM.Submissions.GovGateway.EdrsAttachmentService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service.newAttachment(LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest request) {
+        LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service.newAttachment(LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest request) {
             return base.Channel.newAttachment(request);
         }
         
-        public LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentResponseV1_0Type newAttachment(LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Type arg0) {
-            LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest inValue = new LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest();
+        public LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentResponseV1_0Type newAttachment(LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Type arg0) {
+            LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest inValue = new LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse retVal = ((LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service)(this)).newAttachment(inValue);
+            LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse retVal = ((LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service)(this)).newAttachment(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse> LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service.newAttachmentAsync(LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse> LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service.newAttachmentAsync(LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest request) {
             return base.Channel.newAttachmentAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentResponse> newAttachmentAsync(LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Type arg0) {
-            LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest inValue = new LFM.Submissions.GovGateway.EdrsAttachmentService.newAttachmentRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentResponse> newAttachmentAsync(LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Type arg0) {
+            LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest inValue = new LFM.Submissions.AgentServices.EdrsAttachmentService.newAttachmentRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.GovGateway.EdrsAttachmentService.AttachmentV1_0Service)(this)).newAttachmentAsync(inValue);
+            return ((LFM.Submissions.AgentServices.EdrsAttachmentService.AttachmentV1_0Service)(this)).newAttachmentAsync(inValue);
         }
     }
 }

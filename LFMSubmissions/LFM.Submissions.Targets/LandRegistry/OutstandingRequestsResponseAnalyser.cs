@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LFM.Submissions.GovGateway.OutstandingRequestsService;
+﻿using System.Collections.Generic;
+using LFM.Submissions.AgentServices.OutstandingRequestsService;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
-using LFM.Submissions.InternalMessages.LandRegistry.Messages;
-using NServiceBus;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public static class OutstandingRequestsResponseAnalyser
     {

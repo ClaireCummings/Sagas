@@ -1,6 +1,6 @@
-﻿using LFM.Submissions.GovGateway.CorrespondenceService;
+﻿using LFM.Submissions.AgentServices.CorrespondenceService;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class CorrespondencePollSender
     {

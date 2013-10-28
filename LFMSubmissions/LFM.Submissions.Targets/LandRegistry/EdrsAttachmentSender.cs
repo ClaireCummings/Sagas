@@ -1,6 +1,6 @@
-﻿using LFM.Submissions.GovGateway.EdrsAttachmentPollService;
+﻿using LFM.Submissions.AgentServices.EdrsAttachmentPollService;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class EdrsAttachmentSender
     {

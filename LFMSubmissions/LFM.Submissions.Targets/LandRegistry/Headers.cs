@@ -8,7 +8,7 @@ using System.ServiceModel.Channels;
 using System.ServiceModel;
 using System.Text;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class HMLRBGMessageInspector : IClientMessageInspector
     {

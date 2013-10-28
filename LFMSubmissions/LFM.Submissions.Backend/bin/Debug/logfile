@@ -164,3 +164,310 @@ MessageDrivenSubscriptions - Enabled
 2013-10-28 12:32:13,422 [16] INFO  NServiceBus.Sagas.SagaDispatcherFactory [(null)] <(null)> - Could not find a saga for the message type LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived with id 6a92b3d4-4583-4c9f-9989-a26500ce9ab1. Going to invoke SagaNotFoundHandlers.
 2013-10-28 12:32:14,218 [3] INFO  NServiceBus.Sagas.SagaDispatcherFactory [(null)] <(null)> - Could not find a saga for the message type LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived with id 1703d715-803b-46aa-8ab5-a26500ce9b9e. Going to invoke SagaNotFoundHandlers.
 2013-10-28 12:32:14,652 [16] INFO  NServiceBus.Sagas.SagaDispatcherFactory [(null)] <(null)> - Could not find a saga for the message type LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived with id 3daa4734-0a0a-4eb7-887f-a26500ce9c22. Going to invoke SagaNotFoundHandlers.
+2013-10-28 14:59:42,285 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.29 s
+2013-10-28 14:59:42,454 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,458 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,459 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,461 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,462 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,464 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,466 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,468 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,469 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,471 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,478 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,479 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.GovGateway@P010485 to LFM.Submissions.GovGateway@P010485
+2013-10-28 14:59:42,489 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 14:59:42,499 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 14:59:42,581 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 14:59:42,586 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 14:59:42,593 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.09 s
+2013-10-28 14:59:44,168 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 1.57 s
+2013-10-28 14:59:44,271 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 14:59:44,277 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 14:59:44,289 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 14:59:44,291 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 14:59:44,295 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.12 s
+2013-10-28 14:59:45,980 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 14:59:53,959 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 14:59:53,964 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 14:59:54,168 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 14:59:54,818 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 14:59:54,821 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 14:59:54,825 [16] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:02:25,792 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.28 s
+2013-10-28 15:02:26,032 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,037 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,039 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,041 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,043 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,045 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,047 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,051 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,056 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,059 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,062 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,064 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:02:26,078 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 15:02:26,092 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 15:02:26,181 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 15:02:26,186 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 15:02:26,193 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.10 s
+2013-10-28 15:02:26,520 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.32 s
+2013-10-28 15:02:26,617 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 15:02:26,621 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 15:02:26,632 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 15:02:26,635 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 15:02:26,639 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.12 s
+2013-10-28 15:02:28,617 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 15:02:33,074 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 15:02:33,078 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 15:02:33,280 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 15:02:33,891 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:02:33,895 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:02:33,895 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:06:31,611 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.29 s
+2013-10-28 15:06:31,879 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,884 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,886 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,888 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,892 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,895 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,898 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,900 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,904 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,906 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,914 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,916 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:06:31,927 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 15:06:31,938 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 15:06:32,015 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 15:06:32,020 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 15:06:32,027 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.09 s
+2013-10-28 15:06:32,368 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-10-28 15:06:32,472 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 15:06:32,477 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 15:06:32,489 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 15:06:32,491 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 15:06:32,495 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.12 s
+2013-10-28 15:06:34,566 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 15:06:39,137 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 15:06:39,143 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 15:06:39,344 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 15:06:39,950 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:06:39,954 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:06:39,956 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:10:58,664 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.26 s
+2013-10-28 15:10:58,880 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,886 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,888 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,890 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,891 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,893 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,896 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,898 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,900 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,902 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,905 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,909 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:10:58,919 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 15:10:58,933 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 15:10:59,028 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 15:10:59,034 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 15:10:59,045 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.11 s
+2013-10-28 15:10:59,400 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.35 s
+2013-10-28 15:10:59,484 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 15:10:59,490 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 15:10:59,499 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 15:10:59,502 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 15:10:59,507 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.10 s
+2013-10-28 15:11:01,179 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 15:11:05,451 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 15:11:05,456 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 15:11:05,654 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 15:11:06,328 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:11:06,330 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:11:06,333 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:15:08,040 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.17 s
+2013-10-28 15:15:08,263 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,268 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,270 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,272 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,274 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,276 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,278 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,281 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,284 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,286 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,292 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,296 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:15:08,308 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 15:15:08,322 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 15:15:08,416 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 15:15:08,421 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 15:15:08,431 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.11 s
+2013-10-28 15:15:08,836 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.40 s
+2013-10-28 15:15:08,946 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 15:15:08,951 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 15:15:08,963 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 15:15:08,972 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 15:15:08,976 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.14 s
+2013-10-28 15:15:10,847 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 15:15:15,737 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 15:15:15,743 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 15:15:15,946 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 15:15:16,665 [9] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:15:16,668 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:15:16,668 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:36:22,012 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.28 s
+2013-10-28 15:36:22,254 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollCorrespondence) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,260 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEarlyCompletion) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,261 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrs) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,263 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Commands.IOutstandingRequest(LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,264 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,266 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentAcknowledgementReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,268 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,270 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,272 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsAttachmentResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsAttachmentResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,276 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsOtherReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,279 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsRejectionReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,281 [1] INFO  NServiceBus.Unicast.Routing.StaticMessageRouter [(null)] <(null)> - Routing for inherited message: LFM.Submissions.InternalMessages.LandRegistry.Messages.IEdrsResponseReceived(LFM.Submissions.InternalMessages.LandRegistry.Messages.EdrsResultsReceived) updated from LFM.Submissions.AgentComms@P010485 to LFM.Submissions.AgentComms@P010485
+2013-10-28 15:36:22,289 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 29
+2013-10-28 15:36:22,301 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-10-28 15:36:22,377 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - No valid license found.
+2013-10-28 15:36:22,381 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Configuring NServiceBus to run in trial mode.
+2013-10-28 15:36:22,388 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.09 s
+2013-10-28 15:36:22,864 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.47 s
+2013-10-28 15:36:22,989 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - Sagas found in scanned types, saga persister enabled
+2013-10-28 15:36:22,995 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-10-28 15:36:23,010 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-10-28 15:36:23,012 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-10-28 15:36:23,017 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.15 s
+2013-10-28 15:36:25,109 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-10-28 15:36:32,054 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-10-28 15:36:32,059 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Backend'.
+2013-10-28 15:36:32,265 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-10-28 15:36:32,988 [15] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:36:32,991 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:36:32,992 [17] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-10-28 15:36:59,761 [21] INFO  NServiceBus.Sagas.SagaDispatcherFactory [(null)] <(null)> - Could not find a saga for the message type LFM.Submissions.InternalMessages.LandRegistry.Commands.PollEdrsAttachment with id e2ac6b58-01e4-430b-b6ab-a26501015366. Going to invoke SagaNotFoundHandlers.

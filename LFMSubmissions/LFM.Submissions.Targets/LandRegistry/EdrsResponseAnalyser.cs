@@ -1,6 +1,6 @@
 ﻿using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class EdrsResponseAnalyser : IEdrsResponseAnalyser
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.GovGateway.OutstandingRequestsService {
+namespace LFM.Submissions.AgentServices.OutstandingRequestsService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -20,10 +20,10 @@ namespace LFM.Submissions.GovGateway.OutstandingRequestsService {
         [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SOAPEngineSystemException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse getOutstandingRequests(LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest request);
+        LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse getOutstandingRequests(LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse> getOutstandingRequestsAsync(LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse> getOutstandingRequestsAsync(LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest request);
     }
     
     /// <remarks/>
@@ -664,12 +664,12 @@ namespace LFM.Submissions.GovGateway.OutstandingRequestsService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://outstandingrequestsv2_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.OutstandingRequestsService.RequestOutstandingRequestsType arg0;
+        public LFM.Submissions.AgentServices.OutstandingRequestsService.RequestOutstandingRequestsType arg0;
         
         public getOutstandingRequestsRequest() {
         }
         
-        public getOutstandingRequestsRequest(LFM.Submissions.GovGateway.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
+        public getOutstandingRequestsRequest(LFM.Submissions.AgentServices.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
             this.arg0 = arg0;
         }
     }
@@ -682,23 +682,23 @@ namespace LFM.Submissions.GovGateway.OutstandingRequestsService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://outstandingrequestsv2_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.OutstandingRequestsService.ResponseOutstandingRequestsType @return;
+        public LFM.Submissions.AgentServices.OutstandingRequestsService.ResponseOutstandingRequestsType @return;
         
         public getOutstandingRequestsResponse() {
         }
         
-        public getOutstandingRequestsResponse(LFM.Submissions.GovGateway.OutstandingRequestsService.ResponseOutstandingRequestsType @return) {
+        public getOutstandingRequestsResponse(LFM.Submissions.AgentServices.OutstandingRequestsService.ResponseOutstandingRequestsType @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface OutstandingRequestsV2_0ServiceChannel : LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service, System.ServiceModel.IClientChannel {
+    public interface OutstandingRequestsV2_0ServiceChannel : LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class OutstandingRequestsV2_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service>, LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service {
+    public partial class OutstandingRequestsV2_0ServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service>, LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service {
         
         public OutstandingRequestsV2_0ServiceClient() {
         }
@@ -720,26 +720,26 @@ namespace LFM.Submissions.GovGateway.OutstandingRequestsService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service.getOutstandingRequests(LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest request) {
+        LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service.getOutstandingRequests(LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest request) {
             return base.Channel.getOutstandingRequests(request);
         }
         
-        public LFM.Submissions.GovGateway.OutstandingRequestsService.ResponseOutstandingRequestsType getOutstandingRequests(LFM.Submissions.GovGateway.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
-            LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest inValue = new LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest();
+        public LFM.Submissions.AgentServices.OutstandingRequestsService.ResponseOutstandingRequestsType getOutstandingRequests(LFM.Submissions.AgentServices.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
+            LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest inValue = new LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse retVal = ((LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service)(this)).getOutstandingRequests(inValue);
+            LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse retVal = ((LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service)(this)).getOutstandingRequests(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse> LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service.getOutstandingRequestsAsync(LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse> LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service.getOutstandingRequestsAsync(LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest request) {
             return base.Channel.getOutstandingRequestsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsResponse> getOutstandingRequestsAsync(LFM.Submissions.GovGateway.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
-            LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest inValue = new LFM.Submissions.GovGateway.OutstandingRequestsService.getOutstandingRequestsRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsResponse> getOutstandingRequestsAsync(LFM.Submissions.AgentServices.OutstandingRequestsService.RequestOutstandingRequestsType arg0) {
+            LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest inValue = new LFM.Submissions.AgentServices.OutstandingRequestsService.getOutstandingRequestsRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.GovGateway.OutstandingRequestsService.OutstandingRequestsV2_0Service)(this)).getOutstandingRequestsAsync(inValue);
+            return ((LFM.Submissions.AgentServices.OutstandingRequestsService.OutstandingRequestsV2_0Service)(this)).getOutstandingRequestsAsync(inValue);
         }
     }
 }

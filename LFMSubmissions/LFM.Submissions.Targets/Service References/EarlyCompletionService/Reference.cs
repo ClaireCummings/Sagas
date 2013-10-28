@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.GovGateway.EarlyCompletionService {
+namespace LFM.Submissions.AgentServices.EarlyCompletionService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -21,10 +21,10 @@ namespace LFM.Submissions.GovGateway.EarlyCompletionService {
         [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SchemaException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse getResponse(LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest request);
+        LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse getResponse(LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse> getResponseAsync(LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest request);
     }
     
     /// <remarks/>
@@ -623,12 +623,12 @@ namespace LFM.Submissions.GovGateway.EarlyCompletionService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.earlycompletionv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.EarlyCompletionService.PollRequestType arg0;
+        public LFM.Submissions.AgentServices.EarlyCompletionService.PollRequestType arg0;
         
         public getResponseRequest() {
         }
         
-        public getResponseRequest(LFM.Submissions.GovGateway.EarlyCompletionService.PollRequestType arg0) {
+        public getResponseRequest(LFM.Submissions.AgentServices.EarlyCompletionService.PollRequestType arg0) {
             this.arg0 = arg0;
         }
     }
@@ -641,23 +641,23 @@ namespace LFM.Submissions.GovGateway.EarlyCompletionService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.earlycompletionv1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.EarlyCompletionService.ResponseEarlyCompletionV1_0Type @return;
+        public LFM.Submissions.AgentServices.EarlyCompletionService.ResponseEarlyCompletionV1_0Type @return;
         
         public getResponseResponse() {
         }
         
-        public getResponseResponse(LFM.Submissions.GovGateway.EarlyCompletionService.ResponseEarlyCompletionV1_0Type @return) {
+        public getResponseResponse(LFM.Submissions.AgentServices.EarlyCompletionService.ResponseEarlyCompletionV1_0Type @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EarlyCompletionV1_0PollRequestServiceChannel : LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService, System.ServiceModel.IClientChannel {
+    public interface EarlyCompletionV1_0PollRequestServiceChannel : LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EarlyCompletionV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService>, LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService {
+    public partial class EarlyCompletionV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService>, LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService {
         
         public EarlyCompletionV1_0PollRequestServiceClient() {
         }
@@ -679,26 +679,26 @@ namespace LFM.Submissions.GovGateway.EarlyCompletionService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService.getResponse(LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest request) {
+        LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService.getResponse(LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest request) {
             return base.Channel.getResponse(request);
         }
         
-        public LFM.Submissions.GovGateway.EarlyCompletionService.ResponseEarlyCompletionV1_0Type getResponse(LFM.Submissions.GovGateway.EarlyCompletionService.PollRequestType arg0) {
-            LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest inValue = new LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest();
+        public LFM.Submissions.AgentServices.EarlyCompletionService.ResponseEarlyCompletionV1_0Type getResponse(LFM.Submissions.AgentServices.EarlyCompletionService.PollRequestType arg0) {
+            LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest inValue = new LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse retVal = ((LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService)(this)).getResponse(inValue);
+            LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse retVal = ((LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService)(this)).getResponse(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse> LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService.getResponseAsync(LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse> LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService.getResponseAsync(LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest request) {
             return base.Channel.getResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.EarlyCompletionService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.EarlyCompletionService.PollRequestType arg0) {
-            LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest inValue = new LFM.Submissions.GovGateway.EarlyCompletionService.getResponseRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.AgentServices.EarlyCompletionService.getResponseResponse> getResponseAsync(LFM.Submissions.AgentServices.EarlyCompletionService.PollRequestType arg0) {
+            LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest inValue = new LFM.Submissions.AgentServices.EarlyCompletionService.getResponseRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.GovGateway.EarlyCompletionService.EarlyCompletionV1_0PollRequestService)(this)).getResponseAsync(inValue);
+            return ((LFM.Submissions.AgentServices.EarlyCompletionService.EarlyCompletionV1_0PollRequestService)(this)).getResponseAsync(inValue);
         }
     }
 }

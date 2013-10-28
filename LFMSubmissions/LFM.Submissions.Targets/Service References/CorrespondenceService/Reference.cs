@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LFM.Submissions.GovGateway.CorrespondenceService {
+namespace LFM.Submissions.AgentServices.CorrespondenceService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -21,10 +21,10 @@ namespace LFM.Submissions.GovGateway.CorrespondenceService {
         [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SchemaException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse getResponse(LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest request);
+        LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse getResponse(LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest request);
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse> getResponseAsync(LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest request);
     }
     
     /// <remarks/>
@@ -322,12 +322,12 @@ namespace LFM.Submissions.GovGateway.CorrespondenceService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.correspondencev1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.CorrespondenceService.PollRequestType arg0;
+        public LFM.Submissions.AgentServices.CorrespondenceService.PollRequestType arg0;
         
         public getResponseRequest() {
         }
         
-        public getResponseRequest(LFM.Submissions.GovGateway.CorrespondenceService.PollRequestType arg0) {
+        public getResponseRequest(LFM.Submissions.AgentServices.CorrespondenceService.PollRequestType arg0) {
             this.arg0 = arg0;
         }
     }
@@ -340,23 +340,23 @@ namespace LFM.Submissions.GovGateway.CorrespondenceService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://poll.correspondencev1_0.ws.bg.lr.gov/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0Type @return;
+        public LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0Type @return;
         
         public getResponseResponse() {
         }
         
-        public getResponseResponse(LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0Type @return) {
+        public getResponseResponse(LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0Type @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CorrespondenceV1_0PollRequestServiceChannel : LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService, System.ServiceModel.IClientChannel {
+    public interface CorrespondenceV1_0PollRequestServiceChannel : LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CorrespondenceV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService>, LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService {
+    public partial class CorrespondenceV1_0PollRequestServiceClient : System.ServiceModel.ClientBase<LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService>, LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService {
         
         public CorrespondenceV1_0PollRequestServiceClient() {
         }
@@ -378,26 +378,26 @@ namespace LFM.Submissions.GovGateway.CorrespondenceService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService.getResponse(LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest request) {
+        LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService.getResponse(LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest request) {
             return base.Channel.getResponse(request);
         }
         
-        public LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0Type getResponse(LFM.Submissions.GovGateway.CorrespondenceService.PollRequestType arg0) {
-            LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest inValue = new LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest();
+        public LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0Type getResponse(LFM.Submissions.AgentServices.CorrespondenceService.PollRequestType arg0) {
+            LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest inValue = new LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest();
             inValue.arg0 = arg0;
-            LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse retVal = ((LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService)(this)).getResponse(inValue);
+            LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse retVal = ((LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService)(this)).getResponse(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse> LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService.getResponseAsync(LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest request) {
+        System.Threading.Tasks.Task<LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse> LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService.getResponseAsync(LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest request) {
             return base.Channel.getResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LFM.Submissions.GovGateway.CorrespondenceService.getResponseResponse> getResponseAsync(LFM.Submissions.GovGateway.CorrespondenceService.PollRequestType arg0) {
-            LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest inValue = new LFM.Submissions.GovGateway.CorrespondenceService.getResponseRequest();
+        public System.Threading.Tasks.Task<LFM.Submissions.AgentServices.CorrespondenceService.getResponseResponse> getResponseAsync(LFM.Submissions.AgentServices.CorrespondenceService.PollRequestType arg0) {
+            LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest inValue = new LFM.Submissions.AgentServices.CorrespondenceService.getResponseRequest();
             inValue.arg0 = arg0;
-            return ((LFM.Submissions.GovGateway.CorrespondenceService.CorrespondenceV1_0PollRequestService)(this)).getResponseAsync(inValue);
+            return ((LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0PollRequestService)(this)).getResponseAsync(inValue);
         }
     }
 }

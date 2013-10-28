@@ -1,6 +1,6 @@
-﻿using LFM.Submissions.GovGateway.EarlyCompletionService;
+﻿using LFM.Submissions.AgentServices.EarlyCompletionService;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class EarlyCompletionPollSender
     {

@@ -4,7 +4,6 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.LandRegistry.UnitTests.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\FakeItEasy.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.Backend.dll
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.GovGateway.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.InternalMessages.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.Core.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.dll
@@ -43,3 +42,8 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NSe
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentComms.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentComms.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\app.config
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.pdb

@@ -1,6 +1,6 @@
 ﻿using LFM.Submissions.Contract.LandRegistry;
 
-namespace LFM.Submissions.GovGateway.LandRegistry
+namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public static class CorrespondencePollResponseAnalyser
     {

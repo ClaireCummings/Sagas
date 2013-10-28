@@ -1,0 +1,11 @@
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\app.config
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.AgentServices.dll.config
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.AgentServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.AgentServices.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.InternalMessages.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.Contract.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\bin\Debug\LFM.Submissions.InternalMessages.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.AgentServices.csprojResolveAssemblyReference.cache
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.AgentServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Targets\obj\Debug\LFM.Submissions.AgentServices.pdb
