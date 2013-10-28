@@ -48,10 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\LFM.Submissions.Code\LandRegistry\EdrsProcessor.cs">
-      <Link>LandRegistry\EdrsProcessor.cs</Link>
-    </Compile>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="LandRegistry\EdrsProcessor.cs" />
     <Compile Include="LandRegistry\EdrsResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
