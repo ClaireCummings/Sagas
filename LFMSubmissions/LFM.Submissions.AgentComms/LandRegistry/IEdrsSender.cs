@@ -9,8 +9,6 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         string Password { get; set; }
         string Payload { get; set; }
         IEdrsResponseReceived Response { get;}
-
         bool Submit();
-        bool Poll();
     }
 }

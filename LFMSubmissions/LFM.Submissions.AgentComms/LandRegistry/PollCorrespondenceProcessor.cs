@@ -1,4 +1,5 @@
 ﻿using System;
+using LFM.Submissions.Contract.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using NServiceBus.Saga;
 
@@ -11,7 +12,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
     /// </summary>
     public class PollCorrespondenceProcessor : Saga<PollCorrespondenceSagaData>, IAmStartedByMessages<PollCorrespondence>
     {
-        public ICorrespondencePoller CorrespondencePoller { get; set; }
+        public IEdrsPoller<CorrespondenceReceived> CorrespondencePoller { get; set; }
 
         public override void ConfigureHowToFindSaga()
         {

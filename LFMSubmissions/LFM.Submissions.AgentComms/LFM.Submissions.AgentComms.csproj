@@ -60,10 +60,9 @@
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="AgentCommsModule.cs" />
     <Compile Include="LandRegistry\IEdrsAttachmentSender.cs" />
-    <Compile Include="LandRegistry\ICorrespondencePoller.cs">
-      <ItemGuid>2179a4fb-c4ff-4eed-aa46-86173e71ac41</ItemGuid>
+    <Compile Include="LandRegistry\IEdrsPoller.cs">
+      <ItemGuid>6c6b083d-35df-4598-91f6-c4fa8d68bbda</ItemGuid>
     </Compile>
-    <Compile Include="LandRegistry\IEdrsEarlyCompletionPoller.cs" />
     <Compile Include="LandRegistry\IEdrsSender.cs" />
     <Compile Include="LandRegistry\InvalidPayloadException.cs" />
     <Compile Include="LandRegistry\IOutstandingRequestsPoller.cs" />

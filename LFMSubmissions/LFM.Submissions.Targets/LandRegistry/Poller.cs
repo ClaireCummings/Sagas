@@ -5,7 +5,7 @@ using LFM.Submissions.Contract.LandRegistry;
 
 namespace LFM.Submissions.AgentServices.LandRegistry
 {
-    public class EarlyCompletionPoller : IEdrsEarlyCompletionPoller
+    public class Poller : IEdrsPoller<EarlyCompletionReceived>
     {
         private EarlyCompletionService.ResponseEarlyCompletionV1_0Type _serviceResponse;
 
@@ -13,7 +13,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public EarlyCompletionReceived Response
+        public virtual EarlyCompletionReceived Response
         {
             get
             {
@@ -32,7 +32,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             }
         }
 
-        public bool Poll()
+        public virtual bool Poll()
         {
             var request = new EarlyCompletionService.PollRequestType
             {

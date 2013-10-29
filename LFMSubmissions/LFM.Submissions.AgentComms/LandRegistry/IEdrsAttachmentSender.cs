@@ -11,6 +11,5 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         string Payload { get; set; }
         IEdrsAttachmentResponseReceived Response { get; }
         bool Submit();
-        bool Poll();
     }
 }

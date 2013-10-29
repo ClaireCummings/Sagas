@@ -2,12 +2,14 @@
 
 namespace LFM.Submissions.AgentComms.LandRegistry
 {
-    public interface IEdrsEarlyCompletionPoller
+    public interface IEdrsPoller<out T>
     {
         string MessageId { get; set; }
         string Username { get; set; }
         string Password { get; set; }
-        EarlyCompletionReceived Response { get; }
+        T Response { get; }
+    
+//        EarlyCompletionReceived Response { get; }
         bool Poll();
     }
 }

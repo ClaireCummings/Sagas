@@ -43,3 +43,6 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentComms.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentComms.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\app.config
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.pdb

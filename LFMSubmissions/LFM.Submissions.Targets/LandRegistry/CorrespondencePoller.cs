@@ -5,7 +5,7 @@ using LFM.Submissions.Contract.LandRegistry;
 
 namespace LFM.Submissions.AgentServices.LandRegistry
 {
-    public class CorrespondencePoller : ICorrespondencePoller
+    public class CorrespondencePoller : IEdrsPoller<CorrespondenceReceived>
     {
         private CorrespondenceV1_0Type _serviceResponse;
 

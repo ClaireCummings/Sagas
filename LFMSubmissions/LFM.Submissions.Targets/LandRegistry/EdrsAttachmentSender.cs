@@ -16,8 +16,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         {
             get
             {
-                if (_pollServiceResponse != null)
-                    return GetEdrsResponse(_pollServiceResponse);
+                
 
                 if (_serviceResponse == null)
                     throw new InvalidOperationException("No response from web service");
@@ -56,28 +55,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             return true;
         }
 
-        public bool Poll()
-        {
-            var request = new EdrsAttachmentPollService.PollRequestType
-                {
-                    ID =
-                        new EdrsAttachmentPollService.Q1IdentifierType
-                            {
-                                MessageID = new EdrsAttachmentPollService.MessageIDTextType { Value = AttachmentId }
-                            }
-                };
-
-            // create an instance of the client
-            var client = new EdrsAttachmentPollService.AttachmentV1_0PollRequestServiceClient();
-
-            // create a Header Instance
-            client.ChannelFactory.Endpoint.Behaviors.Add(new HMLRBGMessageEndpointBehavior(Username, Password));
-
-            // submit the request
-            _pollServiceResponse = client.getResponse(request);
-
-            return true;
-        }
+        
 
         private IEdrsAttachmentResponseReceived GetEdrsResponse(
             EdrsAttachmentService.AttachmentResponseV1_0Type response)
@@ -106,31 +84,6 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             }
         }
 
-        private IEdrsAttachmentResponseReceived GetEdrsResponse(
-            EdrsAttachmentPollService.AttachmentResponseV1_0Type response)
-        {
-            switch (response.GatewayResponse.TypeCode)
-            {
-                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item10:
-                    return new EdrsAttachmentAcknowledgementReceived
-                        {
-                        };
-
-                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item20:
-                    return new EdrsAttachmentRejectionReceived
-                        {
-                            RejectionReason = response.GatewayResponse.Rejection.Reason
-                        };
-
-                case EdrsAttachmentPollService.ProductResponseCodeContentType.Item30:
-                    return new EdrsAttachmentResultsReceived
-                        {
-                            Results = response.GatewayResponse.Results.MessageDetails
-                        };
-
-                default:
-                    return new EdrsAttachmentOtherReceived {};
-            }
-        }
+       
     }
 }

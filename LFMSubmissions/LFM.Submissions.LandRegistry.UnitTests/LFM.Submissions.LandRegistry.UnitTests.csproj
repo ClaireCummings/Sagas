@@ -71,6 +71,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CorrespondenceTests.cs" />
+    <Compile Include="EarlyCompletionTest.cs" />
     <Compile Include="LandRegistryTestConventionsAttribute.cs" />
     <Compile Include="When_client_submits_an_edrs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,9 +90,17 @@
       <Project>{C76A7E38-DA05-4533-936A-25CA9990CBC9}</Project>
       <Name>LFM.Submissions.Backend</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.Contract\LFM.Submissions.Contract.csproj">
+      <Project>{1A2A8CBA-0F89-4C03-AFCA-750B61E1AD2F}</Project>
+      <Name>LFM.Submissions.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.InternalMessages\LFM.Submissions.InternalMessages.csproj">
       <Project>{7A568AB9-7268-47D5-81C3-84AF8D64048C}</Project>
       <Name>LFM.Submissions.InternalMessages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.Targets\LFM.Submissions.AgentServices.csproj">
+      <Project>{3182D968-1616-405B-844A-7F24FA717AA6}</Project>
+      <Name>LFM.Submissions.AgentServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
