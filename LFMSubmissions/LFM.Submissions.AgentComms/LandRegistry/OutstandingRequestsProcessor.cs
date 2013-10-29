@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using NServiceBus;
 using NServiceBus.Saga;
+using LFM.Submissions.AgentComms.LandRegistry;
 
 namespace LFM.Submissions.AgentComms.LandRegistry
 {
     public class OutstandingRequestsProcessor : Saga<OutstandingRequestsSagaData>, IAmStartedByMessages<PollForOutstandingRequests>, IHandleMessages<GetOutstandingRequests>, IHandleMessages<StopPollingForOutstandingRequests>
     {
+        public IOutstandingRequestsPoller OutstandingRequestsPoller { get; set; }
+
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<PollForOutstandingRequests>(s => s.Username, m => m.Username);
@@ -22,13 +24,16 @@ namespace LFM.Submissions.AgentComms.LandRegistry
                 this.Data.OngoingApplications = new List<string>();
 
             Console.WriteLine("GovGateway received message PollForOutstandingRequests");
-            this.Data.OngoingApplications.Add(message.ApplicationId);
+
+            if (!Data.OngoingApplications.Contains(message.ApplicationId))
+                Data.OngoingApplications.Add(message.ApplicationId);
+
             this.Data.Username = message.Username;
 
             if (!this.Data.IsPolling)
             {
                 this.Data.IsPolling = true;
-                // TODO Timespan configurable -- recommended 2 hours (using 2 seconds for test)
+                // TODO Timespan configurable -- recommended 2 hours (using seconds for test)
                 Bus.Defer(TimeSpan.FromSeconds(30), new GetOutstandingRequests
                     {
                         RequestId = Guid.NewGuid().ToString(),
@@ -43,22 +48,24 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         {
             Console.WriteLine("About get Outstanding Requests");
 
-            var sender = new OutstandingRequestsSender
-                {
-                    RequestId = message.RequestId, Username = message.Username, Password = message.Password
-                };
-            var response = sender.Query();
+            OutstandingRequestsPoller.RequestId = message.RequestId;
+            OutstandingRequestsPoller.Username = message.Username;
+            OutstandingRequestsPoller.Password = message.Password;
             
-            if (OutstandingRequestsResponseAnalyser.WasRejected(response))
-                MarkAsComplete();
-
-            foreach (var outstandingRequest in OutstandingRequestsResponseAnalyser.GetOutstandingRequests(response))
+            if (OutstandingRequestsPoller.Poll())
             {
-                outstandingRequest.Username = message.Username;
-                outstandingRequest.Password = message.Password;
-                Bus.SendLocal(outstandingRequest);
+                foreach (var outstandingRequest in OutstandingRequestsPoller.Response)
+                {
+                    outstandingRequest.Username = message.Username;
+                    outstandingRequest.Password = message.Password;
+                    Bus.SendLocal(outstandingRequest);
+                }
             }
-
+            else
+            {
+                MarkAsComplete();              
+            }
+            
             // TODO:  Configure the polling interval - recommended is 2 hours
             Bus.Defer(TimeSpan.FromSeconds(20),
                       new GetOutstandingRequests {RequestId = Guid.NewGuid().ToString(), Username = message.Username, Password = message.Password});
@@ -66,9 +73,10 @@ namespace LFM.Submissions.AgentComms.LandRegistry
 
         public void Handle(StopPollingForOutstandingRequests message)
         {
-            this.Data.OngoingApplications.Remove(message.ApplicationId);
+            Data.OngoingApplications.Remove(message.ApplicationId);
+            
             Console.WriteLine((string) "ApplicationId: {0} has been removed from the OngoingApplications list", (object) message.ApplicationId);
-            if(this.Data.OngoingApplications.Count == 0)
+            if(Data.OngoingApplications.Count == 0)
                 MarkAsComplete();
         }
     }

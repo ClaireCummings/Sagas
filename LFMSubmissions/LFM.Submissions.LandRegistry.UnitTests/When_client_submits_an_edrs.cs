@@ -1,6 +1,4 @@
 ﻿using LFM.Submissions.AgentComms.LandRegistry;
-using LFM.Submissions.AgentServices.EdrsSubmissionService;
-using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -24,41 +22,42 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         }
     }
 
-    public class When_govgateway_receives_submitedrs_with_an_invalid_payload
+    public class When_agentcomms_receives_submitedrs_with_an_invalid_payload
     {
         [Theory, LandRegistryTestConventions]
         public void gateway_will_reply_with_the_invalid_payload_response_for_that_application(SubmitEdrs submitEdrsMessage)
         {
+            var fakeEdrsSender = A.Fake<IEdrsSender>();
+            A.CallTo(() => fakeEdrsSender.Submit()).Throws(new InvalidPayloadException()).Once();
+
             MessageConventionExtensions.IsMessageTypeAction =t => t.Namespace != null && t.Namespace.Contains("Messages") && !t.Namespace.StartsWith("NServiceBus");
             Test.Initialize();
             Test.Handler<SubmitEdrsProcessor>()
-                .WithExternalDependencies(h=>h.EdrsSender = new EdrsSender())
+                .WithExternalDependencies(h => h.EdrsSender = fakeEdrsSender)
                 .ExpectReply<InvalidEdrsPayload>(m => m.ApplicationId == submitEdrsMessage.ApplicationId)
                 .OnMessage<SubmitEdrs>(submitEdrsMessage);
         }
     }
 
-    public class When_govgateway_receives_submitedrs_which_is_acknowledged_by_the_Land_Registry
+    public class When_agentcomms_receives_submitedrs_which_is_acknowledged_by_the_Land_Registry
     {
 
         [Theory, LandRegistryTestConventions]
         public void gateway_will_respond_with_an_acknowledgment_received_message_for_that_application(SubmitEdrs submitEdrsMessage)
         {
             var fakeEdrsSender = A.Fake<IEdrsSender>();
-            var fakeEdrsResponseAnalyser = A.Fake<IEdrsResponseAnalyser>();
             
             A.CallTo(() => fakeEdrsSender.Submit())
-                .Returns(new ResponseApplicationToChangeRegisterV1_0Type());
-            
-            A.CallTo(() => fakeEdrsResponseAnalyser
-                .GetEdrsResponse(A<ResponseApplicationToChangeRegisterV1_0Type>.Ignored))
+                .Returns(true);
+
+            A.CallTo(() => fakeEdrsSender
+                .Response)
                 .Returns(new EdrsAcknowledgementReceived());
 
             MessageConventionExtensions.IsMessageTypeAction = t => t.Namespace != null && t.Namespace.Contains("Messages") && !t.Namespace.StartsWith("NServiceBus");
             Test.Initialize();
             Test.Handler<SubmitEdrsProcessor>()
                 .WithExternalDependencies(h => h.EdrsSender = fakeEdrsSender)
-                .WithExternalDependencies(h => h.EdrsResponseAnalyser = fakeEdrsResponseAnalyser)
                 .ExpectReply<EdrsAcknowledgementReceived>(m => (m.ApplicationId == submitEdrsMessage.ApplicationId && m.Username == submitEdrsMessage.Username))
                 .OnMessage<SubmitEdrs>(submitEdrsMessage);
         }

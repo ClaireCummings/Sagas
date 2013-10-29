@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\LFM.Submissions.AgentComms\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,18 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LandRegistry\CorrespondencePollResponseAnalyser.cs" />
-    <Compile Include="LandRegistry\CorrespondencePollSender.cs" />
-    <Compile Include="LandRegistry\EarlyCompletionPollResponseAnalyser.cs" />
-    <Compile Include="LandRegistry\EarlyCompletionPollSender.cs" />
+    <Compile Include="DeserializationException.cs" />
+    <Compile Include="LandRegistry\CorrespondencePoller.cs" />
+    <Compile Include="LandRegistry\EarlyCompletionPoller.cs" />
     <Compile Include="LandRegistry\EdrsAttachmentSender.cs" />
-    <Compile Include="LandRegistry\EdrsResponseAnalyser.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />
-    <Compile Include="LandRegistry\IEdrsResponseAnalyser.cs" />
-    <Compile Include="LandRegistry\IEdrsSender.cs" />
-    <Compile Include="LandRegistry\OutstandingRequestsResponseAnalyser.cs" />
-    <Compile Include="LandRegistry\OutstandingRequestsSender.cs" />
+    <Compile Include="LandRegistry\OutstandingRequestsPoller.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CorrespondenceService\Reference.cs">
@@ -284,6 +279,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LFM.Submissions.AgentComms\LFM.Submissions.AgentComms.csproj">
+      <Project>{e0a0674c-bc7a-4260-97e8-6ceef68efdb7}</Project>
+      <Name>LFM.Submissions.AgentComms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.Contract\LFM.Submissions.Contract.csproj">
       <Project>{1a2a8cba-0f89-4c03-afca-750b61e1ad2f}</Project>
       <Name>LFM.Submissions.Contract</Name>

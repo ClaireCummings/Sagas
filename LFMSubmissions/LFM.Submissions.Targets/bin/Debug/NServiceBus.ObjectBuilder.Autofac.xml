@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NServiceBus.ObjectBuilder.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder">
+            <summary>
+             Autofac implementation of <see cref="T:NServiceBus.ObjectBuilder.Common.IContainer"/>.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.#ctor(Autofac.ILifetimeScope)">
+            <summary>
+             Instantiates the class utilizing the given container.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.#ctor">
+            <summary>
+             Instantiates the class with an empty Autofac container.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.BuildChildContainer">
+            <summary>
+            Returns a child instance of the container to facilitate deterministic disposal
+            of all resources built by the child container.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.Build(System.Type)">
+            <summary>
+             Build an instance of a given type using Autofac.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.BuildAll(System.Type)">
+            <summary>
+             Build all instances of a given type using Autofac.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.ConfigureProperty(System.Type,System.String,System.Object)">
+            <summary>
+             Configure the value of a named component property.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.RegisterSingleton(System.Type,System.Object)">
+            <summary>
+             Register a singleton instance of a dependency within Autofac.
+            </summary>
+            <param name="lookupType"></param>
+            <param name="instance"></param>
+        </member>
+        <member name="M:NServiceBus.ObjectBuilder.Autofac.AutofacObjectBuilder.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+             Set a property value on an instance using reflection
+            </summary>
+        </member>
+        <member name="T:NServiceBus.ConfigureAutofacBuilder">
+            <summary>
+            Contains extension methods to <see cref="T:NServiceBus.Configure"/>.
+            </summary>
+        </member>
+        <member name="M:NServiceBus.ConfigureAutofacBuilder.AutofacBuilder(NServiceBus.Configure)">
+            <summary>
+            Use the Autofac builder.
+            </summary>
+            <param name="config">The configuration context.</param>
+            <returns>The configuration context.</returns>
+        </member>
+        <member name="M:NServiceBus.ConfigureAutofacBuilder.AutofacBuilder(NServiceBus.Configure,Autofac.ILifetimeScope)">
+            <summary>
+            Use the Autofac builder passing in a pre-configured container to be used by nServiceBus.
+            </summary>
+            <param name="config">The configuration context.</param>
+            <param name="rootScope">The root-most lifetime scope.</param>
+            <returns>The configuration context.</returns>
+        </member>
+    </members>
+</doc>

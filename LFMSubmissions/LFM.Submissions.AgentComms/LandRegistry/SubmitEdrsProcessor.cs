@@ -1,5 +1,4 @@
 ﻿using System;
-using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -10,7 +9,6 @@ namespace LFM.Submissions.AgentComms.LandRegistry
     {
         public IBus Bus { get; set; }
         public IEdrsSender EdrsSender { get; set; }
-        public IEdrsResponseAnalyser EdrsResponseAnalyser { get; set; }
 
         public void Handle(SubmitEdrs message)
         {
@@ -21,21 +19,24 @@ namespace LFM.Submissions.AgentComms.LandRegistry
 
             try
             {
-                var response = EdrsSender.Submit();
+                if (EdrsSender.Submit())
+                {
+                    Console.WriteLine("GovGateway EdrsService Responded");
 
-                Console.WriteLine("GovGateway EdrsService Responded");
-                var responseMessage = EdrsResponseAnalyser.GetEdrsResponse(response);
+                    var responseMessage = EdrsSender.Response;
 
-                responseMessage.ApplicationId = message.ApplicationId;
-                responseMessage.Username = message.Username;
-                responseMessage.Password = message.Password;
-                Bus.Reply((object) responseMessage);
+                    responseMessage.ApplicationId = message.ApplicationId;
+                    responseMessage.Username = message.Username;
+                    responseMessage.Password = message.Password;
+                    Bus.Reply((object) responseMessage);
+                }
             }
-            catch (Exception ex)
+            catch (InvalidPayloadException ex)
             {
                 Bus.Reply((object) new InvalidEdrsPayload
                     {
-                        ApplicationId = message.ApplicationId
+                        ApplicationId = message.ApplicationId,
+                        ExceptionMessage = ex.Message
                     });
             }
         }

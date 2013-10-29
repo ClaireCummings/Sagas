@@ -1,5 +1,4 @@
 ﻿using System;
-using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using NServiceBus.Saga;
 
@@ -12,34 +11,34 @@ namespace LFM.Submissions.AgentComms.LandRegistry
     /// </summary>
     public class PollCorrespondenceProcessor : Saga<PollCorrespondenceSagaData>, IAmStartedByMessages<PollCorrespondence>
     {
+        public ICorrespondencePoller CorrespondencePoller { get; set; }
+
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<PollCorrespondence>(s => s.Username, m=> m.Username);
         }
+
         public void Handle(PollCorrespondence message)
         {
             this.Data.Username = message.Username;
 
-           
             Console.WriteLine("Gateway received message PollCorrespondence MessageId: " + message.MessageId);
 
-            var sender = new CorrespondencePollSender
-                {
-                    MessageId = message.MessageId,
-                    Username = message.Username,
-                    Password = message.Password
-                };
+            CorrespondencePoller.MessageId = message.MessageId;
+            CorrespondencePoller.Username = message.Username;
+            CorrespondencePoller.Password = message.Password;
 
-            var response = sender.Poll();
-            
-            var responseMessage = CorrespondencePollResponseAnalyser.GetCorrespondencePollResponse(response);
-            
-            if (responseMessage != null)
+            if (CorrespondencePoller.Poll())
             {
-                responseMessage.Username = message.Username;
-                responseMessage.Password = message.Password;
-                responseMessage.CorrespondenceId = message.MessageId;
-                Bus.Publish(responseMessage);                       
+                var responseMessage = CorrespondencePoller.Response;
+
+                if (responseMessage != null)
+                {
+                    responseMessage.Username = message.Username;
+                    responseMessage.Password = message.Password;
+                    responseMessage.CorrespondenceId = message.MessageId;
+                    Bus.Publish(responseMessage);
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ namespace LFM.Submissions.LandRegistry
         IHandleMessages<PollEdrs>, IHandleMessages<PollEdrsAttachment>,
         IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
         IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>,
-        IHandleMessages<EarlyCompletionReceived>, IHandleMessages<InvalidEdrsPayload> 
+        IHandleMessages<EarlyCompletionReceived>, IHandleMessages<CorrespondenceReceived>, IHandleMessages<InvalidEdrsPayload> 
 
     {
         public override void ConfigureHowToFindSaga()
@@ -43,8 +43,9 @@ namespace LFM.Submissions.LandRegistry
         public void Handle(SubmitEdrsAttachment message)
         {
             this.Data.ApplicationId = message.ApplicationId;
-            this.Data.Attachments = new Dictionary<string, EdrsResponse>();
-            this.Data.Attachments.Add(message.AttachmentId,EdrsResponse.None);
+            if (Data.Attachments == null)
+                Data.Attachments = new Dictionary<string, EdrsResponse>();
+            Data.Attachments.Add(message.AttachmentId,EdrsResponse.None);
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1} AttachmentId: {2}", message.GetType().Name, message.ApplicationId, message.AttachmentId);
             Bus.Send(message);
         }
@@ -137,9 +138,10 @@ namespace LFM.Submissions.LandRegistry
 
         public void Handle(PollEdrsAttachment message)
         {
+            Console.WriteLine("Received PolEdrsAttachement message for AttachmentId" + message.AttachmentId);
             if (this.Data.EdrsResponse == EdrsResponse.None || this.Data.EdrsResponse == EdrsResponse.Acknowledgement)
             {
-                if (this.Data.Attachments.ContainsKey(message.AttachmentId) && this.Data.Attachments[message.AttachmentId] == EdrsResponse.Acknowledgement)
+                if (Data.Attachments !=null && Data.Attachments.ContainsKey(message.AttachmentId) && Data.Attachments[message.AttachmentId] == EdrsResponse.Acknowledgement)
                     Bus.Send(message);
             }
         }
@@ -156,8 +158,7 @@ namespace LFM.Submissions.LandRegistry
 
         public void Handle(EarlyCompletionReceived message)
         {
-            Console.WriteLine("LandRegistry recieved EarlyCompletion for ApplicationID: " + message.ApplicationMessageId);
-            // TODO:  Publish to NotificationService to Email the dispatch doc?  
+            Console.WriteLine("EarlyCompletion for ApplicationID: " + message.ApplicationMessageId);
             // Early completion does not end the Edrs Saga -- still need to await the actual Results
         }
 
@@ -165,6 +166,11 @@ namespace LFM.Submissions.LandRegistry
         {
             Console.WriteLine("Application {0} has an invalid payload", message.ApplicationId);
             MarkAsComplete();
+        }
+
+        public void Handle(CorrespondenceReceived message)
+        {
+            Console.WriteLine("CorrespondanceReceived for ApplicationId: " + message.ApplicationMessageId);
         }
     }
 

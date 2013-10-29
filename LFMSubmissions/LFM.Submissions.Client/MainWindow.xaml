@@ -5,8 +5,8 @@
     <Grid>
         <Button x:Name="SubmitEdrsButton" Content="Submit eDRS" HorizontalAlignment="Left" Margin="44,57,0,0" VerticalAlignment="Top" Width="83" Click="SubmitEdrsButton_Click"/>
         <Button x:Name="SubmitEdrsAttachmentButton" Content="Submit Attachment" HorizontalAlignment="Left" Margin="44,91,0,0" VerticalAlignment="Top" Width="123" Click="SubmitEdrsAttachmentButton_Click"/>
-        <TextBox x:Name="ApplicationIdTextBox" HorizontalAlignment="Left" Height="20" Margin="44,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206"/>
-        <Button x:Name="GenerateIdButton" Content="Generate" HorizontalAlignment="Left" Height="20" Margin="277,15,0,0" VerticalAlignment="Top" Width="54" Click="GenerateIdButton_Click"/>
+        <TextBox x:Name="ApplicationIdTextBox" HorizontalAlignment="Left" Height="20" Margin="44,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352"/>
+        <Button x:Name="GenerateIdButton" Content="Generate" HorizontalAlignment="Left" Height="20" Margin="412,15,0,0" VerticalAlignment="Top" Width="54" Click="GenerateIdButton_Click" RenderTransformOrigin="2.444,0.8"/>
 
     </Grid>
 </Window>

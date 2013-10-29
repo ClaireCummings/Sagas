@@ -1,3 +1,4 @@
+using System.Reflection;
 using Autofac;
 using LFM.Submissions.Config;
 using NServiceBus;
@@ -14,7 +15,7 @@ namespace LFM.Submissions.AgentComms
 	    {
             var builder = new ContainerBuilder();
             builder.RegisterModule<AgentCommsModule>();
-
+            
             Configure.With()
                 .MyMessageConventions()
                 .AutofacBuilder(builder.Build());

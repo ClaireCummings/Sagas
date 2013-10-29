@@ -26,6 +26,3 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.Obj
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.pdb
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\app.config
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\LFM.Submissions.AgentServices.dll
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\LFM.Submissions.AgentServices.pdb

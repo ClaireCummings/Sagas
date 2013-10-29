@@ -49,10 +49,18 @@ namespace LFM.Submissions.AgentServices
         {
             var serializer = new XmlSerializer(type);
             object result;
-
-            using (TextReader reader = new StringReader(objectData))
+            
+            try
             {
-                result = serializer.Deserialize(reader);
+                using (TextReader reader = new StringReader(objectData))
+                {
+                    result = serializer.Deserialize(reader);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                throw new DeserializationException("Failed to deserialize object data", ex);
             }
 
             return result;

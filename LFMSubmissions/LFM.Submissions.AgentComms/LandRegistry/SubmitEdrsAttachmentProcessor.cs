@@ -1,5 +1,4 @@
 ﻿using System;
-using LFM.Submissions.AgentServices.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using NServiceBus;
 
@@ -8,32 +7,29 @@ namespace LFM.Submissions.AgentComms.LandRegistry
     public class SubmitEdrsAttachmentProcessor : IHandleMessages<SubmitEdrsAttachment>
     {
         public IBus Bus { get; set; }
-        public IEdrsSender EdrsSender { get; set; }
-        public IEdrsResponseAnalyser EdrsResponseAnalyser { get; set; }
+        public IEdrsAttachmentSender EdrsAttachmentSender { get; set; }
 
         public void Handle(SubmitEdrsAttachment message)
         {
             Console.WriteLine("GovGateway received message SubmitEdrsAttachment AttachmentId: " + message.AttachmentId);
 
-            var sender = new EdrsAttachmentSender
+            EdrsAttachmentSender.ApplicationId = message.ApplicationId;
+            EdrsAttachmentSender.AttachmentId = message.AttachmentId;
+            EdrsAttachmentSender.Username = message.Username;
+            EdrsAttachmentSender.Password = message.Password;
+            EdrsAttachmentSender.Payload = message.Payload;
+
+            if (EdrsAttachmentSender.Submit())
             {
-                ApplicationId = message.ApplicationId,
-                AttachmentId = message.AttachmentId,
-                Username = message.Username,
-                Password = message.Password,
-                Payload = message.Payload
-            };
+                var responseMessage = EdrsAttachmentSender.Response;
 
-            var response = sender.Submit();
+                responseMessage.ApplicationId = message.ApplicationId;
+                responseMessage.AttachmentId = message.AttachmentId;
+                responseMessage.Username = message.Username;
+                responseMessage.Password = message.Password;
 
-            var responseMessage = EdrsResponseAnalyser.GetEdrsResponse(response);
-
-            responseMessage.ApplicationId = message.ApplicationId;
-            responseMessage.AttachmentId = message.AttachmentId;
-            responseMessage.Username = message.Username;
-            responseMessage.Password = message.Password;
-
-            Bus.Reply(responseMessage);
+                Bus.Reply(responseMessage);
+            }
         }
     }
 }
