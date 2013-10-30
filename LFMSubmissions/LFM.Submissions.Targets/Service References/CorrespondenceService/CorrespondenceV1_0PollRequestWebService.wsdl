@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://poll.correspondencev1_0.ws.bg.lr.gov/" name="CorrespondenceV1_0PollRequestWebService" targetNamespace="http://poll.correspondencev1_0.ws.bg.lr.gov/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://poll.correspondencev1_0.ws.bg.lr.gov/" name="CorrespondenceV1_0SubmitRequestWebService" targetNamespace="http://poll.correspondencev1_0.ws.bg.lr.gov/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
-    <xsd:schema xmlns:ns3="http://poll.correspondencev1_0.ws.bg.lr.gov/" xmlns:ns1="http://www.oscre.org/ns/eReg/MR01-20090605/PollRequest" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2012/CorrespondenceV1_0" targetNamespace="http://poll.correspondencev1_0.ws.bg.lr.gov/">
-      <xsd:import schemaLocation="PollRequest.xsd" namespace="http://www.oscre.org/ns/eReg/MR01-20090605/PollRequest" />
+    <xsd:schema xmlns:ns3="http://poll.correspondencev1_0.ws.bg.lr.gov/" xmlns:ns1="http://www.oscre.org/ns/eReg/MR01-20090605/SubmitRequest" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2012/CorrespondenceV1_0" targetNamespace="http://poll.correspondencev1_0.ws.bg.lr.gov/">
+      <xsd:import schemaLocation="SubmitRequest.xsd" namespace="http://www.oscre.org/ns/eReg/MR01-20090605/SubmitRequest" />
       <xsd:import schemaLocation="CorrespondenceV1_0.xsd" namespace="http://www.oscre.org/ns/eReg-Final/2012/CorrespondenceV1_0" />
       <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string" />
       <xsd:element name="SchemaException" nillable="true" type="xsd:string" />
@@ -10,7 +10,7 @@
       <xsd:element name="getResponseResponse" type="ns3:getResponseResponse" />
       <xsd:complexType name="getResponse">
         <xsd:sequence>
-          <xsd:element minOccurs="0" name="arg0" type="ns1:PollRequestType" />
+          <xsd:element minOccurs="0" name="arg0" type="ns1:SubmitRequestType" />
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="getResponseResponse">
@@ -32,7 +32,7 @@
   <message name="getResponseResponse">
     <part name="parameters" element="tns:getResponseResponse" />
   </message>
-  <portType name="CorrespondenceV1_0PollRequestService">
+  <portType name="CorrespondenceV1_0SubmitRequestService">
     <operation name="getResponse">
       <input message="tns:getResponse" />
       <output message="tns:getResponseResponse" />
@@ -40,7 +40,7 @@
       <fault name="SchemaException" message="tns:SchemaException" />
     </operation>
   </portType>
-  <binding name="CorrespondenceV1_0PollRequestWSImplPortBinding" type="tns:CorrespondenceV1_0PollRequestService">
+  <binding name="CorrespondenceV1_0SubmitRequestWSImplPortBinding" type="tns:CorrespondenceV1_0SubmitRequestService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="getResponse">
       <soap:operation soapAction="" />
@@ -58,9 +58,9 @@
       </fault>
     </operation>
   </binding>
-  <service name="CorrespondenceV1_0PollRequestWebService">
-    <port name="CorrespondenceV1_0PollRequestWSImplPort" binding="tns:CorrespondenceV1_0PollRequestWSImplPortBinding">
-      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/ECDRS_StubService/CorrespondenceV1_0PollRequestWebService" />
+  <service name="CorrespondenceV1_0SubmitRequestWebService">
+    <port name="CorrespondenceV1_0SubmitRequestWSImplPort" binding="tns:CorrespondenceV1_0PollRequestWSImplPortBinding">
+      <soap:address location="https://z0.b2b.http.server.landregistry.gov:13007/ECDRS_StubService/CorrespondenceV1_0SubmitRequestWebService" />
     </port>
   </service>
 </definitions>

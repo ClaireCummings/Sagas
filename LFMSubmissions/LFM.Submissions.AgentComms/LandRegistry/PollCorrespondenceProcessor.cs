@@ -29,7 +29,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
             CorrespondencePoller.Username = message.Username;
             CorrespondencePoller.Password = message.Password;
 
-            if (CorrespondencePoller.Poll())
+            if (CorrespondencePoller.Submit())
             {
                 var responseMessage = CorrespondencePoller.Response;
 

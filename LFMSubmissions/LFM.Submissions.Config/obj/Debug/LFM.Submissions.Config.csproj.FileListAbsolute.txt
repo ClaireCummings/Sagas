@@ -5,3 +5,4 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Config\bin\Debug\NServiceBus.Core.pd
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Config\bin\Debug\NServiceBus.Core.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Config\obj\Debug\LFM.Submissions.Config.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Config\obj\Debug\LFM.Submissions.Config.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Config\obj\Debug\LFM.Submissions.Config.csprojResolveAssemblyReference.cache

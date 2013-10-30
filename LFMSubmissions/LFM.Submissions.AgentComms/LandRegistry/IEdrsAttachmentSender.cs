@@ -2,14 +2,8 @@
 
 namespace LFM.Submissions.AgentComms.LandRegistry
 {
-    public interface IEdrsAttachmentSender
+    public interface IEdrsAttachmentSender : IEdrsSender<IEdrsAttachmentResponseReceived>
     {
-        string ApplicationId { get; set; }
-        string AttachmentId { get; set; }
-        string Username { get; set; }
-        string Password { get; set; }
-        string Payload { get; set; }
-        IEdrsAttachmentResponseReceived Response { get; }
-        bool Submit();
+        string ApplicationMessageId { get; set; }
     }
 }

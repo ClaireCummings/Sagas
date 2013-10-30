@@ -6,8 +6,8 @@ namespace LFM.Submissions.AgentServices.LandRegistry
 {
     public class EdrsAttachmentSender : IEdrsAttachmentSender
     {
-        public string ApplicationId { get; set; }
-        public string AttachmentId { get; set; }
+        public string ApplicationMessageId { get; set; }
+        public string MessageId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Payload { get; set; }
@@ -16,8 +16,6 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         {
             get
             {
-                
-
                 if (_serviceResponse == null)
                     throw new InvalidOperationException("No response from web service");
                 return GetEdrsResponse(_serviceResponse);
@@ -25,7 +23,6 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         }
 
         private EdrsAttachmentService.AttachmentResponseV1_0Type _serviceResponse;
-        private EdrsAttachmentPollService.AttachmentResponseV1_0Type _pollServiceResponse;
 
         public bool Submit()
         {
@@ -40,8 +37,8 @@ namespace LFM.Submissions.AgentServices.LandRegistry
                 return false;
             }
 
-            request.arg0.ApplicationMessageId = ApplicationId;
-            request.arg0.MessageId = AttachmentId;
+            request.arg0.ApplicationMessageId = ApplicationMessageId;
+            request.arg0.MessageId = MessageId;
 
             // create an instance of the client
             var client = new EdrsAttachmentService.AttachmentV1_0ServiceClient();

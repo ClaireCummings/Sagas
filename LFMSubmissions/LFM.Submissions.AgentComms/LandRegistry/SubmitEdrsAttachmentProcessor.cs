@@ -13,8 +13,8 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         {
             Console.WriteLine("GovGateway received message SubmitEdrsAttachment AttachmentId: " + message.AttachmentId);
 
-            EdrsAttachmentSender.ApplicationId = message.ApplicationId;
-            EdrsAttachmentSender.AttachmentId = message.AttachmentId;
+            EdrsAttachmentSender.ApplicationMessageId = message.ApplicationId;
+            EdrsAttachmentSender.MessageId = message.AttachmentId;
             EdrsAttachmentSender.Username = message.Username;
             EdrsAttachmentSender.Password = message.Password;
             EdrsAttachmentSender.Payload = message.Payload;

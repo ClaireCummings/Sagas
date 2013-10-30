@@ -27,7 +27,7 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         [Theory, LandRegistryTestConventions]
         public void gateway_will_reply_with_the_invalid_payload_response_for_that_application(SubmitEdrs submitEdrsMessage)
         {
-            var fakeEdrsSender = A.Fake<IEdrsSender>();
+            var fakeEdrsSender = A.Fake<IEdrsSender<IEdrsResponseReceived>>();
             A.CallTo(() => fakeEdrsSender.Submit()).Throws(new InvalidPayloadException()).Once();
 
             MessageConventionExtensions.IsMessageTypeAction =t => t.Namespace != null && t.Namespace.Contains("Messages") && !t.Namespace.StartsWith("NServiceBus");
@@ -45,7 +45,7 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         [Theory, LandRegistryTestConventions]
         public void gateway_will_respond_with_an_acknowledgment_received_message_for_that_application(SubmitEdrs submitEdrsMessage)
         {
-            var fakeEdrsSender = A.Fake<IEdrsSender>();
+            var fakeEdrsSender = A.Fake<IEdrsSender<IEdrsResponseReceived>>();
             
             A.CallTo(() => fakeEdrsSender.Submit())
                 .Returns(true);

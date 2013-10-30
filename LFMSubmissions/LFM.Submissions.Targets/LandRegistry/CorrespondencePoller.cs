@@ -23,7 +23,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             }
         }
 
-        public bool Poll()
+        public bool Submit()
         {
             var request = new CorrespondenceService.PollRequestType{
                 ID = new CorrespondenceService.Q1IdentifierType() { MessageID = new MessageIDTextType() { Value = MessageId } },
