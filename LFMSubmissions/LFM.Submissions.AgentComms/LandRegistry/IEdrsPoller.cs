@@ -9,6 +9,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         string Password { get; set; }
         T Response { get; }
     
-        bool Submit();
+//        EarlyCompletionReceived Response { get; }
+        bool Poll();
     }
 }

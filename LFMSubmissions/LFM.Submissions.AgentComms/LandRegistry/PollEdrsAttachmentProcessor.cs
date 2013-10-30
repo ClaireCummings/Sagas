@@ -18,7 +18,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
             EdrsAttachmentPoller.Username = message.Username;
             EdrsAttachmentPoller.Password = message.Password;
 
-            if (EdrsAttachmentPoller.Submit())
+            if (EdrsAttachmentPoller.Poll())
             {
                 var responseMessage = EdrsAttachmentPoller.Response;
 

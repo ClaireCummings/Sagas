@@ -25,7 +25,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             }
         }
 
-        public bool Submit()
+        public bool Poll()
         {
             var request = new EdrsAttachmentPollService.PollRequestType
             {

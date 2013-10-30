@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Autofac;
 using LFM.Submissions.AgentComms.LandRegistry;
-using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using Module = Autofac.Module;
 
 namespace LFM.Submissions.AgentComms
@@ -11,7 +10,6 @@ namespace LFM.Submissions.AgentComms
         protected override void Load(ContainerBuilder builder)
         {
             var agentServices = Assembly.Load("LFM.Submissions.AgentServices");
-
             builder.RegisterAssemblyTypes(agentServices).AsImplementedInterfaces();
         }
     }

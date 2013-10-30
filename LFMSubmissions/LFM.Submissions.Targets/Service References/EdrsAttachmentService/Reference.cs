@@ -99,7 +99,7 @@ namespace LFM.Submissions.AgentServices.EdrsAttachmentService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ApplicationType", typeof(ApplicationTypeContent), Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute("MessageId", typeof(string), DataType="positiveInteger", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("AttachmentId", typeof(string), DataType="positiveInteger", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute("DocumentName", typeof(DocumentNameContent), Order=4)]
         public object Item {
             get {

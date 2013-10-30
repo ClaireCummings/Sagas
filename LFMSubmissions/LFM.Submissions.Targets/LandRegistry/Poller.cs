@@ -32,7 +32,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
             }
         }
 
-        public virtual bool Submit()
+        public virtual bool Poll()
         {
             var request = new EarlyCompletionService.PollRequestType
             {

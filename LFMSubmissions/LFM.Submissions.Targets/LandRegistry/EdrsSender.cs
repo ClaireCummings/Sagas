@@ -5,11 +5,11 @@ using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 
 namespace LFM.Submissions.AgentServices.LandRegistry
 {
-    public class EdrsSender : IEdrsSender<IEdrsResponseReceived>
+    public class EdrsSender : IEdrsSender
     {
         private EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type _serviceResponse;
         
-        public string MessageId { get; set; }
+        public string ApplicationId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Payload { get; set; }
@@ -36,7 +36,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
                         .XmlDeserializeFromString<EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type>(
                             Payload);
 
-                request.MessageId = MessageId;
+                request.MessageId = ApplicationId;
 
                 // create an instance of the client
                 var client = new EdrsSubmissionService.EDocumentRegistrationV1_0ServiceClient();

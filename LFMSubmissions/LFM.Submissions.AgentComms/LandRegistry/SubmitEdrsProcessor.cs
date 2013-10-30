@@ -8,11 +8,11 @@ namespace LFM.Submissions.AgentComms.LandRegistry
     public class SubmitEdrsProcessor : IHandleMessages<SubmitEdrs>
     {
         public IBus Bus { get; set; }
-        public IEdrsSender<IEdrsResponseReceived> EdrsSender { get; set; }
+        public IEdrsSender EdrsSender { get; set; }
 
         public void Handle(SubmitEdrs message)
         {
-            EdrsSender.MessageId = message.ApplicationId;
+            EdrsSender.ApplicationId = message.ApplicationId;
             EdrsSender.Username = message.Username;
             EdrsSender.Password = message.Password;
             EdrsSender.Payload = message.Payload;

@@ -98,9 +98,7 @@
     <None Include="Service References\CorrespondenceService\CorrespondenceV1_0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CorrespondenceService\CorrespondenceV1_0PollRequestWebService.wsdl">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Service References\CorrespondenceService\CorrespondenceV1_0PollRequestWebService.wsdl" />
     <None Include="Service References\CorrespondenceService\LFM.Submissions.AgentServices.CorrespondenceService.CorrespondenceV1_0Type.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
