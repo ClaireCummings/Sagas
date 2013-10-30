@@ -5,7 +5,7 @@ using LFM.Submissions.Contract.LandRegistry;
 
 namespace LFM.Submissions.AgentServices.LandRegistry
 {
-    public class Poller : IEdrsPoller<EarlyCompletionReceived>
+    public class EarlyCompletionPoller : IEdrsPoller<EarlyCompletionReceived>
     {
         private EarlyCompletionService.ResponseEarlyCompletionV1_0Type _serviceResponse;
 

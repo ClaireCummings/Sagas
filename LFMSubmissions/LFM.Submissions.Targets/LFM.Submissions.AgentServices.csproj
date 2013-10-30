@@ -45,7 +45,7 @@
     <Compile Include="LandRegistry\CorrespondencePoller.cs" />
     <Compile Include="LandRegistry\EdrsAttachmentPoller.cs" />
     <Compile Include="LandRegistry\EdrsPoller.cs" />
-    <Compile Include="LandRegistry\Poller.cs" />
+    <Compile Include="LandRegistry\EarlyCompletionPoller.cs" />
     <Compile Include="LandRegistry\EdrsAttachmentSender.cs" />
     <Compile Include="LandRegistry\EdrsSender.cs" />
     <Compile Include="LandRegistry\Headers.cs" />

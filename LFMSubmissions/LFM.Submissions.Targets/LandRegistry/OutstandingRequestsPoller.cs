@@ -5,11 +5,11 @@ using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 
 namespace LFM.Submissions.AgentServices.LandRegistry
 {
-    public class OutstandingRequestsPoller : IOutstandingRequestsPoller
+    public class OutstandingRequestsPoller : IEdrsPoller<List<IOutstandingRequest>> // IOutstandingRequestsPoller
     {
         private ResponseOutstandingRequestsType _serviceResponse;
 
-        public string RequestId { get; set; }
+        public string MessageId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
 
@@ -30,7 +30,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         {
             var request = new OutstandingRequestsService.RequestOutstandingRequestsType
             {
-                ID = new Q1IdentifierType() { MessageID = new Q1TextType() { Value = RequestId } },
+                ID = new Q1IdentifierType() { MessageID = new Q1TextType() { Value = MessageId } },
                 Product = new Q1OutstandingRequestsProductType { ShowOnlyNewResponses = new IndicatorType { Value = true }, SpecificServiceSpecified = false }
             };
 

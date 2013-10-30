@@ -65,7 +65,6 @@
     </Compile>
     <Compile Include="LandRegistry\IEdrsSender.cs" />
     <Compile Include="LandRegistry\InvalidPayloadException.cs" />
-    <Compile Include="LandRegistry\IOutstandingRequestsPoller.cs" />
     <Compile Include="LandRegistry\OutstandingRequestsProcessor.cs" />
     <Compile Include="LandRegistry\OutstandingRequestsSagaData.cs" />
     <Compile Include="LandRegistry\PollCorrespondenceProcessor.cs" />

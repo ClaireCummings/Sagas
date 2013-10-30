@@ -9,7 +9,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
 {
     public class OutstandingRequestsProcessor : Saga<OutstandingRequestsSagaData>, IAmStartedByMessages<PollForOutstandingRequests>, IHandleMessages<GetOutstandingRequests>, IHandleMessages<StopPollingForOutstandingRequests>
     {
-        public IOutstandingRequestsPoller OutstandingRequestsPoller { get; set; }
+        public IEdrsPoller<List<IOutstandingRequest>> OutstandingRequestsPoller { get; set; }
 
         public override void ConfigureHowToFindSaga()
         {
@@ -48,7 +48,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         {
             Console.WriteLine("About get Outstanding Requests");
 
-            OutstandingRequestsPoller.RequestId = message.RequestId;
+            OutstandingRequestsPoller.MessageId = message.RequestId;
             OutstandingRequestsPoller.Username = message.Username;
             OutstandingRequestsPoller.Password = message.Password;
             
