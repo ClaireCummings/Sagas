@@ -14,7 +14,7 @@
         </xs:annotation>
       </xs:element>
       <xs:choice>
-        <xs:element minOccurs="1" maxOccurs="1" name="AttachmentId" type="xs:positiveInteger" />
+        <xs:element minOccurs="1" maxOccurs="1" name="MessageId" type="xs:positiveInteger" />
         <xs:element minOccurs="1" maxOccurs="1" name="DocumentName" type="DocumentNameContent" />
         <xs:element minOccurs="1" maxOccurs="1" name="ApplicationType" type="ApplicationTypeContent" />
       </xs:choice>

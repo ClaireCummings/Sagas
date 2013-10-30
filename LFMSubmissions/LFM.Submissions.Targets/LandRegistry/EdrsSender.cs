@@ -9,7 +9,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
     {
         private EdrsSubmissionService.ResponseApplicationToChangeRegisterV1_0Type _serviceResponse;
         
-        public string ApplicationId { get; set; }
+        public string MessageId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Payload { get; set; }
@@ -36,7 +36,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
                         .XmlDeserializeFromString<EdrsSubmissionService.RequestApplicationToChangeRegisterV1_0Type>(
                             Payload);
 
-                request.MessageId = ApplicationId;
+                request.MessageId = MessageId;
 
                 // create an instance of the client
                 var client = new EdrsSubmissionService.EDocumentRegistrationV1_0ServiceClient();

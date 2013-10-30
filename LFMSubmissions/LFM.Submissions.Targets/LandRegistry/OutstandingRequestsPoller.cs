@@ -26,7 +26,7 @@ namespace LFM.Submissions.AgentServices.LandRegistry
         /// the way back to us then how do we recover????
         /// Hopefully New Responses are those which we have already requested from the individual poll services in which case we are OK.
         /// </summary>
-        public bool Poll()
+        public bool Submit()
         {
             var request = new OutstandingRequestsService.RequestOutstandingRequestsType
             {

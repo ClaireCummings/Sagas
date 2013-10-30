@@ -52,7 +52,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
             OutstandingRequestsPoller.Username = message.Username;
             OutstandingRequestsPoller.Password = message.Password;
             
-            if (OutstandingRequestsPoller.Poll())
+            if (OutstandingRequestsPoller.Submit())
             {
                 foreach (var outstandingRequest in OutstandingRequestsPoller.Response)
                 {
@@ -75,7 +75,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
         {
             Data.OngoingApplications.Remove(message.ApplicationId);
             
-            Console.WriteLine((string) "ApplicationId: {0} has been removed from the OngoingApplications list", (object) message.ApplicationId);
+            Console.WriteLine((string) "MessageId: {0} has been removed from the OngoingApplications list", (object) message.ApplicationId);
             if(Data.OngoingApplications.Count == 0)
                 MarkAsComplete();
         }

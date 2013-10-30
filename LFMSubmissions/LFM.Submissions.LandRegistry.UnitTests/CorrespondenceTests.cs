@@ -15,7 +15,7 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         public void Agent_services_will_publish_an_CorrespondenceReceived_message(PollCorrespondence message)
         {
             var fakeCorrespondencePoller = A.Fake<IEdrsPoller<CorrespondenceReceived>>();
-            A.CallTo(() => fakeCorrespondencePoller.Poll()).Returns(true);
+            A.CallTo(() => fakeCorrespondencePoller.Submit()).Returns(true);
             A.CallTo(() => fakeCorrespondencePoller.Response).Returns(new CorrespondenceReceived()
                 {
                     Username = message.Username

@@ -20,7 +20,7 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         public void Agent_services_will_publish_an_EarlyCompletionReceived_message(PollEarlyCompletion message)
         {
             var fakeEarlyCompletionPoller = A.Fake<IEdrsPoller<EarlyCompletionReceived>>();
-            A.CallTo(() => fakeEarlyCompletionPoller.Poll()).Returns(true);
+            A.CallTo(() => fakeEarlyCompletionPoller.Submit()).Returns(true);
             A.CallTo(() => fakeEarlyCompletionPoller.Response).Returns(new EarlyCompletionReceived()
                 {
                     Username = message.Username

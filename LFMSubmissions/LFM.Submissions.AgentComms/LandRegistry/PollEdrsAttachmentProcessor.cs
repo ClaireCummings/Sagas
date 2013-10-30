@@ -12,13 +12,13 @@ namespace LFM.Submissions.AgentComms.LandRegistry
 
         public void Handle(PollEdrsAttachment message)
         {
-            Console.WriteLine("Gateway received message PollEdrsAttachment AttachmentId: " + message.AttachmentId);
+            Console.WriteLine("Gateway received message PollEdrsAttachment MessageId: " + message.AttachmentId);
 
             EdrsAttachmentPoller.MessageId = message.AttachmentId;
             EdrsAttachmentPoller.Username = message.Username;
             EdrsAttachmentPoller.Password = message.Password;
 
-            if (EdrsAttachmentPoller.Poll())
+            if (EdrsAttachmentPoller.Submit())
             {
                 var responseMessage = EdrsAttachmentPoller.Response;
 

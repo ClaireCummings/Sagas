@@ -18,7 +18,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
             EdrsPoller.Username = message.Username;
             EdrsPoller.Password = message.Password;
 
-            if (EdrsPoller.Poll())
+            if (EdrsPoller.Submit())
             {
                 var responseMessage = EdrsPoller.Response;
 

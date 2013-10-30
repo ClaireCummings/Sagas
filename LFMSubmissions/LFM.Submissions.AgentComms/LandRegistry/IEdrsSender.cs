@@ -2,13 +2,13 @@
 
 namespace LFM.Submissions.AgentComms.LandRegistry
 {
-    public interface IEdrsSender
+    public interface IEdrsSender : IEdrsPoller<IEdrsResponseReceived>
     {
-        string ApplicationId { get; set; }
-        string Username { get; set; }
-        string Password { get; set; }
+//        string MessageId { get; set; }
+//        string Username { get; set; }
+//        string Password { get; set; }
         string Payload { get; set; }
-        IEdrsResponseReceived Response { get;}
-        bool Submit();
+//        IEdrsResponseReceived Response { get;}
+//        bool Submit();
     }
 }

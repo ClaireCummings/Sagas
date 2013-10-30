@@ -12,7 +12,7 @@ namespace LFM.Submissions.AgentComms.LandRegistry
 
         public void Handle(SubmitEdrs message)
         {
-            EdrsSender.ApplicationId = message.ApplicationId;
+            EdrsSender.MessageId = message.ApplicationId;
             EdrsSender.Username = message.Username;
             EdrsSender.Password = message.Password;
             EdrsSender.Payload = message.Payload;
