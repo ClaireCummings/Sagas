@@ -1,4 +1,5 @@
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.InternalMessages\bin\Debug\LFM.Submissions.InternalMessages.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.InternalMessages\bin\Debug\LFM.Submissions.InternalMessages.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.InternalMessages\obj\Debug\LFM.Submissions.InternalMessages.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.InternalMessages\obj\Debug\LFM.Submissions.InternalMessages.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.InternalMessages\obj\Debug\LFM.Submissions.InternalMessages.pdb

@@ -1,0 +1,11 @@
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\obj\Debug\LFM.ApplicationServices.csprojResolveAssemblyReference.cache
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\LFM.ApplicationServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\LFM.ApplicationServices.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\LFM.dll
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\LFM.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\Autofac.xml
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\obj\Debug\LFM.ApplicationServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\obj\Debug\LFM.ApplicationServices.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\EntityFramework.dll
+E:\Git\Sagas\LFMSubmissions\LFM.ApplicationServices\bin\Debug\EntityFramework.xml

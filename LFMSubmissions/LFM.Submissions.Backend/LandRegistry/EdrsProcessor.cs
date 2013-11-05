@@ -12,9 +12,11 @@ namespace LFM.Submissions.LandRegistry
         IHandleMessages<PollEdrs>, IHandleMessages<PollEdrsAttachment>,
         IHandleMessages<EdrsAcknowledgementReceived>, IHandleMessages<EdrsRejectionReceived>,IHandleMessages<EdrsResultsReceived>, IHandleMessages<EdrsOtherReceived>,
         IHandleMessages<EdrsAttachmentAcknowledgementReceived>, IHandleMessages<EdrsAttachmentRejectionReceived>, IHandleMessages<EdrsAttachmentResultsReceived>, IHandleMessages<EdrsAttachmentOtherReceived>,
-        IHandleMessages<EarlyCompletionReceived>, IHandleMessages<CorrespondenceReceived>, IHandleMessages<InvalidEdrsPayload> 
+        IHandleMessages<EarlyCompletionReceived>, IHandleMessages<CorrespondenceReceived>, IHandleMessages<InvalidEdrsPayload>
 
     {
+        public ISubmissionAdministrationService AdministrationService { get; set; }
+
         public override void ConfigureHowToFindSaga()
         {
             ConfigureMapping<SubmitEdrs>(s => s.ApplicationId, m => m.ApplicationId);
@@ -36,6 +38,17 @@ namespace LFM.Submissions.LandRegistry
         public void Handle(SubmitEdrs message)
         {
             this.Data.ApplicationId = message.ApplicationId;
+
+
+            AdministrationService.Create(new CreateSubmissionCommand()
+                {
+                    AgentUsername = message.Username,
+                    ApplicationId = message.ApplicationId,
+                    Payload = message.Payload,
+                    // Assume automatic authorisation
+                    Status = SubmissionStatus.AuthorisedAccepted
+                });
+            
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name,message.ApplicationId);
             Bus.Send(message);
         }

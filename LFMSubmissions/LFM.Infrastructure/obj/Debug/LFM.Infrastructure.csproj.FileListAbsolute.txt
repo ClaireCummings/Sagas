@@ -1,0 +1,9 @@
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\LFM.Infrastructure.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\LFM.Infrastructure.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\EntityFramework.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\LFM.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\LFM.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\bin\Debug\EntityFramework.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\obj\Debug\LFM.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\obj\Debug\LFM.Infrastructure.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Infrastructure\obj\Debug\LFM.Infrastructure.pdb

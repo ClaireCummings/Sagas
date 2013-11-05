@@ -46,3 +46,9 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\app.config
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Submissions.AgentServices.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Infrastructure.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.Infrastructure.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\EntityFramework.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\EntityFramework.xml

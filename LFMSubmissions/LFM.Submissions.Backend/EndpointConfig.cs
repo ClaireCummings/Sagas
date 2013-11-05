@@ -1,3 +1,4 @@
+using Autofac;
 using LFM.Submissions.Config;
 
 namespace LFM.Submissions.Backend
@@ -12,8 +13,12 @@ namespace LFM.Submissions.Backend
     {
 	    public void Init()
 	    {
-	        Configure.With()
-	                 .MyMessageConventions();
+            var builder = new ContainerBuilder();
+            builder.RegisterModule<BackendModule>();
+
+            Configure.With()
+	                 .MyMessageConventions()
+                     .AutofacBuilder(builder.Build());
 	    }
     }
 }
