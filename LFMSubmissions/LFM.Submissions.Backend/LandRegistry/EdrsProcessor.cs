@@ -39,7 +39,6 @@ namespace LFM.Submissions.LandRegistry
         {
             this.Data.ApplicationId = message.ApplicationId;
 
-
             AdministrationService.Create(new CreateSubmissionCommand()
                 {
                     AgentUsername = message.Username,

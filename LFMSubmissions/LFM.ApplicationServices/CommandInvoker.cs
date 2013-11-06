@@ -17,23 +17,30 @@ namespace LFM.ApplicationServices
 
         public void Execute<TCommand>(TCommand command)
         {
-            using (var unitOfWork = new UnitOfWork())
+            using (var scope = _lifetimeScope.BeginLifetimeScope())
             {
-                var handler = _lifetimeScope.Resolve<IHandleCommand<TCommand>>();
-                handler.Execute(command);
-                unitOfWork.Complete();
+                using (var unitOfWork = new UnitOfWork())
+                {
+                    var handler = scope.Resolve<IHandleCommand<TCommand>>();
+                    handler.Execute(command);
+                    unitOfWork.Complete();
+                }
             }
         }
 
         public TResponse Execute<TCommand, TResponse>(TCommand command)
         {
-            using (var unitOfWork = new UnitOfWork())
+            using (var scope = _lifetimeScope.BeginLifetimeScope())
             {
-                var handler = _lifetimeScope.Resolve<IHandleCommand<TCommand, TResponse>>();
-                var result = handler.Execute(command);
-                unitOfWork.Complete();
-                return result;
+                using (var unitOfWork = new UnitOfWork())
+                {
+                    var handler = scope.Resolve<IHandleCommand<TCommand, TResponse>>();
+                    var result = handler.Execute(command);
+                    unitOfWork.Complete();
+                    return result;
+                }                
             }
+
         }
     }
 }

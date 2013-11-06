@@ -1,4 +1,3 @@
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\LFM.Submissions.AgentComms.dll.config
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\LFM.Submissions.AgentComms.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\LFM.Submissions.AgentComms.pdb
@@ -24,5 +23,6 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.Hos
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.Host.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.ObjectBuilder.Autofac.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.AgentComms\obj\Debug\LFM.Submissions.AgentComms.pdb

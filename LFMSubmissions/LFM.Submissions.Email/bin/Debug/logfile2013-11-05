@@ -1,0 +1,927 @@
+2013-11-05 10:07:29,403 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.19 s
+2013-11-05 10:07:29,576 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:07:29,590 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:07:29,651 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:07:30,033 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:07:30,035 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:07:30,037 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:07:30,038 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:07:30,039 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:07:30,040 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:07:30,041 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:07:30,042 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:07:30,048 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.46 s
+2013-11-05 10:07:36,768 [1] WARN  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 6.72 s - Details:
+NServiceBus.Unicast.Monitoring.PerformanceCounterInitializer - 6.6816 s
+NServiceBus.Unicast.Config.DefaultTransportForHost - 0.0180 s
+NServiceBus.Hosting.Profiles.ProfileActivator - 0.0072 s
+NServiceBus.Features.FeatureInitializer - 0.0041 s
+NServiceBus.DataBus.Config.Bootstrapper - 0.0033 s
+NServiceBus.Impersonation.Windows.ConfigureWindowsImpersonation - 0.0011 s
+NServiceBus.Gateway.Channels.Http.SetDefaultResponder - 0.0009 s
+NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.EnableMessageDrivenPublisherIfStorageIsFound - 0.0006 s
+NServiceBus.Gateway.DefaultInputAddress - 0.0005 s
+NServiceBus.MasterNode.AdjustSettingsForNonMasterNodes - 0.0004 s
+
+2013-11-05 10:07:36,831 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:07:36,837 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:07:36,848 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:07:36,851 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:07:36,854 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 10:07:39,182 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:07:41,034 [1] WARN  NServiceBus.Transports.Msmq.MsmqQueueCreator [(null)] <(null)> - Queue P010485\private$\LFM.Submissions.Email does not exist.
+2013-11-05 10:07:42,752 [1] WARN  NServiceBus.Transports.Msmq.MsmqQueueCreator [(null)] <(null)> - Queue P010485\private$\LFM.Submissions.Email.Timeouts does not exist.
+2013-11-05 10:07:43,502 [1] WARN  NServiceBus.Transports.Msmq.MsmqQueueCreator [(null)] <(null)> - Queue P010485\private$\LFM.Submissions.Email.TimeoutsDispatcher does not exist.
+2013-11-05 10:07:44,254 [1] WARN  NServiceBus.Transports.Msmq.MsmqQueueCreator [(null)] <(null)> - Queue P010485\private$\LFM.Submissions.Email.Retries does not exist.
+2013-11-05 10:07:46,086 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:07:46,091 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:07:46,357 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:07:47,870 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:07:47,872 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:07:47,874 [15] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:07:47,906 [22] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:07:47,913 [22] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:10:12,500 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.31 s
+2013-11-05 10:10:12,683 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:10:12,697 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:10:12,762 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:10:13,075 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:10:13,076 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:10:13,077 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:10:13,078 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:10:13,079 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:10:13,080 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:10:13,081 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:10:13,081 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:10:13,088 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.39 s
+2013-11-05 10:10:13,458 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.37 s
+2013-11-05 10:10:13,533 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:10:13,538 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:10:13,551 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:10:13,554 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:10:13,558 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.10 s
+2013-11-05 10:10:15,542 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:10:19,204 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:10:19,210 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:10:19,450 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:10:20,085 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:10:20,086 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:10:20,088 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:10:20,151 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:10:20,251 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:22:16,136 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.32 s
+2013-11-05 10:22:16,360 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:22:16,372 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:22:16,443 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:22:16,739 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:22:16,741 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:22:16,742 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:22:16,744 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:22:16,744 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:22:16,745 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:22:16,747 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:22:16,747 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:22:16,754 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.38 s
+2013-11-05 10:22:17,114 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.36 s
+2013-11-05 10:22:17,191 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:22:17,196 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:22:17,208 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:22:17,211 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:22:17,215 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.10 s
+2013-11-05 10:22:18,860 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:22:23,029 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:22:23,034 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:22:23,210 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:22:23,862 [9] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:22:23,863 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:22:23,864 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:22:23,948 [21] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:22:23,957 [21] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:24:39,712 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.25 s
+2013-11-05 10:24:39,892 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:24:39,907 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:24:39,975 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:24:40,291 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:24:40,293 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:24:40,294 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:24:40,296 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:24:40,297 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:24:40,298 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:24:40,299 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:24:40,301 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:24:40,309 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.40 s
+2013-11-05 10:24:40,681 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.37 s
+2013-11-05 10:24:40,747 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:24:40,753 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:24:40,763 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:24:40,766 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:24:40,769 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 10:24:42,366 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:24:46,687 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:24:46,692 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:24:46,845 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:24:47,404 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:24:47,405 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:24:47,408 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:24:47,463 [21] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:24:47,470 [21] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:35:38,879 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.32 s
+2013-11-05 10:35:39,103 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:35:39,114 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:35:39,179 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:35:39,498 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:35:39,500 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:35:39,501 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:35:39,503 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:35:39,504 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:35:39,505 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:35:39,506 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:35:39,508 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:35:39,516 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.40 s
+2013-11-05 10:35:39,853 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 10:35:39,918 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:35:39,922 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:35:39,931 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:35:39,942 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:35:39,946 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 10:35:41,512 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:35:45,387 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:35:45,392 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:35:45,574 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:35:46,270 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:35:46,272 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:35:46,273 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:35:46,335 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:35:46,342 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:36:57,083 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.37 s
+2013-11-05 10:36:57,294 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:36:57,311 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:36:57,388 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:36:57,727 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:36:57,729 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:36:57,730 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:36:57,732 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:36:57,734 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:36:57,735 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:36:57,736 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:36:57,737 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:36:57,746 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.43 s
+2013-11-05 10:36:58,141 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.39 s
+2013-11-05 10:36:58,208 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:36:58,213 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:36:58,225 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:36:58,227 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:36:58,230 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 10:36:59,826 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:37:04,411 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:37:04,416 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:37:04,571 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:37:05,207 [9] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:37:05,209 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:37:05,211 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:37:05,264 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:37:05,270 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:42:12,049 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.31 s
+2013-11-05 10:42:12,239 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:42:12,253 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:42:12,324 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:42:12,623 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:42:12,625 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:42:12,626 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:42:12,627 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:42:12,628 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:42:12,629 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:42:12,630 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:42:12,631 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:42:12,639 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.38 s
+2013-11-05 10:42:12,977 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 10:42:13,040 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:42:13,046 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:42:13,057 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:42:13,059 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:42:13,063 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 10:42:14,743 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:42:19,080 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:42:19,085 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:42:19,250 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:42:19,857 [11] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:42:19,860 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:42:19,860 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:42:19,918 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:42:19,925 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:42:54,271 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.32 s
+2013-11-05 10:42:54,469 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:42:54,482 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:42:54,549 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:42:54,853 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:42:54,855 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:42:54,856 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:42:54,857 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:42:54,859 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:42:54,860 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:42:54,861 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:42:54,862 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:42:54,868 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.39 s
+2013-11-05 10:42:55,234 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.36 s
+2013-11-05 10:42:55,297 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:42:55,302 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:42:55,311 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:42:55,314 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:42:55,317 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 10:42:56,974 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:43:01,261 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:43:01,266 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:43:01,421 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:43:02,035 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:43:02,036 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:43:02,039 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:43:02,083 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:43:02,092 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:44:07,631 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.30 s
+2013-11-05 10:44:07,820 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 10:44:07,833 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 10:44:07,894 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 10:44:08,186 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 10:44:08,188 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 10:44:08,189 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 10:44:08,191 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 10:44:08,192 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 10:44:08,193 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 10:44:08,194 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 10:44:08,195 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 10:44:08,202 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.37 s
+2013-11-05 10:44:08,546 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 10:44:08,632 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 10:44:08,638 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 10:44:08,648 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 10:44:08,650 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 10:44:08,655 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.10 s
+2013-11-05 10:44:10,247 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 10:44:14,689 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 10:44:14,694 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 10:44:14,871 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 10:44:15,480 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:44:15,481 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:44:15,483 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 10:44:15,519 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 10:44:15,524 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:14:06,944 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.33 s
+2013-11-05 11:14:07,202 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 11:14:07,220 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 11:14:07,296 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 11:14:07,640 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 11:14:07,641 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 11:14:07,643 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 11:14:07,644 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 11:14:07,645 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 11:14:07,646 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 11:14:07,648 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 11:14:07,649 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 11:14:07,657 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.43 s
+2013-11-05 11:14:08,038 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.38 s
+2013-11-05 11:14:08,107 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 11:14:08,113 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 11:14:08,122 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 11:14:08,124 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 11:14:08,129 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 11:14:09,915 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 11:14:16,739 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 11:14:16,744 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 11:14:16,949 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 11:14:17,524 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:14:17,525 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:14:17,528 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:14:17,588 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:14:17,595 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:16:51,060 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.30 s
+2013-11-05 11:16:51,256 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 11:16:51,271 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 11:16:51,334 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 11:16:51,631 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 11:16:51,633 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 11:16:51,634 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 11:16:51,636 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 11:16:51,637 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 11:16:51,638 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 11:16:51,639 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 11:16:51,641 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 11:16:51,648 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.38 s
+2013-11-05 11:16:51,996 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.35 s
+2013-11-05 11:16:52,062 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 11:16:52,067 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 11:16:52,079 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 11:16:52,081 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 11:16:52,085 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 11:16:53,457 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 11:16:58,303 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 11:16:58,308 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 11:16:58,615 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 11:16:59,219 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:16:59,220 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:16:59,221 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:16:59,295 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:16:59,303 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:19:06,093 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.27 s
+2013-11-05 11:19:06,280 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 11:19:06,295 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 11:19:06,366 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 11:19:06,708 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 11:19:06,709 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 11:19:06,710 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 11:19:06,712 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 11:19:06,713 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 11:19:06,714 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 11:19:06,714 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 11:19:06,715 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 11:19:06,724 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.43 s
+2013-11-05 11:19:07,062 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 11:19:07,131 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 11:19:07,135 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 11:19:07,146 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 11:19:07,149 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 11:19:07,153 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 11:19:08,603 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 11:19:13,321 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 11:19:13,325 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 11:19:13,502 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 11:19:14,117 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:19:14,118 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:19:14,120 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:19:14,173 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:19:14,182 [18] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:35:35,559 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.28 s
+2013-11-05 11:35:35,760 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 11:35:35,777 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 11:35:35,845 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 11:35:36,163 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 11:35:36,165 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 11:35:36,166 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 11:35:36,167 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 11:35:36,168 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 11:35:36,169 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 11:35:36,171 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 11:35:36,172 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 11:35:36,179 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.40 s
+2013-11-05 11:35:36,516 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 11:35:36,579 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 11:35:36,585 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 11:35:36,595 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 11:35:36,598 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 11:35:36,603 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 11:35:38,244 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 11:35:43,116 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 11:35:43,120 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 11:35:43,296 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 11:35:43,791 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:35:43,792 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:35:43,794 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 11:35:43,853 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 11:35:43,861 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:14:41,310 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.28 s
+2013-11-05 12:14:41,479 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 12:14:41,495 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 12:14:41,561 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 12:14:41,859 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 12:14:41,860 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 12:14:41,861 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 12:14:41,863 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 12:14:41,864 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 12:14:41,865 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 12:14:41,866 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 12:14:41,867 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 12:14:41,874 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.38 s
+2013-11-05 12:14:42,189 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.31 s
+2013-11-05 12:14:42,251 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 12:14:42,255 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 12:14:42,263 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 12:14:42,266 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 12:14:42,269 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 12:14:43,839 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 12:14:50,789 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 12:14:50,794 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 12:14:50,987 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 12:14:51,574 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:14:51,575 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:14:51,578 [14] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:14:51,614 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:14:51,620 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:21:42,888 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.26 s
+2013-11-05 12:21:43,071 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 12:21:43,084 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 12:21:43,144 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 12:21:43,438 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 12:21:43,439 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 12:21:43,440 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 12:21:43,441 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 12:21:43,442 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 12:21:43,443 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 12:21:43,444 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 12:21:43,445 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 12:21:43,451 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.37 s
+2013-11-05 12:21:43,770 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.32 s
+2013-11-05 12:21:43,834 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 12:21:43,839 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 12:21:43,851 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 12:21:43,853 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 12:21:43,857 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 12:21:45,045 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 12:21:48,472 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 12:21:48,477 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 12:21:48,656 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 12:21:49,239 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:21:49,240 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:21:49,243 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:21:49,304 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:21:49,313 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:27:21,929 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.26 s
+2013-11-05 12:27:22,104 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 12:27:22,115 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 12:27:22,174 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 12:27:22,467 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 12:27:22,469 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 12:27:22,470 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 12:27:22,471 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 12:27:22,472 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 12:27:22,474 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 12:27:22,475 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 12:27:22,475 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 12:27:22,482 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.37 s
+2013-11-05 12:27:22,825 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.34 s
+2013-11-05 12:27:22,900 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 12:27:22,906 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 12:27:22,917 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 12:27:22,920 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 12:27:22,923 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 12:27:24,225 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 12:27:28,736 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 12:27:28,741 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 12:27:28,948 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 12:27:29,539 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:27:29,540 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:27:29,549 [11] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 12:27:29,608 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 12:27:29,617 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:24:19,348 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.33 s
+2013-11-05 14:24:19,522 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 14:24:19,534 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 14:24:19,605 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 14:24:19,879 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 14:24:19,881 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 14:24:19,882 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 14:24:19,883 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 14:24:19,884 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 14:24:19,885 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 14:24:19,886 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 14:24:19,887 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 14:24:19,893 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.36 s
+2013-11-05 14:24:21,647 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 1.75 s
+2013-11-05 14:24:21,716 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 14:24:21,721 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 14:24:21,730 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 14:24:21,733 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 14:24:21,736 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.09 s
+2013-11-05 14:24:23,649 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 14:24:31,256 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 14:24:31,261 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 14:24:31,437 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 14:24:32,169 [10] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:24:32,170 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:24:32,173 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:24:32,204 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:24:32,210 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:29:15,080 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.26 s
+2013-11-05 14:29:15,279 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 14:29:15,442 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 14:29:15,579 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 14:29:15,867 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 14:29:15,869 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 14:29:15,870 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 14:29:15,871 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 14:29:15,872 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 14:29:15,873 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 14:29:15,874 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 14:29:15,875 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 14:29:15,882 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.36 s
+2013-11-05 14:29:16,194 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.31 s
+2013-11-05 14:29:16,260 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 14:29:16,265 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 14:29:16,273 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 14:29:16,276 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 14:29:16,279 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 14:29:17,499 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 14:29:22,746 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 14:29:22,751 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 14:29:23,000 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 14:29:23,620 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:29:23,622 [11] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:29:23,625 [12] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:29:23,725 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:29:23,732 [19] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:51:54,088 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfiguration completed in 0.32 s
+2013-11-05 14:51:54,282 [1] INFO  NServiceBus.Unicast.UnicastBus [(null)] <(null)> - Number of messages found: 7
+2013-11-05 14:51:54,293 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.INeedInitialization completed in 0.00 s
+2013-11-05 14:51:54,359 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Using embedded license found in registry [HKEY_CURRENT_USER\Software\NServiceBus\4.1\License].
+2013-11-05 14:51:54,688 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Found a Trial license.
+2013-11-05 14:51:54,690 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Registered to claire.cummings@advancedcomputersoftware.com
+2013-11-05 14:51:54,691 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - Expires on 01/26/2014 00:00:00
+2013-11-05 14:51:54,693 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseVersion]: [4.1]
+2013-11-05 14:51:54,694 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [WorkerThreads]: [Max]
+2013-11-05 14:51:54,695 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [AllowedNumberOfWorkerNodes]: [Max]
+2013-11-05 14:51:54,696 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [LicenseType]: [Trial]
+2013-11-05 14:51:54,697 [1] INFO  NServiceBus.Licensing.LicenseManager [(null)] <(null)> - [MaxMessageThroughputPerSecond]: [Max]
+2013-11-05 14:51:54,704 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.INeedInitialization completed in 0.41 s
+2013-11-05 14:51:55,003 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.IWantToRunBeforeConfigurationIsFinalized completed in 0.30 s
+2013-11-05 14:51:55,064 [1] INFO  NServiceBus.Sagas.ReplyingToNullOriginatorDispatcher [(null)] <(null)> - The saga feature was enabled but no saga implementations could be found. No need to enable the configured saga persister
+2013-11-05 14:51:55,068 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Features: 
+Audit - Enabled
+AutoSubscribe - Enabled
+BinarySerialization - Controlled by category Serializers
+BsonSerialization - Controlled by category Serializers
+JsonSerialization - Controlled by category Serializers
+XmlSerialization - Controlled by category Serializers
+MsmqTransport - Enabled
+Gateway - Disabled
+TimeoutManager - Enabled
+Sagas - Enabled
+SecondLevelRetries - Enabled
+StorageDrivenPublisher - Disabled
+MessageDrivenSubscriptions - Enabled
+
+2013-11-05 14:51:55,079 [1] INFO  NServiceBus.Features.FeatureInitializer [(null)] <(null)> - Feature categories: 
+   - Serializers
+       * BinarySerialization - Disabled
+       * BsonSerialization - Disabled
+       * JsonSerialization - Disabled
+       * XmlSerialization - Enabled
+
+2013-11-05 14:51:55,082 [1] INFO  NServiceBus.Config.InfrastructureServices [(null)] <(null)> - Infrastructure service NServiceBus.AutomaticSubscriptions.IAutoSubscriptionStrategy was found in the container and will be used instead of the default
+2013-11-05 14:51:55,086 [1] INFO  NServiceBus.Configure [(null)] <(null)> - Invocation of NServiceBus.Config.IFinalizeConfiguration completed in 0.08 s
+2013-11-05 14:51:56,638 [1] INFO  NServiceBus.ConfigureRavenPersistence [(null)] <(null)> - Connection to RavenDB at http://localhost:8080 verified. Detected version: Product version: 2.0.3 / 5a4b7ea, Build version: 2375
+2013-11-05 14:52:04,834 [1] INFO  NServiceBus.Installation.PerformanceMonitorUsersInstaller [(null)] <(null)> - Skipped adding user 'TTLIVE\claire.cummings' to group 'Performance Monitor Users' because the user is already in group.
+2013-11-05 14:52:04,839 [1] INFO  NServiceBus.Persistence.Raven.RavenUserInstaller [(null)] <(null)> - Adding user 'TTLIVE\claire.cummings' to raven. Instance:'http://localhost:8080', Database:'LFM.Submissions.Email'.
+2013-11-05 14:52:05,106 [1] WARN  NServiceBus.MessageInterfaces.MessageMapper.Reflection.MessageMapper [(null)] <(null)> - Interface ICustomAttributeProvider contains methods and can there for not be mapped. Be aware that non mapped interface can't be used to send messages.
+2013-11-05 14:52:05,687 [1] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 1/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutMessageProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:52:05,687 [13] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 3/3 'NServiceBus.SecondLevelRetries.SecondLevelRetriesProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:52:05,691 [8] INFO  NServiceBus.Satellites.SatelliteLauncher [(null)] <(null)> - Started 2/3 'NServiceBus.Timeout.Hosting.Windows.TimeoutDispatcherProcessor, NServiceBus.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c' satellite
+2013-11-05 14:52:05,751 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.CorrespondenceReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485
+2013-11-05 14:52:05,757 [20] INFO  NServiceBus.Unicast.Subscriptions.MessageDrivenSubscriptions.MessageDrivenSubscriptionManager [(null)] <(null)> - Subscribing to LFM.Submissions.Contract.LandRegistry.EarlyCompletionReceived, LFM.Submissions.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null at publisher queue LFM.Submissions.AgentComms@P010485

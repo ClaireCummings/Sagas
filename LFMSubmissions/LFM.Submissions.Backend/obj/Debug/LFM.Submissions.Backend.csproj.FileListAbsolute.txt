@@ -3,6 +3,9 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Ba
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Backend.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\Autofac.Configuration.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\Autofac.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.SqlServer.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.ApplicationServices.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Infrastructure.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Config.dll
@@ -12,7 +15,7 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Core.d
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.exe
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.ObjectBuilder.Autofac.dll
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.ApplicationServices.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Infrastructure.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Config.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.Contract.pdb
@@ -20,6 +23,8 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.Submissions.In
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\LFM.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\Autofac.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\Autofac.Configuration.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.xml
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.SqlServer.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Core.pdb
@@ -28,9 +33,6 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.p
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.Host.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.ObjectBuilder.Autofac.pdb
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\NServiceBus.ObjectBuilder.Autofac.xml
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.xml
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\obj\Debug\LFM.Submissions.Backend.pdb
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.SqlServer.dll
-E:\Git\Sagas\LFMSubmissions\LFM.Submissions.Backend\bin\Debug\EntityFramework.SqlServer.xml

@@ -5,6 +5,6 @@ E:\Git\Sagas\LFMSubmissions\LFM\bin\Debug\EntityFramework.dll
 E:\Git\Sagas\LFMSubmissions\LFM\bin\Debug\EntityFramework.SqlServer.dll
 E:\Git\Sagas\LFMSubmissions\LFM\bin\Debug\EntityFramework.xml
 E:\Git\Sagas\LFMSubmissions\LFM\bin\Debug\EntityFramework.SqlServer.xml
+E:\Git\Sagas\LFMSubmissions\LFM\obj\Debug\LFM.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM\obj\Debug\LFM.dll
 E:\Git\Sagas\LFMSubmissions\LFM\obj\Debug\LFM.pdb
-E:\Git\Sagas\LFMSubmissions\LFM\obj\Debug\LFM.csprojResolveAssemblyReference.cache

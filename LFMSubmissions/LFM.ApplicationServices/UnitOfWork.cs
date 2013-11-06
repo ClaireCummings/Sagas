@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace LFM.ApplicationServices
 {
@@ -7,14 +8,21 @@ namespace LFM.ApplicationServices
     /// </summary>
     public class UnitOfWork : IDisposable
     {
+        private readonly TransactionScope _transaction;
+
+        public UnitOfWork()
+        {
+            _transaction = new TransactionScope();
+        }
+
         public void Complete()
         {
-            // Surround with transactional unit of work
+            _transaction.Complete();
         }
 
         public void Dispose()
         {
-            
+            _transaction.Dispose();
         }
     }
 }

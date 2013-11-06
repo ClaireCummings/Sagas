@@ -80,6 +80,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LFM.ApplicationServices\LFM.ApplicationServices.csproj">
+      <Project>{ffd9ff51-258e-4b69-8957-381d2791caeb}</Project>
+      <Name>LFM.ApplicationServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Infrastructure\LFM.Infrastructure.csproj">
       <Project>{6634f8cb-0c98-429d-a545-097aa3d0d6f8}</Project>
       <Name>LFM.Infrastructure</Name>

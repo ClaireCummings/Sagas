@@ -10,8 +10,13 @@ namespace LFM.Submissions.Backend
             builder.RegisterAssemblyTypes(typeof (SubmissionAdministrationService).Assembly)
                    .Where(t => t.Name.EndsWith("Service"))
                    .AsImplementedInterfaces();
+//            builder.RegisterAssemblyTypes(typeof (SubmissionRepository).Assembly)
+//                   .AsImplementedInterfaces().WithParameter("context", new SubmissionsContext());
             builder.RegisterAssemblyTypes(typeof (SubmissionRepository).Assembly)
-                   .AsImplementedInterfaces().WithParameter("context", new SubmissionsContext());
+                   .AsImplementedInterfaces();
+            builder.RegisterType<SubmissionsContext>()
+                   .AsSelf()
+                   .InstancePerLifetimeScope();
         }
     }
 }

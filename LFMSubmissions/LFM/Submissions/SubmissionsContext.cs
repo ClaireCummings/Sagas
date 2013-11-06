@@ -9,5 +9,10 @@ namespace LFM.Submissions
         }
 
         public DbSet<Submission> Submissions { get; set; }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+        }
     }
 }
