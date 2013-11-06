@@ -7,15 +7,18 @@ namespace LFM.ApplicationServices.Submissions
                                         IHandleCommand<CreateSubmissionCommand,CreateSubmissionQueryResult>,
                                         IHandleCommand<UpdateSubmissionCommand, UpdateSubmissionQueryResult>
     {
+        private readonly ISubmissionAdministrationService _submissionAdministrationService;
         private readonly ISubmissionRepository _submissionRepository;
         
-        public SubmissionService(ISubmissionRepository submissionRepository)
+        public SubmissionService(ISubmissionRepository submissionRepository, ISubmissionAdministrationService submissionAdministrationService )
         {
             _submissionRepository = submissionRepository;
+            _submissionAdministrationService = submissionAdministrationService;
         }
 
         public CreateSubmissionQueryResult Execute(CreateSubmissionCommand command)
         {
+            _submissionAdministrationService.Create(command);
             return new CreateSubmissionQueryResult()
                 {
                     Command = command

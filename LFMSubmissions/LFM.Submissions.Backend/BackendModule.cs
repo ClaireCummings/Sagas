@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using Autofac;
 using LFM.Infrastructure.Submissions;
 
@@ -17,6 +18,9 @@ namespace LFM.Submissions.Backend
             builder.RegisterType<SubmissionsContext>()
                    .AsSelf()
                    .InstancePerLifetimeScope();
+//            builder.RegisterType<SubmissionsContext>()
+//                   .As<DbContext>()
+//                   .InstancePerLifetimeScope();
         }
     }
 }

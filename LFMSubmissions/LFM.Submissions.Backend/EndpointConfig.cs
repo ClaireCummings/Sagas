@@ -1,4 +1,5 @@
 using Autofac;
+using LFM.ApplicationServices;
 using LFM.Submissions.Config;
 
 namespace LFM.Submissions.Backend
@@ -15,6 +16,7 @@ namespace LFM.Submissions.Backend
 	    {
             var builder = new ContainerBuilder();
             builder.RegisterModule<BackendModule>();
+            builder.RegisterModule<ApplicationServicesModule>();
 
             Configure.With()
 	                 .MyMessageConventions()

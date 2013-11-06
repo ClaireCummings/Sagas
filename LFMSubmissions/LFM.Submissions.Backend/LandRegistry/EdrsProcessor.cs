@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using LFM.ApplicationServices;
+using LFM.ApplicationServices.Submissions;
 using LFM.Submissions.Contract.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
@@ -16,6 +19,7 @@ namespace LFM.Submissions.LandRegistry
 
     {
         public ISubmissionAdministrationService AdministrationService { get; set; }
+        public ICommandInvoker CommandInvoker { get; set; }
 
         public override void ConfigureHowToFindSaga()
         {
@@ -39,7 +43,7 @@ namespace LFM.Submissions.LandRegistry
         {
             this.Data.ApplicationId = message.ApplicationId;
 
-            AdministrationService.Create(new CreateSubmissionCommand()
+            CommandInvoker.Execute<CreateSubmissionCommand, CreateSubmissionQueryResult>(new CreateSubmissionCommand()
                 {
                     AgentUsername = message.Username,
                     ApplicationId = message.ApplicationId,
@@ -47,7 +51,7 @@ namespace LFM.Submissions.LandRegistry
                     // Assume automatic authorisation
                     Status = SubmissionStatus.AuthorisedAccepted
                 });
-            
+                        
             Console.WriteLine("Land Registry Received {0} ApplicationId: {1}", message.GetType().Name,message.ApplicationId);
             Bus.Send(message);
         }
