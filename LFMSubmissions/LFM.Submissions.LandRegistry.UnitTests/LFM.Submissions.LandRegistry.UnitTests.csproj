@@ -74,7 +74,7 @@
     <Compile Include="CorrespondenceTests.cs" />
     <Compile Include="EarlyCompletionTest.cs" />
     <Compile Include="LandRegistryTestConventionsAttribute.cs" />
-    <Compile Include="When_client_submits_an_edrs.cs" />
+    <Compile Include="EdrsSubmissionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

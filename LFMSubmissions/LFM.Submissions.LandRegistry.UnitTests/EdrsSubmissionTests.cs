@@ -6,24 +6,49 @@ using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
 using NServiceBus.Testing;
 using FakeItEasy;
+using Xunit;
 using Xunit.Extensions;
 
 namespace LFM.Submissions.LandRegistry.UnitTests
 {
     public class When_client_submits_an_edrs
     {
+        public ICommandInvoker _fakeCommandInvoker;
+
+        public When_client_submits_an_edrs()
+        {
+            _fakeCommandInvoker = A.Fake<ICommandInvoker>();
+        }
+
         [Theory, LandRegistryTestConventions]
         public void submitedrs_is_forwarded_onto_the_gateway_by_the_backend(SubmitEdrs submitEdrsMessage)
         {
-            var fakeCommandInvoker = A.Fake<ICommandInvoker>();
-
             MessageConventionExtensions.IsCommandTypeAction = t => t.Namespace != null && t.Namespace.Contains("Commands") && !t.Namespace.StartsWith("NServiceBus");
             Test.Initialize();
             Test.Handler<EdrsProcessor>()
                 .WithExternalDependencies(h=>h.Data = new EdrsProcessorSagaData())
-                .WithExternalDependencies(h=>h.CommandInvoker = fakeCommandInvoker)
+                .WithExternalDependencies(h=>h.CommandInvoker = _fakeCommandInvoker)
                 .ExpectSend<SubmitEdrs>(m => m == submitEdrsMessage)
                 .OnMessage<SubmitEdrs>(submitEdrsMessage);
+        }
+
+        [Theory, LandRegistryTestConventions]
+        public void a_submission_record_is_saved_to_the_database(SubmitEdrs submitEdrsMessage)
+        {
+            var sut = A.Fake<EdrsProcessor>();
+            var bus = A.Fake<IBus>();
+
+            sut.CommandInvoker = _fakeCommandInvoker;
+            sut.Bus = bus;
+            sut.Data = new EdrsProcessorSagaData();
+            sut.Handle(submitEdrsMessage);
+
+            A.CallTo(() => _fakeCommandInvoker.Execute<CreateSubmissionCommand, CreateSubmissionQueryResult>
+                  (A<CreateSubmissionCommand>.That.Matches(c => c.AgentUsername == submitEdrsMessage.Username 
+                      && c.ApplicationId == submitEdrsMessage.ApplicationId 
+                      && c.Payload == submitEdrsMessage.Payload 
+                      && c.Status == SubmissionStatus.AuthorisedAccepted)))
+                .MustHaveHappened();
         }
     }
 
