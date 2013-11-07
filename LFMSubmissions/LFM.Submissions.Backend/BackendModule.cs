@@ -8,19 +8,11 @@ namespace LFM.Submissions.Backend
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(typeof (SubmissionAdministrationService).Assembly)
-                   .Where(t => t.Name.EndsWith("Service"))
-                   .AsImplementedInterfaces();
-//            builder.RegisterAssemblyTypes(typeof (SubmissionRepository).Assembly)
-//                   .AsImplementedInterfaces().WithParameter("context", new SubmissionsContext());
             builder.RegisterAssemblyTypes(typeof (SubmissionRepository).Assembly)
                    .AsImplementedInterfaces();
             builder.RegisterType<SubmissionsContext>()
                    .AsSelf()
                    .InstancePerLifetimeScope();
-//            builder.RegisterType<SubmissionsContext>()
-//                   .As<DbContext>()
-//                   .InstancePerLifetimeScope();
         }
     }
 }

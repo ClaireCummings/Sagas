@@ -82,6 +82,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LFM.ApplicationServices\LFM.ApplicationServices.csproj">
+      <Project>{FFD9FF51-258E-4B69-8957-381D2791CAEB}</Project>
+      <Name>LFM.ApplicationServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LFM.Submissions.AgentComms\LFM.Submissions.AgentComms.csproj">
       <Project>{e0a0674c-bc7a-4260-97e8-6ceef68efdb7}</Project>
       <Name>LFM.Submissions.AgentComms</Name>
@@ -101,6 +105,10 @@
     <ProjectReference Include="..\LFM.Submissions.Targets\LFM.Submissions.AgentServices.csproj">
       <Project>{3182D968-1616-405B-844A-7F24FA717AA6}</Project>
       <Name>LFM.Submissions.AgentServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LFM\LFM.csproj">
+      <Project>{AA907C62-E515-4E97-87B4-AC9DFCC35D2C}</Project>
+      <Name>LFM</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

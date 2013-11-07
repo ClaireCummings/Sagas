@@ -18,7 +18,6 @@ namespace LFM.Submissions.LandRegistry
         IHandleMessages<EarlyCompletionReceived>, IHandleMessages<CorrespondenceReceived>, IHandleMessages<InvalidEdrsPayload>
 
     {
-        public ISubmissionAdministrationService AdministrationService { get; set; }
         public ICommandInvoker CommandInvoker { get; set; }
 
         public override void ConfigureHowToFindSaga()

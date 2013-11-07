@@ -52,3 +52,5 @@ E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\Ent
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.csprojResolveAssemblyReference.cache
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.dll
 E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\obj\Debug\LFM.Submissions.LandRegistry.UnitTests.pdb
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.ApplicationServices.dll
+E:\Git\Sagas\LFMSubmissions\LFM.Submissions.LandRegistry.UnitTests\bin\Debug\LFM.ApplicationServices.pdb

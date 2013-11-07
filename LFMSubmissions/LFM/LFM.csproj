@@ -49,10 +49,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Submissions\CreateSubmissionCommand.cs" />
-    <Compile Include="Submissions\ISubmissionAdministrationService.cs" />
     <Compile Include="Submissions\ISubmissionRepository.cs" />
     <Compile Include="Submissions\Submission.cs" />
-    <Compile Include="Submissions\SubmissionAdministrationService.cs" />
     <Compile Include="Submissions\SubmissionsContext.cs" />
     <Compile Include="Submissions\SubmissionStatus.cs" />
     <Compile Include="Submissions\UpdateSubmissionCommand.cs" />

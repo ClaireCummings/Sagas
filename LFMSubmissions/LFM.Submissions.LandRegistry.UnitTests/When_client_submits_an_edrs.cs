@@ -1,4 +1,6 @@
-﻿using LFM.Submissions.AgentComms.LandRegistry;
+﻿using LFM.ApplicationServices;
+using LFM.ApplicationServices.Submissions;
+using LFM.Submissions.AgentComms.LandRegistry;
 using LFM.Submissions.InternalMessages.LandRegistry.Commands;
 using LFM.Submissions.InternalMessages.LandRegistry.Messages;
 using NServiceBus;
@@ -13,10 +15,13 @@ namespace LFM.Submissions.LandRegistry.UnitTests
         [Theory, LandRegistryTestConventions]
         public void submitedrs_is_forwarded_onto_the_gateway_by_the_backend(SubmitEdrs submitEdrsMessage)
         {
+            var fakeCommandInvoker = A.Fake<ICommandInvoker>();
+
             MessageConventionExtensions.IsCommandTypeAction = t => t.Namespace != null && t.Namespace.Contains("Commands") && !t.Namespace.StartsWith("NServiceBus");
             Test.Initialize();
             Test.Handler<EdrsProcessor>()
                 .WithExternalDependencies(h=>h.Data = new EdrsProcessorSagaData())
+                .WithExternalDependencies(h=>h.CommandInvoker = fakeCommandInvoker)
                 .ExpectSend<SubmitEdrs>(m => m == submitEdrsMessage)
                 .OnMessage<SubmitEdrs>(submitEdrsMessage);
         }

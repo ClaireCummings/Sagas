@@ -7,18 +7,19 @@ namespace LFM.ApplicationServices.Submissions
                                         IHandleCommand<CreateSubmissionCommand,CreateSubmissionQueryResult>,
                                         IHandleCommand<UpdateSubmissionCommand, UpdateSubmissionQueryResult>
     {
-        private readonly ISubmissionAdministrationService _submissionAdministrationService;
         private readonly ISubmissionRepository _submissionRepository;
         
-        public SubmissionService(ISubmissionRepository submissionRepository, ISubmissionAdministrationService submissionAdministrationService )
+        public SubmissionService(ISubmissionRepository submissionRepository)
         {
             _submissionRepository = submissionRepository;
-            _submissionAdministrationService = submissionAdministrationService;
         }
 
         public CreateSubmissionQueryResult Execute(CreateSubmissionCommand command)
         {
-            _submissionAdministrationService.Create(command);
+            var submission = new Submission(command);
+            _submissionRepository.Save(submission);
+            _submissionRepository.PersistAll();
+          
             return new CreateSubmissionQueryResult()
                 {
                     Command = command
@@ -27,6 +28,10 @@ namespace LFM.ApplicationServices.Submissions
 
         public UpdateSubmissionQueryResult Execute(UpdateSubmissionCommand command)
         {
+            var submission = _submissionRepository.GetById(command.ApplicationId);
+            submission.Update(command);
+            _submissionRepository.PersistAll();
+
             return new UpdateSubmissionQueryResult()
                 {
                     Command = command
